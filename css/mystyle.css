@@ -1,0 +1,7 @@
+.spreadsheet {
+    margin-top: 20px;
+    overflow: scroll;
+    position: relative;:
+    width: 400px;
+    height: 300px;
+}
