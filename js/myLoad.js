@@ -123,6 +123,7 @@ $(function () {
       var img = imgNode[0]
       var pixelRatio = window.devicePixelRatio || 1
       imgNode.Jcrop({
+        aspectRatio: 1,
         setSelect: [
           40,
           40,

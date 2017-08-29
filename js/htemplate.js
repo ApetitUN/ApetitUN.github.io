@@ -1,21 +1,37 @@
 var
   data1 = [
-    ['', 'Kia', 'Nissan', 'Toyota', 'Honda'],
-    ['2008', 10, 11, 12, 13],
-    ['2009', 20, 11, 14, 13],
-    ['2010', 30, 15, 12, 13]
+    {
+      "name": "Carlos",
+      "lastname": "Gomez",
+      "cover": "https://pbs.twimg.com/profile_images/671824524086796291/M9EyXA_V_reasonably_small.jpg"
+    },
+    {
+      "name": "Camilo",
+      "lastname": "Calero",
+      "cover": "https://pbs.twimg.com/profile_images/671824524086796291/M9EyXA_V_reasonably_small.jpg"
+    },
+    {
+      "name": "Juan",
+      "lastname": "Barreto",
+      "cover": "https://pbs.twimg.com/profile_images/671824524086796291/M9EyXA_V_reasonably_small.jpg"
+    }
   ],
   container1 = document.getElementById('example1'),
   settings1 = {
     data: data1,
     contextMenu: true,
-    rowHeaders: true,
-    colHeaders: true
+    colHeaders: ["Name", "Lastname", "Images"],
+    // rowHeaders: true,
+    colWidths: [200, 200, 200],
+    columns: [
+      {data: "name"},
+      {data: "lastname"},
+      {data: "cover", renderer: coverRenderer}
+    ]
   },
   hot1;
 
 hot1 = new Handsontable(container1, settings1);
-data1[0][1] = 'Ford'; // change "Kia" to "Ford" programatically
 hot1.render();
 
 
