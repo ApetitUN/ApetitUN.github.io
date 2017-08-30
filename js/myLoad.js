@@ -13,7 +13,6 @@
 
 var imagetest
 
-
 $(function () {
   'use strict'
 
