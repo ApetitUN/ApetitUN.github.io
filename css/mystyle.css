@@ -1,8 +1,12 @@
+.mdl-color--primary-dark .mdl-layout__tab-bar {
+  color: #1a75cf !important;
+}
+
 .spreadsheet {
     margin-top: 20px;
     overflow: scroll;
-    position: relative;:
-    width: 400px;
+    position: relative;
+    width: 100%;
     height: 300px;
 }
 
@@ -59,8 +63,7 @@ td {
 }
 .result,
 .thumbnail {
-  padding: 20px;
-  background: #fff;
+  padding: 10px;
   color: #222;
   text-align: center;
 }

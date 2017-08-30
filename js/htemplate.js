@@ -1,9 +1,11 @@
+//var imagetest = "https://pbs.twimg.com/profile_images/671824524086796291/M9EyXA_V_reasonably_small.jpg"
+
 var
   data1 = [
     {
       "name": "Carlos",
       "lastname": "Gomez",
-      "cover": "https://pbs.twimg.com/profile_images/671824524086796291/M9EyXA_V_reasonably_small.jpg"
+      "cover": imagetest
     },
     {
       "name": "Camilo",

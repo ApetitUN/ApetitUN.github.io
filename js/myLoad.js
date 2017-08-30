@@ -11,6 +11,9 @@
 
 /* global loadImage, HTMLCanvasElement, $ */
 
+var imagetest
+
+
 $(function () {
   'use strict'
 
@@ -56,6 +59,8 @@ $(function () {
         .attr('href', img.src || img.toDataURL())
     }
     result.children().replaceWith(content)
+    imagetest = img.toDataURL()
+    
     if (img.getContext) {
       actionsNode.show()
     }
@@ -141,6 +146,7 @@ $(function () {
       })
     })
 
+
   $('#crop')
     .on('click', function (event) {
       event.preventDefault()
@@ -155,9 +161,12 @@ $(function () {
           minWidth: result.width(),
           maxWidth: result.width(),
           pixelRatio: pixelRatio,
-          downsamplingRatio: 0.5
+          downsamplingRatio: 0.5,
         }))
+        //console.log(coordinates.x + " "  + coordinates.y + " " + coordinates.w + " "  + coordinates.h)
         coordinates = null
       }
     })
 })
+
+
