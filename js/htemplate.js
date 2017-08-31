@@ -17,19 +17,19 @@ $(function () {
           "name": "Alvaro Camilo",
           "lastname": "Calero Pino",
           "cover": silhouette
-        },{
+        }, {
           "name": "Alvaro Camilo",
           "lastname": "Calero Pino",
           "cover": silhouette
-        },{
+        }, {
           "name": "Alvaro Camilo",
           "lastname": "Calero Pino",
           "cover": silhouette
-        },{
+        }, {
           "name": "Alvaro Camilo",
           "lastname": "Calero Pino",
           "cover": silhouette
-        },{
+        }, {
           "name": "Alvaro Camilo",
           "lastname": "Calero Pino",
           "cover": silhouette
@@ -56,7 +56,7 @@ $(function () {
       hot1;
 
     hot1 = new Handsontable(container1, settings1);
-    if(this.hot1){
+    if (this.hot1) {
       this.hot1.render();
     }
 
