@@ -44,11 +44,11 @@ var
 hot = new Handsontable(container, {
     startRows: 8,
     startCols: 6,
-    columns: [
-        { data: "cover", renderer: coverRenderer },
-        { data: "lastname" },
-        { data: "name" }
-    ],
+    //columns: [
+    //    { data: "cover", renderer: coverRenderer },
+    //    { data: "lastname" },
+    //    { data: "name" }
+    //],
     rowHeaders: true,
     colHeaders: true,
     minSpareRows: 1,
