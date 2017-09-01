@@ -44,11 +44,11 @@ var
 hot = new Handsontable(container, {
     startRows: 8,
     startCols: 6,
-    //columns: [
-    //    { data: "cover", renderer: coverRenderer },
-    //    { data: "lastname" },
-    //    { data: "name" }
-    //],
+    columns: [
+       { data: "cover", renderer: coverRenderer },
+       { data: "lastname" },
+       { data: "name" }
+    ],
     rowHeaders: true,
     colHeaders: true,
     minSpareRows: 1,
@@ -97,7 +97,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
 }
 
 Handsontable.dom.addEvent(load, 'click', function () {
-    ajax('json/load.json', 'GET', '', function (res) {
+    ajax('json/dataload.json', 'GET', '', function (res) {
         var data = JSON.parse(res.response);
 
         hot.loadData(data.data);
