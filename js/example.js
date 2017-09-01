@@ -52,6 +52,7 @@ hot = new Handsontable(container, {
     rowHeaders: true,
     colHeaders: true,
     minSpareRows: 1,
+    persistentState: true,
     //contextMenu: true,
     afterChange: function (change, source) {
         if (source === 'loadData') {
@@ -107,15 +108,10 @@ Handsontable.dom.addEvent(load, 'click', function () {
 
 Handsontable.dom.addEvent(save, 'click', function () {
     // save all cell's data
-    ajax('json/save.json', 'GET', JSON.stringify({ data: hot.getData() }), function (res) {
+    ajax('php/save.php', 'GET', JSON.stringify({ data: hot.getData() }), function (res) {
         var response = JSON.parse(res.response);
 
-        if (response.result === 'ok') {
-            exampleConsole.innerText = 'Data saved';
-        }
-        else {
-            exampleConsole.innerText = 'Save error';
-        }
+       hot.save(response.data);
     });
 });
 
