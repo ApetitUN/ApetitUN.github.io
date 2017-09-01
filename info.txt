@@ -1,4 +1,4 @@
-Informe del mes de Agosto
+Informe del mes de junio, julio y agosto de 2017.
 
 Nombre:
 cc:
@@ -8,6 +8,6 @@ Empresa:
 
 2. Luego, fui asignado a un proyecto como consultor en una empresa cliente de Woombat, el cual usa en su arquitectura el procesamiento y el análisis de datos. Esta arquitectura consiste a grandes rasgos en la migración de los datos que residen actualmente en otras bases de datos a un clúster manejado por Cloudera, para ofrecer a sus empleados una herramienta que le permita crear estadísticas de forma rápida y precisa, reemplazando el proceso actual que es engorroso y demora tiempo.
 
-3. Más tarde, realicé el montaje de los nodos del clúster, que posteriormente fueron registrados en un directorio activo y se trabajó en la autenticación y la autorización de sus servicios mediante Kerberos, que es el encargado de establecer estos procedimientos. Inicialmente, fueron vinculados con Freeipa, una solución de seguridad para sistemas operativos núcleo Linux que incluye identificación en un dominio, políticas de seguridad y confiabilidad para la interacción con otros dominios. Sin embargo, la integración con Cloudera fue compleja debido a su capa diferencial de Kerberos, por lo que la solución se traslado al uso de Active Directory en Windows Server, donde se obtuvieron los resultados esperados.
+3. Más tarde, realicé el montaje de los nodos del clúster y un directorio activo. Los nodos fueron registrados en el directorio activo (comprobandose mediante la autenticación en los equipos de los usuarios registrados allí), donde posteriormente se trabajó en la autenticación y la autorización de los servicios de Cloudera Manager mediante Kerberos, que es el encargado de establecer estos procedimientos de seguridad. Inicialmente, fueron vinculados con FreeIPA, una solución de seguridad para sistemas operativos núcleo Linux que incluye identificación en un dominio, políticas de seguridad y confiabilidad para la interacción con otros dominios. Sin embargo, la integración con Cloudera fue compleja debido a su capa diferencial de Kerberos, por lo que la solución se traslado al uso de Active Directory en Windows Server, donde se obtuvieron los resultados esperados.
 
-4. Finalmente, se han realizado mockups en HTML+CSS, Javascript y librerias relacionadas con diseño web para la visualización de la información de los datos de la empresa, que se integrará con los resultados dados por los servicios que ofrece Cloudera para tal motivo.
+4. Finalmente, se han realizado mockups en HTML+CSS, Javascript y librerias relacionadas con diseño web para la visualización de la información de los datos de la empresa, que incluyen gráficos estadísticos con el análisis realizados por los servicios de Cloudera dispuestos para tal fin. 
