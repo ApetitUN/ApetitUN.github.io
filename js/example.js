@@ -1,31 +1,31 @@
 function ajax(url, method, params, callback) {
-  var obj;
+    var obj;
 
-  try {
-    obj = new XMLHttpRequest();
-  } catch (e) {
     try {
-      obj = new ActiveXObject("Msxml2.XMLHTTP");
+        obj = new XMLHttpRequest();
     } catch (e) {
-      try {
-        obj = new ActiveXObject("Microsoft.XMLHTTP");
-      } catch (e) {
-        alert("Your browser does not support Ajax.");
-        return false;
-      }
+        try {
+            obj = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                obj = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                alert("Your browser does not support Ajax.");
+                return false;
+            }
+        }
     }
-  }
-  obj.onreadystatechange = function () {
-    if (obj.readyState == 4) {
-      callback(obj);
-    }
-  };
-  obj.open(method, url, true);
-  obj.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-  obj.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-  obj.send(params);
+    obj.onreadystatechange = function () {
+        if (obj.readyState == 4) {
+            callback(obj);
+        }
+    };
+    obj.open(method, url, true);
+    obj.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    obj.send(params);
 
-  return obj;
+    return obj;
 }
 
 
@@ -45,9 +45,9 @@ hot = new Handsontable(container, {
     startRows: 8,
     startCols: 6,
     columns: [
-       { data: "cover", renderer: coverRenderer },
-       { data: "lastname" },
-       { data: "name" }
+        { data: "cover", renderer: coverRenderer },
+        { data: "lastname" },
+        { data: "name" }
     ],
     rowHeaders: true,
     colHeaders: true,
@@ -108,11 +108,21 @@ Handsontable.dom.addEvent(load, 'click', function () {
 
 Handsontable.dom.addEvent(save, 'click', function () {
     // save all cell's data
-    ajax('php/save.php', 'GET', JSON.stringify({ data: hot.getData() }), function (res) {
-        var response = JSON.parse(res.response);
 
-       hot.save(response.data);
+    //var response = JSON.parse(res.response);
+    var csvContent = "data:text/csv;charset=utf-8,";
+    var dataToSave = hot.getData()
+    dataToSave.forEach(function (infoArray, index) {
+        dataString = infoArray.join("|");
+        csvContent += dataString + "\n";
     });
+    //console.log(JSON.stringify(hot.getData()))
+    //exampleConsole.innerHTML = JSON.stringify(hot.getData())
+
+    var encode = encodeURI(csvContent)
+    window.open(encode)
+    //hot.save(response.data);
+
 });
 
 Handsontable.dom.addEvent(autosave, 'click', function () {
