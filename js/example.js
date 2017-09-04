@@ -97,28 +97,10 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     return td;
 }
 
-// Handsontable.dom.addEvent(reload, 'click', function () {
-//     $.getJSON("json/dataload.json", function(data){
-//         document.getElementById("crop").src = imagetest
-//         data.data[0].cover = imagetest
-
-//     });
-//     // ajax('json/dataload.json', 'GET', '', function (res) {
-//     //     var data = JSON.parse(res.response);
-//     //     //var image = data.data[0].cover;
-//     //     //console.log(image)
-//     //     console.log("1: " + data.data[0].cover)
-//     //     document.getElementById("crop").src = imagetest
-//     //     console.log(imagetest)
-//     //     data.data[0].cover = imagetest
-//     //     console.log("3: " + data.data[0].cover)
-//     // });
-// });
-
 Handsontable.dom.addEvent(load, 'click', function () {
     ajax('json/dataload.json', 'GET', '', function (res) {
         var data = JSON.parse(res.response);
-        
+
         document.getElementById("crop").src = imagetest
         data.data[0].cover = imagetest
 
@@ -128,27 +110,16 @@ Handsontable.dom.addEvent(load, 'click', function () {
 });
 
 Handsontable.dom.addEvent(save, 'click', function () {
-    // save all cell's data
-
-    //var response = JSON.parse(res.response);
     var csvContent = "data:text/csv;charset=utf-8,";
-    var dataToSave = hot.getData()
-    dataToSave.forEach(function (infoArray, index) {
-        dataString = infoArray.join("|");
-        csvContent += dataString + "\n";
-    });    
-    //console.log(JSON.stringify(hot.getData()))
-    //exampleConsole.innerHTML = JSON.stringify(hot.getData())
-
-    var encodedUri = encodeURI(csvContent)
+    var dataToSave = hot.getSourceData()
+    // http://jsfiddle.net/9a60zzk9/
+    var encodedUri = encodeURIComponent(JSON.stringify(hot.getData()))
     var link = document.createElement("a");
-    link.setAttribute("href", encodedUri);
-    link.setAttribute("download", "my_data.csv");
-    document.body.appendChild(link); // Required for FF
-    
-    link.click(); // This will download the data file named "my_data.csv".
+    link.setAttribute("href", 'data:text/plain;charset=utf-u,' + encodedUri);
+    link.setAttribute("download", "data.json");
+    document.body.appendChild(link);
+    link.click();
     window.open(encodedUri)
-    //hot.save(response.data);
 
 });
 
