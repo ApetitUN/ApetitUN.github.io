@@ -40,7 +40,7 @@
     <script src="js/vendor/jquery.Jcrop.js"></script>
     <script src="js/myLoad.js"></script>
 
-    <script type="text/javascript" src="js/htemplate.js"></script>
+
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -71,7 +71,7 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Jcrop is not required by JavaScript Load Image, but included for the demo -->
     <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
-
+    <!-- <script type="text/javascript" src="js/example.js"></script> -->
     <style>
         #view-source {
             position: fixed;
@@ -117,13 +117,17 @@
               </i></p>
 
                             <p>
-                                <button name="load" id="load">Load</button>
-                                <button name="save" id="save">Save</button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load">
+                                    Cargar
+                                </button>
+                                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save">
+                                    Guardar en CSV
+                                </button>
                                 <label><input type="checkbox" name="autosave" id="autosave" checked="checked" autocomplete="off"> Autosave</label>
                             </p>
                             <pre id="example1console" class="console">Click "Load" to load data from server</pre>
                             <div class="spreadsheet" id="example2"></div>
-                            <script type="text/javascript" src="js/example.js"></script>
+                            <!-- <script type="text/javascript" src="js/example.js"></script> -->
                 </section>
                 </div>
                 <footer class="mdl-mega-footer">

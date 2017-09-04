@@ -34,13 +34,10 @@
 
 
 
-  <script src="js/load-image.all.min.js"></script>
-  <!-- jQuery and Jcrop are not required by JavaScript Load Image, but included for the demo -->
-  <script src="js/vendor/jquery.js"></script>
-  <script src="js/vendor/jquery.Jcrop.js"></script>
-  <script src="js/myLoad.js"></script>
 
-  <script type="text/javascript" src="js/htemplate.js"></script>
+
+
+
 
   <!-- Add to homescreen for Chrome on Android -->
   <meta name="mobile-web-app-capable" content="yes">
@@ -155,11 +152,19 @@
             <div class="mdl-card__supporting-text">
               <h4>Handsontable template</h4>
               <!-- </button> -->
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="reload">
-                        Cargar Handsontable
+              <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="reload">
+                Recargar
+                      </button> -->
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load">
+                Cargar
                       </button>
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save">
+                Guardar en CSV
+                      </button>
+              <label><input type="checkbox" name="autosave" id="autosave" checked="checked" autocomplete="off"> Autosave</label>
+              <pre id="example1console" class="console">Click "Load" to load data from server</pre>
               <div class="spreadsheet" id="example1"></div>
-
+              <script type="text/javascript" src="js/example.js"></script>
             </div>
             <div class="mdl-card__actions">
               <a href="#" class="mdl-button">OK</a>
@@ -230,9 +235,13 @@
       </footer>
     </main>
   </div>
-  <a href="test.html" id="view-source"
-    class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Ir a pruebas</a>
+  <a href="test.html" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Ir a pruebas</a>
   <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="js/load-image.all.min.js"></script>
+  <!-- jQuery and Jcrop are not required by JavaScript Load Image, but included for the demo -->
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/jquery.Jcrop.js"></script>
+  <script src="js/myLoad.js"></script>
 </body>
 
 </html>
