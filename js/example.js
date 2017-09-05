@@ -79,8 +79,10 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
         img = document.createElement('IMG');
         img.src = value;
+        img.setAttribute('style', 'border-radius: 50%')
         img.setAttribute('width', '100px')
         img.setAttribute('heigth', '100px')
+
 
         Handsontable.dom.addEvent(img, 'mousedown', function (e) {
             e.preventDefault(); // prevent selection quirk
@@ -99,10 +101,13 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
 
 Handsontable.dom.addEvent(load, 'click', function () {
     ajax('json/dataload.json', 'GET', '', function (res) {
+        //var files = evt.target.files;
         var data = JSON.parse(res.response);
 
-        document.getElementById("crop").src = imagetest
-        data.data[0].cover = imagetest
+        if (imagetest != undefined) {
+            document.getElementById("crop").src = imagetest
+            data.data[0].cover = imagetest
+        }
 
         hot.loadData(data.data);
         exampleConsole.innerText = 'Data loaded';

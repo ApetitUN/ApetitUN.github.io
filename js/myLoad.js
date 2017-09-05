@@ -90,6 +90,7 @@ $(function () {
     var file = target && target.files && target.files[0]
     var options = {
       maxWidth: result.width(),
+      maxHeight: 500,
       canvas: true,
       pixelRatio: window.devicePixelRatio,
       downsamplingRatio: 0.5,
@@ -157,8 +158,8 @@ $(function () {
           top: coordinates.y * pixelRatio,
           sourceWidth: coordinates.w * pixelRatio,
           sourceHeight: coordinates.h * pixelRatio,
-          minWidth: result.width(),
-          maxWidth: result.width(),
+          minWidth: 500,
+          maxWidth: 500,
           pixelRatio: pixelRatio,
           downsamplingRatio: 0.5,
         }))
