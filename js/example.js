@@ -39,7 +39,10 @@ var
     save = $('save'),
     reload = $('reload'),
     autosaveNotification,
-    hot;
+    hot,
+    number = function() {
+        return document.getElementById("sample3").value
+    };
 
 hot = new Handsontable(container, {
     startRows: 8,
@@ -129,7 +132,7 @@ Handsontable.dom.addEvent(load, 'click', function () {
         data = JSON.parse(lines);
         if (imagetest != undefined) {
             document.getElementById("crop").src = imagetest
-            data.data[0].cover = imagetest
+            data.data[number()].cover = imagetest
         }
         hot.loadData(data.data);
         exampleConsole.innerText = 'Data loaded';
