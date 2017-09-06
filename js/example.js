@@ -40,8 +40,9 @@ var
     reload = $('reload'),
     autosaveNotification,
     hot,
-    number = function() {
-        return document.getElementById("sample3").value
+    number = function () {
+        var getNumber = parseInt(document.getElementById("sample3").value)
+        return getNumber - 1
     };
 
 hot = new Handsontable(container, {
@@ -53,12 +54,12 @@ hot = new Handsontable(container, {
         { data: "name" }
     ],
     rowHeaders: true,
-    rowHeights: 120,
+    rowHeights: 110,
     colHeaders: ["Foto", "Apellidos", "Nombre(s)"],
     colWidths: [120, 200, 200],
     minSpareRows: 1,
     persistentState: true,
-    //contextMenu: true,
+    contextMenu: true,
     afterChange: function (change, source) {
         if (source === 'loadData') {
             return; //don't save this change
@@ -75,6 +76,22 @@ hot = new Handsontable(container, {
         });
     }
 });
+
+hot.updateSettings({
+    contextMenu: {
+      callback: function (key, options) {
+        if (key === 'about') {
+          setTimeout(function () {
+            // timeout is used to make sure the menu collapsed before alert is shown
+            alert("This is a context menu with default and custom options mixed");
+          }, 100);
+        }
+      },
+      items: {
+        "about": {name: 'About this menu'}
+      }
+    }
+  })
 
 
 function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
@@ -120,7 +137,7 @@ Handsontable.dom.addEvent(load, 'click', function () {
         alert("This browser doesn't seem to support the `files` property of file inputs.");
     }
     else if (!input.files[0]) {
-        alert("Please select a file before clicking 'Load'");
+        alert("Por favor, selecciona un archivo.");
     }
     else {
         file = input.files[0];
@@ -132,22 +149,21 @@ Handsontable.dom.addEvent(load, 'click', function () {
     function receivedText(e) {
         lines = e.target.result;
         data = JSON.parse(lines);
-        
-        hot.loadData(data.data);
 
         if (imagetest != undefined) {
             document.getElementById("crop").src = imagetest
             data.data[number()].cover = imagetest
         }
+
+        hot.loadData(data.data);
         exampleConsole.innerText = 'Data loaded';
     }
 });
 
 Handsontable.dom.addEvent(save, 'click', function () {
     var csvContent = "data:text/csv;charset=utf-8,";
-    var dataToSave = hot.getSourceData() 
-    // http://jsfiddle.net/9a60zzk9/
-    var encodedUri = encodeURIComponent("{ \"data\":" +  JSON.stringify( dataToSave ) + "}")
+    var dataToSave = hot.getSourceData()
+    var encodedUri = encodeURIComponent("{ \"data\":" + JSON.stringify(dataToSave) + "}")
     var link = document.createElement("a");
     link.setAttribute("href", 'data:text/plain;charset=utf-u,' + encodedUri);
     link.setAttribute("download", "data.json");
