@@ -53,7 +53,9 @@ hot = new Handsontable(container, {
         { data: "name" }
     ],
     rowHeaders: true,
-    colHeaders: true,
+    rowHeights: 120,
+    colHeaders: ["Foto", "Apellidos", "Nombre(s)"],
+    colWidths: [120, 200, 200],
     minSpareRows: 1,
     persistentState: true,
     //contextMenu: true,
