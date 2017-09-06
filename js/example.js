@@ -130,11 +130,13 @@ Handsontable.dom.addEvent(load, 'click', function () {
     function receivedText(e) {
         lines = e.target.result;
         data = JSON.parse(lines);
+        
+        hot.loadData(data.data);
+
         if (imagetest != undefined) {
             document.getElementById("crop").src = imagetest
             data.data[number()].cover = imagetest
         }
-        hot.loadData(data.data);
         exampleConsole.innerText = 'Data loaded';
     }
 });
