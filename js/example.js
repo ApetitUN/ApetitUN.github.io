@@ -77,18 +77,37 @@ hot = new Handsontable(container, {
     }
 });
 
+
+
 hot.updateSettings({
     contextMenu: {
       callback: function (key, options) {
-        if (key === 'about') {
-          setTimeout(function () {
-            // timeout is used to make sure the menu collapsed before alert is shown
-            alert("This is a context menu with default and custom options mixed");
-          }, 100);
+        if (key === 'edit') {
+           
+            (function() {
+                var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
+                document.querySelector('#dialog-with-list-activation').addEventListener('click', function (evt) {
+                  dialogScrollable.lastFocusedTarget = evt.target;
+                  dialogScrollable.show();
+                });
+              })();
+              (function() {
+                //mdc.dialog.MDCDialog.attachTo(document.querySelector('.mdc-dialog'));
+              
+                // Hack to work around style-loader async loading styles
+                setTimeout(function() {
+                  mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
+                }, 200);
+              })();
         }
       },
       items: {
-        "about": {name: 'About this menu'}
+        "edit": {name: '<section class="example"><a id="dialog-with-list-activation">Show Scrolling Dialog</a></section>', 
+        isHtmlName: true,
+        disabled: function () {
+            // if first row, disable this option
+            return ! (hot.getSelected()[0,2,0,3] === 0)
+          }}
       }
     }
   })
@@ -181,3 +200,7 @@ Handsontable.dom.addEvent(autosave, 'click', function () {
         exampleConsole.innerText = 'Changes will not be autosaved';
     }
 });
+
+
+
+

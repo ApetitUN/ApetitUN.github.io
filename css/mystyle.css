@@ -2,6 +2,18 @@
   background-color: #1a75cf !important;
 }
 
+.mdc-dialog__body--scrollable{
+  max-height: 100%;
+}
+
+.mdc-dialog__surface{
+  height: calc(100% - 30px);
+}
+
+
+#add-btn-dlg-panel {
+  display: none;
+}
 .mdl-color--accent {
     background: rgb(26,207,116) !important;
     color: rgb(255,255,255);
@@ -10,6 +22,10 @@
 .mdl-demo .mdl-card__actions a {
     color: #1a75cf !important;
     margin: 0;
+}
+
+#default-dialog-activation {
+  display: inline-flex
 }
 
 .mdl-button--fab.mdl-button--colored {
