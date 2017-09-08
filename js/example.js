@@ -96,14 +96,14 @@ hot.updateSettings({
               
                 // Hack to work around style-loader async loading styles
                 setTimeout(function() {
-                  mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
+                    mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
                 }, 200);
               })();
         }
       },
       items: {
-        "edit": {name: '<section class="example"><a id="dialog-with-list-activation">Show Scrolling Dialog</a></section>', 
-        isHtmlName: true,
+        "edit": {name: 'Show Scrolling Dialog', 
+        //isHtmlName: true,
         disabled: function () {
             // if first row, disable this option
             return ! (hot.getSelected()[0,2,0,3] === 0)
