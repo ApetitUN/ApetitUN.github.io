@@ -40,10 +40,7 @@ var
     reload = $('reload'),
     autosaveNotification,
     hot,
-    number = function () {
-        var getNumber = parseInt(document.getElementById("sample3").value)
-        return getNumber - 1
-    };
+    number;
 
 hot = new Handsontable(container, {
     startRows: 8,
@@ -84,7 +81,7 @@ hot.updateSettings({
     contextMenu: {
         callback: function (key, options) {
             if (key === 'edit') {
-                console.log(hot.getSelected()[0]);
+                number = (hot.getSelected()[0]);
                 (function () {
                     var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
                     document.querySelector('#dialog-with-list-activation').addEventListener('click', function (evt) {
@@ -172,7 +169,7 @@ Handsontable.dom.addEvent(load, 'click', function () {
 
         if (imagetest != undefined) {
             document.getElementById("crop").src = imagetest
-            data.data[number()].cover = imagetest
+            data.data[number].cover = imagetest
         }
 
         hot.loadData(data.data);

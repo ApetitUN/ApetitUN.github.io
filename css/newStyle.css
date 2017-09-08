@@ -2,6 +2,12 @@
   background-color: #1a75cf !important;
 }
 
+.mdl-card__supporting-text {
+  color: rgba(0, 0, 0, 0.46);
+  padding: 24px;
+  width: 100%;
+}
+
 .mdc-dialog__header, .mdc-toolbar__section--align-start{
   background-color: #1a75cf;
 }
@@ -19,14 +25,13 @@
 }
 
 .mdc-dialog__body--scrollable{
-  max-height: 100%;
+  max-height: 500px;
 }
 
 .mdc-dialog__surface{
-  height: calc(100% - 30px);
+  /* height: calc(100% - 30px); */
   background-color: #1a75cf;
 }
-
 
 #add-btn-dlg-panel {
   display: none;

@@ -58,6 +58,7 @@ $(function () {
         .attr('href', img.src || img.toDataURL())
     }
     result.children().replaceWith(content)
+    console.log(imagetest)
     imagetest = img.toDataURL()
     
     if (img.getContext) {
