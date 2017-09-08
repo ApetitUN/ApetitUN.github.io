@@ -36,47 +36,12 @@
   <script src="css/vendor/demo-styles.css.js"></script>
 
   <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
-  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/newStyle.css">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <style>
-    .demo-body {
-      padding: 24px;
-      margin: 0;
-      box-sizing: border-box;
-    }
-
-    .demo-content>button {
-      margin-bottom: 6px;
-    }
-
-    .mdc-theme--dark {
-      background-color: #303030;
-    }
-
-    section.demo-content {
-      padding: 24px;
-    }
-
-    .catalog-dialog-demo {
-      position: relative;
-      width: 320px;
-    }
-
-    .dialog-container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .mdc-theme--dark,
-    .section-dark-theme {
-      background: #262626;
-      color: white;
-    }
-  </style>
+  
 </head>
 
 <body class="mdc-typography">
@@ -84,9 +49,10 @@
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
         <span class="catalog-back">
-            <a href="index.html" class="mdc-toolbar__icon--menu"><i class="material-icons">&#xE5C4;</i></a>
+            <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
           </span>
-        <span class="mdc-toolbar__title catalog-title">Dialog</span>
+        <span class="mdc-toolbar__title catalog-title">
+          <a href="./">Ostrich Head in Sand</a></span>
       </section>
     </div>
   </header>
@@ -105,11 +71,7 @@
           </header>
           <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
             <h4>Carga una imagen</h4>
-            <br><br>
-
             <input id="file-input" class="none" type="file">
-
-            <br><br>
             <h4>Resultado</h4>
             <p id="actions" style="display:none;">
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
@@ -124,30 +86,25 @@
             </div>
           </section>
           <footer class="mdc-dialog__footer">
-            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Decline</button>
-            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Accept</button>
+            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancelar</button>
+            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Aceptar</button>
           </footer>
         </div>
         <div class="mdc-dialog__backdrop"></div>
       </aside>
     </div>
-    <section class="example">
-      <a id="dialog-with-list-activation">Show Scrolling Dialog</a>
-    </section>
     <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
       <div class="mdl-card mdl-cell mdl-cell--12-col">
         <div class="mdl-card__supporting-text">
           <h4>Handsontable template</h4>
 
-
           <p>Cargue un archivo .json desde Explorador de archivos</p>
 
-          <!-- </button> -->
-          <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="reload">
-            Recargar
-                  </button> -->
           <input type="file" id="fileinput" value="Import" />
           <br><br>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="dialog-with-list-activation">
+            Editar foto
+          </button>
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load">
             Cargar tabla
                   </button>
@@ -166,7 +123,6 @@
       <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
               <i class="material-icons">more_vert</i>
             </button>
-      
     </section>
 
   </main>
