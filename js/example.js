@@ -81,36 +81,36 @@ hot = new Handsontable(container, {
 
 hot.updateSettings({
     contextMenu: {
-      callback: function (key, options) {
-        if (key === 'edit') {
-           
-            (function() {
-                var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
-                document.querySelector('#dialog-with-list-activation').addEventListener('click', function (evt) {
-                  dialogScrollable.lastFocusedTarget = evt.target;
-                  dialogScrollable.show();
-                });
-              })();
-              (function() {
-                //mdc.dialog.MDCDialog.attachTo(document.querySelector('.mdc-dialog'));
-              
-                // Hack to work around style-loader async loading styles
-                setTimeout(function() {
-                    mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
-                }, 200);
-              })();
+        callback: function (key, options) {
+            if (key === 'edit') {
+
+                (function () {
+                    var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
+                    document.querySelector('#dialog-with-list-activation').addEventListener('click', function (evt) {
+                        dialogScrollable.lastFocusedTarget = evt.target;
+                        dialogScrollable.show();
+                    });
+                })();
+                (function () {
+                    // Hack to work around style-loader async loading styles
+                    setTimeout(function () {
+                        mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
+                    }, 200);
+                })();
+            }
+        },
+        items: {
+            "edit": {
+                name: 'Show Scrolling Dialog',
+                //isHtmlName: true,
+                disabled: function () {
+                    // if first row, disable this option
+                    return !(hot.getSelected()[0, 2, 0, 3] === 0)
+                }
+            }
         }
-      },
-      items: {
-        "edit": {name: 'Show Scrolling Dialog', 
-        //isHtmlName: true,
-        disabled: function () {
-            // if first row, disable this option
-            return ! (hot.getSelected()[0,2,0,3] === 0)
-          }}
-      }
     }
-  })
+})
 
 
 function coverRenderer(instance, td, row, col, prop, value, cellProperties) {

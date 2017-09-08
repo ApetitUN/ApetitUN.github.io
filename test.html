@@ -15,12 +15,13 @@
   limitations under the License
 -->
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Test - Material Components Catalog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
-    
+
+<head>
+  <meta charset="utf-8">
+  <title>Test - Material Components Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
+
   <!--
     Loading Handsontable (full distribution that includes all dependencies apart from jQuery)
     -->
@@ -29,140 +30,153 @@
   <link data-jsfiddle="common" rel="stylesheet" media="screen" href="dist/handsontable.full.css">
 
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
-  
-    <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-    
-    <script src="css/vendor/demo-styles.css.js"></script>
 
-    <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
-    <link rel="stylesheet" href="css/mystyle.css">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <style>
-      .demo-body {
-        padding: 24px;
-        margin: 0;
-        box-sizing: border-box;
-      }
-      .demo-content > button {
-        margin-bottom: 6px;
-      }
-      .mdc-theme--dark {
-        background-color: #303030;
-      }
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-      section.demo-content {
-        padding: 24px;
-      }
+  <script src="css/vendor/demo-styles.css.js"></script>
 
-      .catalog-dialog-demo {
-        position: relative;
-        width: 320px;
-      }
+  <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
+  <link rel="stylesheet" href="css/mystyle.css">
 
-      .dialog-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <style>
+    .demo-body {
+      padding: 24px;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-      .mdc-theme--dark, .section-dark-theme {
-        background: #262626;
-        color: white;
-      }
-    </style>
-  </head>
-  <body class="mdc-typography">
-    <header class="mdc-toolbar mdc-toolbar--fixed">
-      <div class="mdc-toolbar__row">
-        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-          <span class="catalog-back">
+    .demo-content>button {
+      margin-bottom: 6px;
+    }
+
+    .mdc-theme--dark {
+      background-color: #303030;
+    }
+
+    section.demo-content {
+      padding: 24px;
+    }
+
+    .catalog-dialog-demo {
+      position: relative;
+      width: 320px;
+    }
+
+    .dialog-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mdc-theme--dark,
+    .section-dark-theme {
+      background: #262626;
+      color: white;
+    }
+  </style>
+</head>
+
+<body class="mdc-typography">
+  <header class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row">
+      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+        <span class="catalog-back">
             <a href="index.html" class="mdc-toolbar__icon--menu"><i class="material-icons">&#xE5C4;</i></a>
           </span>
-          <span class="mdc-toolbar__title catalog-title">Dialog</span>
-        </section>
-      </div>
-    </header>
-    <main>
-      <div class="mdc-toolbar-fixed-adjust"></div>
+        <span class="mdc-toolbar__title catalog-title">Dialog</span>
+      </section>
+    </div>
+  </header>
+  <main>
+    <div class="mdc-toolbar-fixed-adjust"></div>
 
-      <div class="demo-body">       
+    <div class="demo-body">
 
-        <aside id="mdc-dialog-with-list"
-               class="mdc-dialog"
-               role="alertdialog"
-               aria-hidden="true"
-               aria-labelledby="mdc-dialog-with-list-label"
-               aria-describedby="mdc-dialog-with-list-description">
-          <div class="mdc-dialog__surface">
-            <header class="mdc-dialog__header">
-              <h2 id="mdc-dialog-with-list-label" class="mdc-dialog__header__title">
-                Editar foto
-              </h2>
-            </header>
-            <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
-                <h4>Carga una imagen</h4>
-                    <br><br>
-      
-                    <input id="file-input" class="none" type="file">
-      
-                    <br><br>
-                    <h4>Resultado</h4>
-                    <p id="actions" style="display:none;">
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
+      <aside id="mdc-dialog-with-list" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-with-list-label"
+        aria-describedby="mdc-dialog-with-list-description">
+        <div class="mdc-dialog__surface">
+          <header class="mdc-dialog__header">
+            <h2 id="mdc-dialog-with-list-label" class="mdc-dialog__header__title">
+              Editar foto
+            </h2>
+          </header>
+          <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
+            <h4>Carga una imagen</h4>
+            <br><br>
+
+            <input id="file-input" class="none" type="file">
+
+            <br><br>
+            <h4>Resultado</h4>
+            <p id="actions" style="display:none;">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
                           Editar
                         </button>
-                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="crop">
+              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="crop">
                           Recortar y cargar
                         </button>
-                    </p>
-                    <div id="result" class="result">
-                      <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                  or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
-                    </div>
-            </section>
-            <footer class="mdc-dialog__footer">
-              <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Decline</button>
-              <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Accept</button>
-            </footer>
-          </div>
-          <div class="mdc-dialog__backdrop"></div>
-        </aside>
+            </p>
+            <div id="result" class="result">
+              <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
+            </div>
+          </section>
+          <footer class="mdc-dialog__footer">
+            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Decline</button>
+            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Accept</button>
+          </footer>
+        </div>
+        <div class="mdc-dialog__backdrop"></div>
+      </aside>
+    </div>
+    <section class="example">
+      <a id="dialog-with-list-activation">Show Scrolling Dialog</a>
+    </section>
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+      <div class="mdl-card mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__supporting-text">
+          <h4>Handsontable template</h4>
+
+
+          <p>Cargue un archivo .json desde Explorador de archivos</p>
+
+          <!-- </button> -->
+          <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="reload">
+            Recargar
+                  </button> -->
+          <input type="file" id="fileinput" value="Import" />
+          <br><br>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load">
+            Cargar tabla
+                  </button>
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save">
+            Guardar en JSON
+                  </button>
+          <label><input type="checkbox" name="autosave" id="autosave" checked="checked" autocomplete="off"> Autosave</label>
+          <pre id="example1console" class="console">Click "Load" to load data from server</pre>
+          <div class="spreadsheet" id="example1"></div>
+          <script type="text/javascript" src="js/example.js"></script>
+        </div>
+        <div class="mdl-card__actions">
+          <a href="#" class="mdl-button">OK</a>
+        </div>
       </div>
-       <section class="example">
-        <a id="dialog-with-list-activation">Show Scrolling Dialog</a>
-      </section> 
-      <h4>Handsontable template</h4>
+      <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
+              <i class="material-icons">more_vert</i>
+            </button>
       
+    </section>
 
-<p>Cargue un archivo .json desde Explorador de archivos</p>
+  </main>
 
-<!-- </button> -->
-<!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="reload">
-Recargar
- </button> -->
-<input type="file" id="fileinput" value="Import" />
-<br><br>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load">
-Cargar tabla
- </button>
-<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save">
-Guardar en JSON
- </button>
-<label><input type="checkbox" name="autosave" id="autosave" checked="checked" autocomplete="off"> Autosave</label>
-<pre id="example1console" class="console">Click "Load" to load data from server</pre>
-<div class="spreadsheet" id="example1"></div>
-<script type="text/javascript" src="js/example.js"></script>
-     
-    </main>
-        
-  </body>
-  <script src="js/vendor/material-components-web.js"></script>  
-  <script src="js/load-image.all.min.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/vendor/jquery.Jcrop.js"></script>
-  <script src="js/myLoad.js"></script>
-  
+</body>
+<script src="js/vendor/material-components-web.js"></script>
+<script src="js/load-image.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/vendor/jquery.Jcrop.js"></script>
+<script src="js/myLoad.js"></script>
+
 </html>
