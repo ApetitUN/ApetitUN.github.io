@@ -40,6 +40,7 @@ var
     reload = $('reload'),
     autosaveNotification,
     hot,
+    list_images = {},
     number;
 
 hot = new Handsontable(container, {
@@ -167,9 +168,12 @@ Handsontable.dom.addEvent(load, 'click', function () {
         lines = e.target.result;
         data = JSON.parse(lines);
 
-        if (imagetest != undefined) {
-            document.getElementById("crop").src = imagetest
-            data.data[number].cover = imagetest
+        if (currentImage != undefined) {
+            document.getElementById("crop").src = currentImage
+            list_images[number] = currentImage
+            for (var n in list_images){
+                data.data[n].cover = list_images[n]
+            } 
         }
 
         hot.loadData(data.data);

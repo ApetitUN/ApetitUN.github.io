@@ -11,7 +11,7 @@
 
 /* global loadImage, HTMLCanvasElement, $ */
 
-var imagetest
+var currentImage
 
 $(function () {
   'use strict'
@@ -51,15 +51,15 @@ $(function () {
   function updateResults (img, data) {
     var content
     if (!(img.src || img instanceof HTMLCanvasElement)) {
-      content = $('<span>Loading image file failed</span>')
+      content = $('<span>Falla en la carga de la imagen</span>')
     } else {
       content = $('<a target="_blank">').append(img)
         .attr('download', currentFile.name)
         .attr('href', img.src || img.toDataURL())
     }
     result.children().replaceWith(content)
-    console.log(imagetest)
-    imagetest = img.toDataURL()
+    console.log(currentImage)
+    currentImage = img.toDataURL()
     
     if (img.getContext) {
       actionsNode.show()
