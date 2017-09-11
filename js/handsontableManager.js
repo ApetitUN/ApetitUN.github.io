@@ -28,6 +28,9 @@ function ajax(url, method, params, callback) {
     return obj;
 }
 
+
+
+
 var
     $ = function (id) {
         return document.getElementById(id);
@@ -40,8 +43,9 @@ var
     reload = $('reload'),
     autosaveNotification,
     hot,
-    list_images = {},
     number;
+
+
 
 hot = new Handsontable(container, {
     startRows: 8,
@@ -83,6 +87,7 @@ hot.updateSettings({
         callback: function (key, options) {
             if (key === 'edit') {
                 number = (hot.getSelected()[0]);
+                document.getElementById("dialog-with-list-activation").disabled = false;
                 (function () {
                     var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
                     document.querySelector('#dialog-with-list-activation').addEventListener('click', function (evt) {
@@ -96,11 +101,12 @@ hot.updateSettings({
                         mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
                     }, 200);
                 })();
+                //document.getElementById("dialog-with-list-activation").disabled = true;
             }
         },
         items: {
             "edit": {
-                name: 'Show Scrolling Dialog',
+                name: 'Habilitar edición',
                 //isHtmlName: true,
                 disabled: function () {
                     // if first row, disable this option
@@ -140,7 +146,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
 }
 
 Handsontable.dom.addEvent(load, 'click', function () {
-    var input, file, fr, data;
+    var input, file, fr,  list_images = {},data;
 
     if (typeof window.FileReader !== 'function') {
         alert("The file API isn't supported on this browser yet.");
@@ -168,18 +174,29 @@ Handsontable.dom.addEvent(load, 'click', function () {
         lines = e.target.result;
         data = JSON.parse(lines);
 
-        if (currentImage != undefined) {
-            document.getElementById("crop").src = currentImage
-            list_images[number] = currentImage
-            for (var n in list_images){
-                data.data[n].cover = list_images[n]
-            } 
-        }
+        $('#accept').on('click', function () {
+            if (currentImage != undefined) {
+                document.getElementById("crop").src = currentImage
+                list_images[number] = currentImage
+                for (var n in list_images) {
+                    data.data[n].cover = list_images[n]
+                }
+            }
+            hot.loadData(data.data)
+        })
 
+        //currentImage = undefined
+        console.log(list_images)
         hot.loadData(data.data);
         exampleConsole.innerText = 'Data loaded';
+        //var tw = list_images
+        
     }
 });
+
+// Handsontable.dom.addEvent(refresh, 'click', function(){
+//     alert("to implement");
+// });
 
 Handsontable.dom.addEvent(save, 'click', function () {
     var csvContent = "data:text/csv;charset=utf-8,";
@@ -202,6 +219,7 @@ Handsontable.dom.addEvent(autosave, 'click', function () {
         exampleConsole.innerText = 'Changes will not be autosaved';
     }
 });
+
 
 
 

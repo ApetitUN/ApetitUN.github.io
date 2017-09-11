@@ -8,7 +8,7 @@
   width: 100%;
 }
 
-.mdc-dialog__header, .mdc-toolbar__section--align-start{
+.mdc-dialog__header, .mdc-toolbar__row, .mdc-toolbar__section--align-start{
   background-color: #1a75cf;
 }
 
@@ -30,7 +30,7 @@
 
 .mdc-dialog__surface{
   /* height: calc(100% - 30px); */
-  background-color: #1a75cf;
+  background-color: #1974CF;
 }
 
 #add-btn-dlg-panel {
@@ -50,18 +50,28 @@
   display: inline-flex
 }
 
+
+body .handsontable .currentRow {
+  background-color: #eaf4fd;
+}
+
 .mdl-button--fab.mdl-button--colored {
     background: rgb(26,207,116) !important;
     color: rgb(255,255,255);
 }
 
 .mdl-color--primary-dark  {
-  background-color: #1a75cf !important;
+  background-color: #1874CF !important;
 }
 
 .mdl-button--raised.mdl-button--colored {
     background: rgb(26,117,207) !important;
     color: rgb(255,255,255);
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+  background: #19cf74 !important;
+  color: rgb(255,255,255);
 }
 
 .spreadsheet {

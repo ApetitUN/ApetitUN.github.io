@@ -44,7 +44,7 @@
 
 </head>
 
-<body class="class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base"">
+<body class="class=" mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base "">
   <header class="mdc-toolbar mdc-toolbar--fixed">
     <div class="mdc-toolbar__row">
       <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
@@ -88,7 +88,7 @@
           </section>
           <footer class="mdc-dialog__footer">
             <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancelar</button>
-            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept">Aceptar</button>
+            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept" id="accept">Aceptar</button>
           </footer>
         </div>
         <div class="mdc-dialog__backdrop"></div>
@@ -101,22 +101,29 @@
           <div class="mdl-card__supporting-text">
             <h5 style="color:#1a75cf">Ostrich Head in Sand</h5>
 
-            <p>Cargue un archivo .json desde Explorador de archivos</p>
+            <p>Cargue un archivo .json desde el Explorador de archivos.</p>
 
             <input type="file" id="fileinput" value="Import" />
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load"><i class="mdl-color-text--white material-icons" role="presentation">update</i>Cargar datos en tabla</button>
             <br><br>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="dialog-with-list-activation">Editar foto</button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load">Cargar tabla</button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save">Guardar en JSON</button>
-            <label><input type="checkbox" name="autosave" id="autosave" checked="checked" autocomplete="off"> Autosave</label>
+            <p>Opciones de handsontable.</p>
+            <!-- refresh -->
+            <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="refresh"><i class="mdl-color-text--white material-icons" role="presentation">refresh</i>Refrescar tabla</button> -->
+            <button class="mdl-button mdl-js-button mdl-button--raised" id="dialog-with-list-activation" disabled><i class="mdl-color-text--grey material-icons" role="presentation">photo_library</i>Editar foto</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>Guardar en JSON</button>
+            <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
             <pre id="example1console" class="console">Click "Load" to load data from server</pre>
             <div class="spreadsheet" id="example1"></div>
+            <!-- <div class="spreadsheet mdl-data-table mdl-js-data-table" id="example1"></div> -->
             <script type="text/javascript" src="js/handsontableManager.js"></script>
+            <!-- <script type="text/javascript">
+              $('div').addClass('mdc-toolbar__row');
+            </script> -->
           </div>
         </div>
       </section>
     </div>
-    
+
   </main>
 
 </body>

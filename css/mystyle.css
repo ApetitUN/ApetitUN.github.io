@@ -45,9 +45,14 @@
   background-color: #1a75cf !important;
 }
 
-.mdl-button--raised.mdl-button--colored {
+.mdl-button--raised .mdl-button--colored {
     background: rgb(26,117,207) !important;
     color: rgb(255,255,255);
+}
+
+.mdl-button--raised .mdl-button--accent {
+  background: #19cf74 !important;
+  color: rgb(255,255,255);
 }
 
 .spreadsheet {
