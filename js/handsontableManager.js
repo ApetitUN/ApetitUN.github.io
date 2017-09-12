@@ -67,7 +67,7 @@ hot = new Handsontable(container, {
             data: "style.radius",
             type: 'dropdown',
             source: ['1px', '2px', '3px']
-        } , {
+        }, {
             data: "style.lineColor",
             type: 'dropdown',
             source: ['yellow', 'red', 'orange', 'green']
@@ -76,7 +76,7 @@ hot = new Handsontable(container, {
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 60,
-    colHeaders: ["ID","Nombre","ClassName","Figura","Descripción","Imagen","Imagen2","Cargado","Longitud linea","Radio","Color de línea"],
+    colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud linea", "Radio", "Color de línea"],
     colWidths: [70, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
     minSpareRows: 1,
     width: 600,
@@ -123,6 +123,9 @@ hot.updateSettings({
             }
         },
         items: {
+            'row_above': {
+                name: "Insertar fila encima"
+            }, 'row_below': { name: "Insertar debajo" }, 'remove_row': { name: "Eliminar fila" },
             "edit": {
                 name: 'Habilitar edición',
                 //isHtmlName: true,
