@@ -90,8 +90,8 @@ $(function () {
     var target = e.dataTransfer || e.target
     var file = target && target.files && target.files[0]
     var options = {
-      maxWidth: result.width(),
-      maxHeight: 500,
+      maxWidth: 600,
+      maxHeight: 400,
       canvas: true,
       pixelRatio: window.devicePixelRatio,
       downsamplingRatio: 0.5,
@@ -119,22 +119,25 @@ $(function () {
     })
     .on('drop', dropChangeHandler)
 
-  $('#file-input')
+  $('#input')
     .on('change', dropChangeHandler)
 
   $('#edit')
     .on('click', function (event) {
       event.preventDefault()
+      detectFace()
       var imgNode = result.find('img, canvas')
+      console.log("This is the up point:" + upPoint[0])
+      console.log("This is the down point:" + downPoint[0])
       var img = imgNode[0]
       var pixelRatio = window.devicePixelRatio || 1
       imgNode.Jcrop({
         aspectRatio: 1,
         setSelect: [
-          40,
-          40,
-          (img.width / pixelRatio) - 40,
-          (img.height / pixelRatio) - 40
+          upPoint[0][0],
+          upPoint[0][1],
+          downPoint[0][0],
+          downPoint[0][1]
         ],
         onSelect: function (coords) {
           coordinates = coords
@@ -150,7 +153,6 @@ $(function () {
   $('#crop')
     .on('click', function (event) {
       event.preventDefault()
-      detectFace()
       var img = result.find('img, canvas')[0]
       var pixelRatio = window.devicePixelRatio || 1
       if (img && coordinates) {

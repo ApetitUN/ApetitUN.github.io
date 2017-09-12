@@ -72,7 +72,7 @@
           </header>
           <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
             <h5>Carga una imagen</h5>
-            <input id="file-input" class="none" type="file">
+            <input id="input" class="none" type="file">
             <h5>Aquí se muestra el resultado</h5>
             <p id="actions" style="display:none;">
               <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
@@ -82,25 +82,26 @@
                           Recortar y cargar
                         </button>
             </p>
+            <a id="downloadLnk" download="YourFileName.jpg">Download processed images</a>
+            <!-- <div class="spinner" id='spinner'></div> -->
             <div id="result" class="result">
               <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
-			</div>
-			<a id="downloadLnk" download="YourFileName.jpg">Download processed images</a>
-			<div class="spinner" id='spinner'></div>
-		
-			<div id="showcase">
-				<div>
-					<canvas  id="canvas1"  ></canvas>
-				</div>
-				<input type="file" id="input" name="file" />
-			</div>
-		
-			<script async src="js/cv/cv.js"></script>
-			<script src='js/cv/dat.gui.js'></script>
-			<script src='js/imageCV.js'></script>
-			<script  type='text/javascript'>
-				var Module = {};
-			</script>
+            </div>
+
+
+            <div id="showcase">
+              <div>
+                <canvas id="canvas1"></canvas>
+              </div>
+              <!-- <input type="file" id="input" name="file" /> -->
+            </div>
+
+            <script async src="js/cv/cv.js"></script>
+            <script src='js/cv/dat.gui.js'></script>
+            <script src='js/imageCV.js'></script>
+            <script type='text/javascript'>
+              var Module = {};
+            </script>
           </section>
           <footer class="mdc-dialog__footer">
             <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancelar</button>
@@ -142,12 +143,13 @@
 
   </main>
 
-	
-	</body>
-	<script src="js/vendor/material-components-web.js"></script>
-	<script src="js/load-image.all.min.js"></script>
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="js/vendor/jquery.Jcrop.js"></script>
-	<script src="js/myLoad.js"></script>
+
+</body>
+<script src="js/vendor/material-components-web.js"></script>
+<script src="js/load-image.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/vendor/jquery.Jcrop.js"></script>
+<script src="js/cv/myLoad.js"></script>
+
 </html>

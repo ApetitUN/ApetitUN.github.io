@@ -23,7 +23,8 @@
     {
       "name": "Alvaro Camilo",
       "lastname": "Calero Pino",
-      "cover": "http://www.neighborsfinancial.com/wp-content/themes/nfc/images/blank_avatar.png"
+      "cover": "http://www.neighborsfinancial.com/wp-content/themes/nfc/images/blank_avatar.png",
+      "color": "red"
     },
     {
       "name": "Alvaro Camilo",

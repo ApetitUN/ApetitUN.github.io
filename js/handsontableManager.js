@@ -53,16 +53,25 @@ hot = new Handsontable(container, {
     columns: [
         { data: "cover", renderer: coverRenderer },
         { data: "lastname" },
-        { data: "name" }
+        { data: "name" },
+        {
+            data: "color",
+            type: 'dropdown',
+            source: ['yellow', 'red', 'orange', 'green']
+        },{
+            data: "style.border",
+            type: 'dropdown',
+            source: ['1px', '2px', '3px']
+        }
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
-    rowHeights: 110,
-    colHeaders: ["Foto", "Apellidos", "Nombre(s)"],
-    colWidths: [120, 200, 200],
+    rowHeights: 60,
+    colHeaders: ["Foto", "Apellidos", "Nombre(s)", "Color", "Border"],
+    colWidths: [70, 100, 100, 100, 100],
     minSpareRows: 1,
-    width: 584,
-    height: 320,
+    width: 600,
+    height: 400,
     persistentState: true,
     contextMenu: true,
     afterChange: function (change, source) {
@@ -126,8 +135,8 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
         img = document.createElement('IMG');
         img.src = value;
         img.setAttribute('style', 'border-radius: 50%')
-        img.setAttribute('width', '100px')
-        img.setAttribute('heigth', '100px')
+        img.setAttribute('width', '50px')
+        img.setAttribute('heigth', '50px')
 
 
         Handsontable.dom.addEvent(img, 'mousedown', function (e) {
@@ -146,7 +155,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
 }
 
 Handsontable.dom.addEvent(load, 'click', function () {
-    var input, file, fr,  list_images = {},data;
+    var input, file, fr, list_images = {}, data;
 
     if (typeof window.FileReader !== 'function') {
         alert("The file API isn't supported on this browser yet.");
@@ -190,7 +199,7 @@ Handsontable.dom.addEvent(load, 'click', function () {
         hot.loadData(data.data);
         exampleConsole.innerText = 'Data loaded';
         //var tw = list_images
-        
+
     }
 });
 

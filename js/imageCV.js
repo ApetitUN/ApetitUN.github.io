@@ -7,6 +7,7 @@ show_image = function (mat, canvas_id) {
   channelSize = mat.elemSize1();
 
   var canvas = document.getElementById(canvas_id);
+  canvas.style.display = "none";
 
   ctx = canvas.getContext("2d");
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -29,6 +30,7 @@ var inputElement = document.getElementById("input");
 inputElement.addEventListener("change", handleFiles, false);
 function handleFiles(e) {
   var canvas = document.getElementById('canvas1');
+  canvas.style.display = "none";
   var canvasWidth = 600;
   var canvasHeight = 400;
   var ctx = canvas.getContext('2d');
@@ -60,7 +62,7 @@ function makeGray() {
   src.delete();
   res.delete();
 }
-
+var upPoint = {}, downPoint = {};
 function detectFace() {
 
   if (face_cascade == undefined) {
@@ -92,8 +94,11 @@ function detectFace() {
     var prt = 0.3;
     var p1 = [x - w * prt / 2, y - h * prt / 2];
     var p2 = [x + w + w * prt / 2, y + h + h * prt / 2];
-    var color = new cv.Scalar(255, 0, 0);
+    upPoint[i] = p1
+    downPoint[i] = p2
+    var color = new cv.Scalar(26,117,207);
     cv.rectangle(img_color, p1, p2, color, 2, 8, 0);
+    console.log("POINT1: " + p1 + "\nPOINT2: " + p2)
     faceRect.delete();
     color.delete();
 
@@ -171,24 +176,3 @@ var Control = {
   runAllTests: runAllTests
 };
 
-function init() {
-
-  container = document.createElement('div');
-  document.body.appendChild(container);
-
-
-  gui = new dat.GUI({ autoPlace: false });
-  document.body.appendChild(gui.domElement);
-  gui.domElement.style.position = "absolute";
-  gui.domElement.style.top = "0px";
-  gui.domElement.style.right = "5px";
-
-  //Run All Tests
-  gui.add(Control, 'runAllTests');
-
-  // Haar Cascade
-  var cSpaceFolder = gui.addFolder('Haar Cascade');
-  cSpaceFolder.add(Control, 'detectFace');
-
-}
-init();
