@@ -51,24 +51,33 @@ hot = new Handsontable(container, {
     startRows: 8,
     startCols: 6,
     columns: [
-        { data: "cover", renderer: coverRenderer },
-        { data: "lastname" },
+        { data: "id" },
         { data: "name" },
+        { data: "className" },
+        { data: "shape" },
+        { data: "text" },
+        { data: "image", renderer: coverRenderer },
+        { data: "image2", renderer: coverRenderer },
+        { data: "loaded" },
         {
-            data: "color",
+            data: "style.lineWidth",
             type: 'dropdown',
             source: ['yellow', 'red', 'orange', 'green']
-        },{
-            data: "style.border",
+        }, {
+            data: "style.radius",
             type: 'dropdown',
             source: ['1px', '2px', '3px']
+        } , {
+            data: "style.lineColor",
+            type: 'dropdown',
+            source: ['yellow', 'red', 'orange', 'green']
         }
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 60,
-    colHeaders: ["Foto", "Apellidos", "Nombre(s)", "Color", "Border"],
-    colWidths: [70, 100, 100, 100, 100],
+    colHeaders: ["ID","Nombre","ClassName","Figura","Descripción","Imagen","Imagen2","Cargado","Longitud linea","Radio","Color de línea"],
+    colWidths: [70, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
     minSpareRows: 1,
     width: 600,
     height: 400,
@@ -188,7 +197,7 @@ Handsontable.dom.addEvent(load, 'click', function () {
                 document.getElementById("crop").src = currentImage
                 list_images[number] = currentImage
                 for (var n in list_images) {
-                    data.data[n].cover = list_images[n]
+                    data.data[n].image = list_images[n]
                 }
             }
             hot.loadData(data.data)
