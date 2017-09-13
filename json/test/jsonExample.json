@@ -1,0 +1,58 @@
+{
+  "nodes":[
+  {
+    "id": "0",
+    "name": "a",
+    "className": "a",
+    "shape": "circle",
+    "text": "a",
+    "image": "img/iconos/persona.png",
+    "image2": "img/iconos/persona.png",
+    "loaded": "true",
+    "style": {
+      "lineWidth": "7",
+      "radius": "60",
+      "lineColor": "#d53e4f"
+    }
+  },
+    {
+    "id": "0",
+    "name": "a",
+    "className": "a",
+    "shape": "circle",
+    "text": "a",
+    "image": "img/iconos/persona.png",
+    "image2": "img/iconos/persona.png",
+    "loaded": "true",
+    "style": {
+      "lineWidth": "7",
+      "radius": "60",
+      "lineColor": "#d53e4f"
+    }
+  }
+],
+  "links": [
+  {
+    "id": "1",
+    "from": "188",
+    "to": "0",
+    "value": "",
+    "type": "direct",
+    "style": {
+      "fillColor": "#d53e4f",
+      "radius": "6"
+    }
+  },
+  {
+    "id": "2",
+    "from": "188",
+    "to": "1",
+    "value": "",
+    "type": "direct",
+    "style": {
+      "fillColor": "#d53e4f",
+      "radius": "6"
+    }
+  }
+]
+}

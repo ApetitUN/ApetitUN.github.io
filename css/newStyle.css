@@ -2,6 +2,18 @@
   background-color: #1a75cf !important;
 }
 
+.my-modified-toolbar-section {
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+}
+
+[dir="rtl"] .my-modified-toolbar-section {
+  right: auto;
+  left: 0;
+}
+  
+
 .mdl-card__supporting-text {
   color: rgba(0, 0, 0, 0.46);
   padding: 24px;

@@ -1,0 +1,35 @@
+{
+    "nodes": [
+        {
+            "id": null,
+            "name": "Example",
+            "className": "Example2",
+            "shape": null,
+            "text": "Este es un ejemplo",
+            "image": "https://lh3.googleusercontent.com/ZpRFACyEwIvB5qzfag-NguaQ2G9kVw-ooDSHcl6mt19izszP78M3wYh7uHqwCFCYZQ=w300",
+            "image2": "https://lh3.googleusercontent.com/ZpRFACyEwIvB5qzfag-NguaQ2G9kVw-ooDSHcl6mt19izszP78M3wYh7uHqwCFCYZQ=w300",
+            "loaded": "",
+            "style": {
+                "lineWidth": "orange",
+                "radius": "2px",
+                "lineColor": null
+            }
+        },
+        {
+            "id": null,
+            "name": "Example3",
+            "className": null,
+            "shape": null,
+            "text": null,
+            "image": "https://lh3.googleusercontent.com/ZpRFACyEwIvB5qzfag-NguaQ2G9kVw-ooDSHcl6mt19izszP78M3wYh7uHqwCFCYZQ=w300",
+            "image2": "https://lh3.googleusercontent.com/ZpRFACyEwIvB5qzfag-NguaQ2G9kVw-ooDSHcl6mt19izszP78M3wYh7uHqwCFCYZQ=w300",
+            "loaded": null,
+            "style": {
+                "lineWidth": "red",
+                "radius": "1px",
+                "lineColor": null
+            }
+        },
+        {}
+    ]
+}

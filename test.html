@@ -45,16 +45,26 @@
 </head>
 
 <body class="class=" mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base "">
+
+
   <header class="mdc-toolbar mdc-toolbar--fixed">
     <div class="mdc-toolbar__row">
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-        <span class="catalog-back">
-            <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
-          </span>
-        <span class="mdc-toolbar__title catalog-title">
-          <a href="./">Ostrich Head in Sand</a></span>
-      </section>
-    </div>
+      <div class="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit mdc-toolbar__section--align-start">
+          <span class="catalog-back">
+              <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
+            </span>
+          <span class="mdc-toolbar__title catalog-title">
+            <a href="./">Ostrich Head in Sand</a></span>
+      </div>
+      <div class="mdc-toolbar__section mdc-toolbar__section--align-end">
+        <div class="mdc-toolbar__section--table-style-wrapper">
+          <nav class="mdc-tab-bar mdc-tab-bar--indicator-accent">
+            <a class="mdc-tab mdc-tab--active" href="#one">Nodos</a>
+            <a class="mdc-tab" href="#two">Enlaces</a>
+            <span class="mdc-tab-bar__indicator"></span>
+          </nav>
+        </div>
+      </div>
   </header>
 
   <main id="mdl-layout__content">
@@ -96,6 +106,7 @@
     </div>
 
     <div class="mdl-layout__tab-panel">
+
       <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-card mdl-cell mdl-cell--12-col">
           <div class="mdl-card__supporting-text">

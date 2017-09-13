@@ -166,71 +166,72 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     return td;
 }
 
-Handsontable.dom.addEvent(load, 'click', function () {
-    var input, file, fr, list_images = {}, data;
+// Handsontable.dom.addEvent(load, 'click', function () {
+//     var input, file, fr, list_images = {}, dataTotal, data;
 
-    if (typeof window.FileReader !== 'function') {
-        alert("The file API isn't supported on this browser yet.");
-        return;
-    }
+//     if (typeof window.FileReader !== 'function') {
+//         alert("The file API isn't supported on this browser yet.");
+//         return;
+//     }
 
-    input = document.getElementById('fileinput');
-    if (!input) {
-        alert("Um, couldn't find the fileinput element.");
-    }
-    else if (!input.files) {
-        alert("This browser doesn't seem to support the `files` property of file inputs.");
-    }
-    else if (!input.files[0]) {
-        alert("Por favor, selecciona un archivo.");
-    }
-    else {
-        file = input.files[0];
-        fr = new FileReader();
-        fr.onload = receivedText;
-        fr.readAsText(file);
-    }
+//     input = document.getElementById('fileinput');
+//     if (!input) {
+//         alert("Um, couldn't find the fileinput element.");
+//     }
+//     else if (!input.files) {
+//         alert("This browser doesn't seem to support the `files` property of file inputs.");
+//     }
+//     else if (!input.files[0]) {
+//         alert("Por favor, selecciona un archivo.");
+//     }
+//     else {
+//         file = input.files[0];
+//         fr = new FileReader();
+//         fr.onload = receivedText;
+//         fr.readAsText(file);
+//     }
 
-    function receivedText(e) {
-        lines = e.target.result;
-        data = JSON.parse(lines);
+//     function receivedText(e) {
+//         lines = e.target.result;
+//         dataTotal = JSON.parse("{ \"data\":" + lines + "}");
+//         data = dataTotal.data;
+//         console.log("NODES: "+ data.nodes)
 
-        $('#accept').on('click', function () {
-            if (currentImage != undefined) {
-                document.getElementById("crop").src = currentImage
-                list_images[number] = currentImage
-                for (var n in list_images) {
-                    data.data[n].image = list_images[n]
-                }
-            }
-            hot.loadData(data.data)
-        })
+//         $('#accept').on('click', function () {
+//             if (currentImage != undefined) {
+//                 document.getElementById("crop").src = currentImage
+//                 list_images[number] = currentImage
+//                 for (var n in list_images) {
+//                     data.nodes[n].image = list_images[n]
+//                 }
+//             }
+//             hot.loadData(data.nodes)
+//         })
 
-        //currentImage = undefined
-        console.log(list_images)
-        hot.loadData(data.data);
-        exampleConsole.innerText = 'Data loaded';
-        //var tw = list_images
+//         //currentImage = undefined
+//         console.log("Images: "+list_images)
+//         hot.loadData(data.nodes);
+//         exampleConsole.innerText = 'Data loaded';
+//         //var tw = list_images
 
-    }
-});
+//     }
+// });
 
 // Handsontable.dom.addEvent(refresh, 'click', function(){
 //     alert("to implement");
 // });
 
-Handsontable.dom.addEvent(save, 'click', function () {
-    var csvContent = "data:text/csv;charset=utf-8,";
-    var dataToSave = hot.getSourceData()
-    var encodedUri = encodeURIComponent("{ \"data\":" + JSON.stringify(dataToSave) + "}")
-    var link = document.createElement("a");
-    link.setAttribute("href", 'data:text/plain;charset=utf-u,' + encodedUri);
-    link.setAttribute("download", "data.json");
-    document.body.appendChild(link);
-    link.click();
-    window.open(encodedUri)
-
-});
+// Handsontable.dom.addEvent(save, 'click', function () {
+//     var csvContent = "data:text/csv;charset=utf-8,";
+//     var dataToSave = hot.getSourceData()
+//     var encodedUri = encodeURIComponent(JSON.stringify(dataToSave))
+//     var link = document.createElement("a");
+//     link.setAttribute("href", 'data:text/plain;charset=utf-u,' + encodedUri);
+//     link.setAttribute("download", "data.json");
+//     document.body.appendChild(link);
+//     link.click();
+//     window.open(encodedUri)
+// });
 
 Handsontable.dom.addEvent(autosave, 'click', function () {
     if (autosave.checked) {

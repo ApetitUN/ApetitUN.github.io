@@ -45,17 +45,25 @@
 </head>
 
 <body class="class=" mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base "">
-  <header class="mdc-toolbar mdc-toolbar--fixed">
-    <div class="mdc-toolbar__row">
-      <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-        <span class="catalog-back">
-            <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
-          </span>
-        <span class="mdc-toolbar__title catalog-title">
-          <a href="./">Ostrich Head in Sand</a></span>
-      </section>
-    </div>
-  </header>
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+        <div class="mdc-toolbar__row">
+          <div class="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit mdc-toolbar__section--align-start">
+              <span class="catalog-back">
+                  <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
+                </span>
+              <span class="mdc-toolbar__title catalog-title">
+                <a href="./">Ostrich Head in Sand</a></span>
+          </div>
+          <!-- <div class="mdc-toolbar__section mdc-toolbar__section--align-end">
+            <div class="mdc-toolbar__section--table-style-wrapper">
+              <nav class="mdc-tab-bar mdc-tab-bar--indicator-accent">
+                <a class="mdc-tab mdc-tab--active" href="#one">Nodos</a>
+                <a class="mdc-tab" href="#two">Enlaces</a>
+                <span class="mdc-tab-bar__indicator"></span>
+              </nav>
+            </div>
+          </div> -->
+      </header>
 
   <main id="mdl-layout__content">
     <div class="mdc-toolbar-fixed-adjust"></div>
@@ -83,7 +91,6 @@
                         </button>
             </p>
             <a id="downloadLnk" download="YourFileName.jpg">Download processed images</a>
-            <!-- <div class="spinner" id='spinner'></div> -->
             <div id="result" class="result">
               <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
             </div>
@@ -93,7 +100,6 @@
               <div>
                 <canvas id="canvas1"></canvas>
               </div>
-              <!-- <input type="file" id="input" name="file" /> -->
             </div>
 
             <script async src="js/cv/cv.js"></script>
@@ -112,35 +118,35 @@
       </aside>
     </div>
 
-    <div class="mdl-layout__tab-panel">
-      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+
+    <section class="panel active" id="one" role="tabpanel">
+      <div class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-card mdl-cell mdl-cell--12-col">
           <div class="mdl-card__supporting-text">
-            <h5 style="color:#1a75cf">Ostrich Head in Sand</h5>
+            <h5 style="color:#1a75cf">Ostrich Head in Sand - Nodos</h5>
 
             <p>Cargue un archivo .json desde el Explorador de archivos.</p>
 
             <input type="file" id="fileinput" value="Import" />
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load"><i class="mdl-color-text--white material-icons" role="presentation">update</i>Cargar datos en tabla</button>
             <br><br>
+            <h5 style="color:rgb(26,207,116)">Nodos</h5>
             <p>Opciones de handsontable.</p>
-            <!-- refresh -->
-            <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" id="refresh"><i class="mdl-color-text--white material-icons" role="presentation">refresh</i>Refrescar tabla</button> -->
             <button class="mdl-button mdl-js-button mdl-button--raised" id="dialog-with-list-activation" disabled><i class="mdl-color-text--grey material-icons" role="presentation">photo_library</i>Editar foto</button>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>Guardar en JSON</button>
             <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
             <pre id="example1console" class="console">Click "Load" to load data from server</pre>
             <div class="spreadsheet" id="example1"></div>
-            <!-- <div class="spreadsheet mdl-data-table mdl-js-data-table" id="example1"></div> -->
-            <script type="text/javascript" src="js/handsontableManager.js"></script>
-            <!-- <script type="text/javascript">
-              $('div').addClass('mdc-toolbar__row');
-            </script> -->
+            <script type="text/javascript" src="js/nodesManager.js"></script>
+            <h5 style="color:rgb(26,207,116)">Enlaces</h5>
+            <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
+            <pre id="example2console" class="console">Click "Load" to load data from server</pre>
+            <div class="spreadsheet" id="example2"></div>
+            <script type="text/javascript" src="js/linksManager.js"></script>
           </div>
         </div>
-      </section>
-    </div>
-
+      </div>
+    </section>
   </main>
 
 
