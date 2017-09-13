@@ -56,7 +56,12 @@ hot = new Handsontable(container, {
         { data: "className" },
         { data: "shape" },
         { data: "text" },
-        { data: "image", renderer: coverRenderer },
+        {
+            data: "image",
+            renderer: coverRenderer,
+            type: 'dropdown',
+            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+        },
         { data: "image2", renderer: coverRenderer },
         { data: "loaded" },
         {
