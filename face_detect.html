@@ -133,16 +133,36 @@
             <p>Opciones de handsontable.</p>
             <button class="mdl-button mdl-js-button mdl-button--raised" id="dialog-with-list-activation" disabled><i class="mdl-color-text--grey material-icons" role="presentation">photo_library</i>Editar foto</button>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>Guardar en JSON</button>
+            <br><br>
+         <div class = "mdl-layout__content">    
+          <div class = "mdl-tabs mdl-js-tabs">
+             <div class = "mdl-tabs__tab-bar">
+                <a href = "#nodes-panel" class = "mdl-tabs__tab is-active">Nodos</a>
+                <a href = "#links-panel" class = "mdl-tabs__tab">Enlaces</a>
+                
+             </div>
+          
+             <div class = "mdl-tabs__panel is-active" id = "nodes-panel">
+                 
             <h5 style="color:rgb(26,207,116)">Nodos</h5>
             <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
             <pre id="example1console" class="console">Click "Load" to load data from server</pre>
             <div class="spreadsheet" id="example1"></div>
             <script type="text/javascript" src="js/nodesManager.js"></script>
-            <h5 style="color:rgb(26,207,116)">Enlaces</h5>
-            <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
-            <pre id="example2console" class="console">Click "Load" to load data from server</pre>
-            <div class="spreadsheet" id="example2"></div>
-            <script type="text/javascript" src="js/linksManager.js"></script>
+             </div>
+          
+             <div class = "mdl-tabs__panel" id = "links-panel">
+              <h5 style="color:rgb(26,207,116)">Enlaces</h5>
+              <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
+              <pre id="example2console" class="console">Click "Load" to load data from server</pre>
+              <div class="spreadsheet" id="example2"></div>
+              <script type="text/javascript" src="js/linksManager.js"></script> 
+             </div>
+          
+          </div>
+        </div>
+           
+            
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
-.mdl-demo .mdl-layout__header-row {
-  background-color: #1a75cf !important;
+.mdl-demo .mdl-layout__header-row, .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
+  background-color: #1a75cf;
 }
 
 .my-modified-toolbar-section {
@@ -12,7 +12,6 @@
   right: auto;
   left: 0;
 }
-  
 
 .mdl-card__supporting-text {
   color: rgba(0, 0, 0, 0.46);
@@ -101,6 +100,10 @@ body .handsontable .currentRow {
     height: 500px;
 }
 
+#example1, #example2{
+width: 100%;
+}
+
 /*
  * JavaScript Load Image Demo CSS
  * https://github.com/blueimp/JavaScript-Load-Image
@@ -113,12 +116,9 @@ body .handsontable .currentRow {
  */
 
 body {
-  max-width: 750px;
+  max-width: calc(100% - 200px);
   margin: 0 auto;
   padding: 1em;
-  font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
-  font-size: 1em;
-  line-height: 1.4em;
   background: #f5f5f5;
   color: #1a75cf;
   -webkit-text-size-adjust: 100%;
