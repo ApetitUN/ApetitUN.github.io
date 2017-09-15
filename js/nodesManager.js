@@ -80,6 +80,8 @@ hot = new Handsontable(container, {
         {
             data: "style.lineWidth",
             type: 'dropdown',
+            renderer: colorRenderer,
+            allowInvalid: false,
             source: ['yellow', 'red', 'orange', 'green']
         }, {
             data: "style.radius",
@@ -88,7 +90,7 @@ hot = new Handsontable(container, {
         }, {
             data: "style.lineColor",
             type: 'dropdown',
-            source: ['yellow', 'red', 'orange', 'green']
+            source: ['Rojo', 'Azul', 'Verde', 'Gris']
         }
     ],
     currentRowClassName: 'currentRow',
@@ -157,6 +159,24 @@ hot.updateSettings({
     }
 })
 
+function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
+    var colorize = Handsontable.helper.stringify(value), p;
+    //console.log(colorize.indexOf('color'))
+    
+        p = document.createElement("HR")
+        p.style.color = value;
+        //console.log(p.style.color)
+
+        Handsontable.dom.addEvent(p, 'mousedown', function (e) {
+            e.preventDefault(); // prevent selection quirk
+        });
+
+        Handsontable.dom.empty(td);
+        td.appendChild(p);
+    
+
+    return td;
+}
 
 function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     var escaped = Handsontable.helper.stringify(value),
@@ -165,6 +185,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
         img = document.createElement('IMG');
         img.src = value;
+        //console.log(img.src)
         img.setAttribute('style', 'border-radius: 50%')
         img.setAttribute('width', '50px')
         img.setAttribute('heigth', '50px')
