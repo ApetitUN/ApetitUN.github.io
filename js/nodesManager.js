@@ -185,7 +185,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
         img = document.createElement('IMG');
         img.src = value;
-        //console.log(img.src)
+        //Gconsole.log(img.src)
         img.setAttribute('style', 'border-radius: 50%')
         img.setAttribute('width', '50px')
         img.setAttribute('heigth', '50px')
