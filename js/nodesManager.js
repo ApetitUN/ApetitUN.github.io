@@ -53,8 +53,16 @@ hot = new Handsontable(container, {
     columns: [
         { data: "id" },
         { data: "name" },
-        { data: "className" },
-        { data: "shape" },
+        {
+            data: "className",
+            type: 'dropdown',
+            source: ['a', 'b', 'c', 'd']
+        },
+        {
+            data: "shape",
+            type: 'dropdown',
+            source: ['a', 'b', 'c', 'd']
+        },
         { data: "text" },
         {
             data: "image",
@@ -62,7 +70,12 @@ hot = new Handsontable(container, {
             type: 'dropdown',
             source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
-        { data: "image2", renderer: coverRenderer },
+        {
+            data: "image2",
+            renderer: coverRenderer,
+            type: 'dropdown',
+            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+        },
         { data: "loaded" },
         {
             data: "style.lineWidth",
@@ -84,8 +97,9 @@ hot = new Handsontable(container, {
     colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud linea", "Radio", "Color de línea"],
     colWidths: [70, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
     minSpareRows: 1,
-    width: 1000,
-    height: 400,
+    // width: 1300,
+    // height: 400,
+    stretchH: 'all',
     persistentState: true,
     contextMenu: true,
     afterChange: function (change, source) {

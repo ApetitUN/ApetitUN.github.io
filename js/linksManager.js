@@ -52,8 +52,16 @@ hot2 = new Handsontable(container, {
     startCols: 6,
     columns: [
         { data: "id" },
-        { data: "from" },
-        { data: "to" },
+        {
+            data: "from",
+            type: 'dropdown',
+            source: ['a', 'b', 'c', 'd']
+        },
+        {
+            data: "to",
+            type: 'dropdown',
+            source: ['a', 'b', 'c', 'd']
+        },
         { data: "value" },
         { data: "type" },
         {
@@ -71,8 +79,9 @@ hot2 = new Handsontable(container, {
     colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Radio"],
     colWidths: [70, 100, 100, 100, 100, 100, 100],
     minSpareRows: 1,
-    width: 600,
-    height: 400,
+    // width: 600,
+    // height: 400,
+    stretchH: 'all',
     persistentState: true,
     contextMenu: true,
     afterChange: function (change, source) {
@@ -186,7 +195,7 @@ Handsontable.dom.addEvent(save, 'click', function () {
     var csvContent = "data:text/csv;charset=utf-8,";
     var nodeToSave = hot.getSourceData()
     var dataToSave = hot2.getSourceData()
-    var encodedUri = encodeURIComponent("{ \"nodes\":" + JSON.stringify(nodeToSave) +", \"links\":" + JSON.stringify(dataToSave) + "}")
+    var encodedUri = encodeURIComponent("{ \"nodes\":" + JSON.stringify(nodeToSave) + ", \"links\":" + JSON.stringify(dataToSave) + "}")
     var link = document.createElement("a");
     link.setAttribute("href", 'data:text/plain;charset=utf-u,' + encodedUri);
     link.setAttribute("download", "data.json");

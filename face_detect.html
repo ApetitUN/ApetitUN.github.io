@@ -45,16 +45,16 @@
 </head>
 
 <body class="class=" mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base "">
-    <header class="mdc-toolbar mdc-toolbar--fixed">
-        <div class="mdc-toolbar__row">
-          <div class="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit mdc-toolbar__section--align-start">
-              <span class="catalog-back">
+  <header class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row">
+      <div class="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit mdc-toolbar__section--align-start">
+        <span class="catalog-back">
                   <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
                 </span>
-              <span class="mdc-toolbar__title catalog-title">
+        <span class="mdc-toolbar__title catalog-title">
                 <a href="./">Ostrich Head in Sand</a></span>
-          </div>
-          <!-- <div class="mdc-toolbar__section mdc-toolbar__section--align-end">
+      </div>
+      <!-- <div class="mdc-toolbar__section mdc-toolbar__section--align-end">
             <div class="mdc-toolbar__section--table-style-wrapper">
               <nav class="mdc-tab-bar mdc-tab-bar--indicator-accent">
                 <a class="mdc-tab mdc-tab--active" href="#one">Nodos</a>
@@ -63,7 +63,7 @@
               </nav>
             </div>
           </div> -->
-      </header>
+  </header>
 
   <main id="mdl-layout__content">
     <div class="mdc-toolbar-fixed-adjust"></div>
@@ -123,7 +123,7 @@
       <div class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-card mdl-cell mdl-cell--12-col">
           <div class="mdl-card__supporting-text">
-            <h5 style="color:#1a75cf">Ostrich Head in Sand - Nodos</h5>
+            <h5 style="color:#1a75cf">Ostrich Head in Sand</h5>
 
             <p>Cargue un archivo .json desde el Explorador de archivos.</p>
 
@@ -134,35 +134,35 @@
             <button class="mdl-button mdl-js-button mdl-button--raised" id="dialog-with-list-activation" disabled><i class="mdl-color-text--grey material-icons" role="presentation">photo_library</i>Editar foto</button>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>Guardar en JSON</button>
             <br><br>
-         <div class = "mdl-layout__content">    
-          <div class = "mdl-tabs mdl-js-tabs">
-             <div class = "mdl-tabs__tab-bar">
-                <a href = "#nodes-panel" class = "mdl-tabs__tab is-active">Nodos</a>
-                <a href = "#links-panel" class = "mdl-tabs__tab">Enlaces</a>
-                
-             </div>
-          
-             <div class = "mdl-tabs__panel is-active" id = "nodes-panel">
-                 
-            <h5 style="color:rgb(26,207,116)">Nodos</h5>
-            <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
-            <pre id="example1console" class="console">Click "Load" to load data from server</pre>
-            <div class="spreadsheet" id="example1"></div>
-            <script type="text/javascript" src="js/nodesManager.js"></script>
-             </div>
-          
-             <div class = "mdl-tabs__panel" id = "links-panel">
-              <h5 style="color:rgb(26,207,116)">Enlaces</h5>
-              <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
-              <pre id="example2console" class="console">Click "Load" to load data from server</pre>
-              <div class="spreadsheet" id="example2"></div>
-              <script type="text/javascript" src="js/linksManager.js"></script> 
-             </div>
-          
-          </div>
-        </div>
-           
-            
+            <div class="mdl-layout__content">
+              <div class="mdl-tabs mdl-js-tabs">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#nodes-panel" class="mdl-tabs__tab is-active">Nodos</a>
+                  <a href="#links-panel" class="mdl-tabs__tab">Enlaces</a>
+
+                </div>
+
+                <div class="mdl-tabs__panel is-active" id="nodes-panel">
+
+                  <h5 style="color:rgb(26,207,116)">Nodos</h5>
+                  <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
+                  <pre id="example1console" class="console">Click "Load" to load data from server</pre>
+                  <div class="spreadsheet" id="example1"></div>
+                  <script type="text/javascript" src="js/nodesManager.js"></script>
+                </div>
+
+                <div class="mdl-tabs__panel" id="links-panel">
+                  <h5 style="color:rgb(26,207,116)">Enlaces</h5>
+                  <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
+                  <pre id="example2console" class="console">Click "Load" to load data from server</pre>
+                  <div class="spreadsheet" id="example2"></div>
+                  <script type="text/javascript" src="js/linksManager.js"></script>
+                </div>
+
+              </div>
+            </div>
+
+
           </div>
         </div>
       </div>
