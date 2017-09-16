@@ -163,15 +163,7 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     var colorize = Handsontable.helper.stringify(value), p;
     //console.log(colorize.indexOf('color'))
     
-        p = document.createElement("HR")
-        p.style.color = value;
-        //console.log(p.style.color)
-
-        Handsontable.dom.addEvent(p, 'mousedown', function (e) {
-            e.preventDefault(); // prevent selection quirk
-        });
-
-        Handsontable.dom.empty(td);
+    p = document.createElement("button")
         td.appendChild(p);
     
 
