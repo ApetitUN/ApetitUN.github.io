@@ -160,12 +160,18 @@ hot.updateSettings({
 })
 
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p;
+    var colorize = Handsontable.helper.stringify(value), p, text;
     //console.log(colorize.indexOf('color'))
     
-    p = document.createElement("button")
-        td.appendChild(p);
+    p = document.createElement("LI")
+    //text = document.createTextNode("Color")
+    p.style.backgroundColor = value
+    //p.setAttribute('style', 'color: \''+value+'\'')
+    td.appendChild(p);
     
+    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
+        e.preventDefault(); // prevent selection quirk
+    });
 
     return td;
 }
