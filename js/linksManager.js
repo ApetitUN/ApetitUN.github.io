@@ -36,7 +36,7 @@ var
         return document.getElementById(id);
     },
     container = $('example2'),
-    exampleConsole = $('example2console'),
+    exampleConsole = $('example1console'),
     autosave = $('autosave'),
     load = $('load'),
     save = $('save'),
@@ -66,6 +66,8 @@ hot2 = new Handsontable(container, {
         { data: "type" },
         {
             data: "style.fillColor", type: 'dropdown',
+            renderer: colorRenderer,
+            allowInvalid: false,
             source: ['yellow', 'red', 'orange', 'green']
         },
         {
@@ -101,43 +103,23 @@ hot2 = new Handsontable(container, {
     }
 });
 
-// hot2.updateSettings({
-//     contextMenu: {
-//         callback: function (key, options) {
-//             if (key === 'edit') {
-//                 number = (hot2.getSelected()[0]);
-//                 document.getElementById("dialog-with-list-activation").disabled = false;
-//                 (function () {
-//                     var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
-//                     document.querySelector('#dialog-with-list-activation').addEventListener('click', function (evt) {
-//                         dialogScrollable.lastFocusedTarget = evt.target;
-//                         dialogScrollable.show();
-//                     });
-//                 })();
-//                 (function () {
-//                     // Hack to work around style-loader async loading styles
-//                     setTimeout(function () {
-//                         mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
-//                     }, 200);
-//                 })();
-//                 //document.getElementById("dialog-with-list-activation").disabled = true;
-//             }
-//         },
-//         items: {
-//             'row_above': {
-//                 name: "Insertar fila encima"
-//             }, 'row_below': { name: "Insertar debajo" }, 'remove_row': { name: "Eliminar fila" },
-//             "edit": {
-//                 name: 'Habilitar edición',
-//                 //isHtmlName: true,
-//                 disabled: function () {
-//                     // if first row, disable this option
-//                     return !(hot2.getSelected()[0, 2, 0, 3] === 0)
-//                 }
-//             }
-//         }
-//     }
-// })
+function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
+    var colorize = Handsontable.helper.stringify(value), p, text;
+
+    p = document.createElement("LI")
+    //text = document.createTextNode("Color")
+    p.style.backgroundColor = value
+    //p.setAttribute('style', 'color: \''+value+'\'')
+    
+    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
+        e.preventDefault(); // prevent selection quirk
+    });
+    
+    Handsontable.dom.empty(td);
+    td.appendChild(p);
+    return td;
+}
+
 
 Handsontable.dom.addEvent(load, 'click', function () {
     var input, file, fr, list_images = {}, dataTotal, data;

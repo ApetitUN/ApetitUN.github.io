@@ -80,9 +80,7 @@ hot = new Handsontable(container, {
         {
             data: "style.lineWidth",
             type: 'dropdown',
-            renderer: colorRenderer,
-            allowInvalid: false,
-            source: ['yellow', 'red', 'orange', 'green']
+            source: ['10px','20px','30px']
         }, {
             data: "style.radius",
             type: 'dropdown',
@@ -90,7 +88,9 @@ hot = new Handsontable(container, {
         }, {
             data: "style.lineColor",
             type: 'dropdown',
-            source: ['Rojo', 'Azul', 'Verde', 'Gris']
+            renderer: colorRenderer,
+            allowInvalid: false,
+            source: ['yellow', 'red', 'orange', 'green']
         }
     ],
     currentRowClassName: 'currentRow',
@@ -161,18 +161,18 @@ hot.updateSettings({
 
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     var colorize = Handsontable.helper.stringify(value), p, text;
-    //console.log(colorize.indexOf('color'))
-    
+
     p = document.createElement("LI")
     //text = document.createTextNode("Color")
     p.style.backgroundColor = value
     //p.setAttribute('style', 'color: \''+value+'\'')
-    td.appendChild(p);
     
     Handsontable.dom.addEvent(p, 'mousedown', function (e) {
         e.preventDefault(); // prevent selection quirk
     });
-
+    
+    Handsontable.dom.empty(td);
+    td.appendChild(p);
     return td;
 }
 
