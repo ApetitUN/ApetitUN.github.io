@@ -162,8 +162,6 @@ Handsontable.dom.addEvent(load, 'click', function () {
             hot.loadData(data.nodes)
         })
 
-        //console.log("LINKS:" + data.links)
-        //console.log("nodesinfo " + hot.getSourceData())
         hot.loadData(data.nodes);
         hot2.loadData(data.links);
         exampleConsole.innerText = 'Data loaded';

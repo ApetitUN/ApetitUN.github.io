@@ -58,7 +58,7 @@ $(function () {
         .attr('href', img.src || img.toDataURL())
     }
     result.children().replaceWith(content)
-    console.log(currentImage)
+    //console.log(currentImage)
     currentImage = img.toDataURL()
 
     if (img.getContext) {
@@ -127,8 +127,8 @@ $(function () {
       event.preventDefault()
       detectFace()
       var imgNode = result.find('img, canvas')
-      console.log("This is the up point:" + upPoint[0])
-      console.log("This is the down point:" + downPoint[0])
+      // console.log("This is the up point:" + upPoint[0])
+      // console.log("This is the down point:" + downPoint[0])
       var img = imgNode[0]
       var pixelRatio = window.devicePixelRatio || 1
       imgNode.Jcrop({
