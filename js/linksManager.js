@@ -68,7 +68,7 @@ hot2 = new Handsontable(container, {
             data: "style.fillColor", type: 'dropdown',
             renderer: colorRenderer,
             allowInvalid: false,
-            source: ['yellow', 'red', 'orange', 'green']
+            source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
         },
         {
             data: "style.radius", type: 'dropdown',
@@ -85,7 +85,7 @@ hot2 = new Handsontable(container, {
     // height: 400,
     stretchH: 'all',
     persistentState: true,
-    contextMenu: true,
+    //contextMenu: true,
     afterChange: function (change, source) {
         if (source === 'loadData') {
             return; //don't save this change

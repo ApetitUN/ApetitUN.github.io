@@ -68,7 +68,7 @@
   <main id="mdl-layout__content">
     <div class="mdc-toolbar-fixed-adjust"></div>
 
-    
+
 
     <section>
       <div class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -82,77 +82,77 @@
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>  Guardar en JSON</button>
             <br><br>
             <div class="mdl-layout__content">
+              <button class="mdl-button mdl-js-button mdl-button--raised" id="dialog-with-list-activation" disabled><i class="mdl-color-text--grey material-icons" role="presentation">photo_library</i> Editar foto</button>
               <div class="mdl-tabs mdl-js-tabs">
                 <div class="mdl-tabs__tab-bar">
-                  <a href="#nodes-panel" class="mdl-tabs__tab is-active" style="color:rgb(26,207,116)">Nodos</a>
-                  <a href="#links-panel" class="mdl-tabs__tab" style="color:rgb(26,207,116)">Enlaces</a>
+                  <a href="#nodes-panel" class="mdl-tabs__tab is-active" style="color:#1a75cf">Nodos</a>
+                  <a href="#links-panel" class="mdl-tabs__tab" style="color:#1a75cf">Enlaces</a>
 
                 </div>
                 <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
                 <pre id="example1console" class="console">Click "Load" to load data from server</pre>
                 <div class="mdl-tabs__panel is-active" id="nodes-panel">
-                    <button class="mdl-button mdl-js-button mdl-button--raised" id="dialog-with-list-activation" disabled><i class="mdl-color-text--grey material-icons" role="presentation">photo_library</i>Editar foto</button>
                   <div class="spreadsheet" id="example1"></div>
                   <script type="text/javascript" src="js/nodesManager.js"></script>
                 </div>
 
                 <div class="mdl-tabs__panel" id="links-panel">
-                 
+
                   <div class="spreadsheet" id="example2"></div>
                   <script type="text/javascript" src="js/linksManager.js"></script>
                 </div>
 
               </div>
             </div>
-<div class="demo-body">
+            <div class="demo-body">
 
-      <aside id="mdc-dialog-with-list" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-with-list-label"
-        aria-describedby="mdc-dialog-with-list-description">
-        <div class="mdc-dialog__surface">
-          <header class="mdc-dialog__header">
-            <h2 id="mdc-dialog-with-list-label" class="mdc-dialog__header__title">
-              Editar foto
-            </h2>
-          </header>
-          <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
-            <h5>Carga una imagen</h5>
-            <input id="input" class="none" type="file">
-            <h5>Aquí se muestra el resultado</h5>
-            <p id="actions" style="display:none;">
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
+              <aside id="mdc-dialog-with-list" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-with-list-label"
+                aria-describedby="mdc-dialog-with-list-description">
+                <div class="mdc-dialog__surface">
+                  <header class="mdc-dialog__header">
+                    <h2 id="mdc-dialog-with-list-label" class="mdc-dialog__header__title">
+                      Editar foto
+                    </h2>
+                  </header>
+                  <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
+                    <h5>Carga una imagen</h5>
+                    <input id="input" class="none" type="file">
+                    <h5>Aquí se muestra el resultado</h5>
+                    <p id="actions" style="display:none;">
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
                           Editar
                         </button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="crop">
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="crop">
                           Recortar y cargar
                         </button>
-            </p>
-            <a id="downloadLnk" download="YourFileName.jpg">Download processed images</a>
-            <div id="result" class="result">
-              <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
+                    </p>
+                    <a id="downloadLnk" download="YourFileName.jpg">Download processed images</a>
+                    <div id="result" class="result">
+                      <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                        or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
+                    </div>
+
+
+                    <div id="showcase">
+                      <div>
+                        <canvas id="canvas1"></canvas>
+                      </div>
+                    </div>
+
+                    <script async src="js/cv/cv.js"></script>
+                    <script src='js/cv/dat.gui.js'></script>
+                    <script src='js/imageCV.js'></script>
+                    <script type='text/javascript'>
+                      var Module = {};
+                    </script>
+                  </section>
+                  <footer class="mdc-dialog__footer">
+                    <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancelar</button>
+                    <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept" id="accept">Aceptar</button>
+                  </footer>
+                </div>
+                <div class="mdc-dialog__backdrop"></div>
+              </aside>
             </div>
-
-
-            <div id="showcase">
-              <div>
-                <canvas id="canvas1"></canvas>
-              </div>
-            </div>
-
-            <script async src="js/cv/cv.js"></script>
-            <script src='js/cv/dat.gui.js'></script>
-            <script src='js/imageCV.js'></script>
-            <script type='text/javascript'>
-              var Module = {};
-            </script>
-          </section>
-          <footer class="mdc-dialog__footer">
-            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancelar</button>
-            <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept" id="accept">Aceptar</button>
-          </footer>
-        </div>
-        <div class="mdc-dialog__backdrop"></div>
-      </aside>
-    </div>
 
 
           </div>

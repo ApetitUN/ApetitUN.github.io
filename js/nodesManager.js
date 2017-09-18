@@ -90,7 +90,7 @@ hot = new Handsontable(container, {
             type: 'dropdown',
             renderer: colorRenderer,
             allowInvalid: false,
-            source: ['yellow', 'red', 'orange', 'green']
+            source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
         }
     ],
     currentRowClassName: 'currentRow',
