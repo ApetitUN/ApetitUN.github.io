@@ -80,7 +80,7 @@ hot = new Handsontable(container, {
         {
             data: "style.lineWidth",
             type: 'dropdown',
-            source: ['10px','20px','30px']
+            source: ['10px', '20px', '30px']
         }, {
             data: "style.radius",
             type: 'dropdown',
@@ -126,33 +126,34 @@ hot.updateSettings({
         callback: function (key, options) {
             if (key === 'edit') {
                 number = (hot.getSelected()[0]);
-                document.getElementById("dialog-with-list-activation").disabled = false;
-                (function () {
-                    var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
-                    document.querySelector('#dialog-with-list-activation').addEventListener('click', function (evt) {
-                        dialogScrollable.lastFocusedTarget = evt.target;
-                        dialogScrollable.show();
-                    });
-                })();
-                (function () {
-                    // Hack to work around style-loader async loading styles
-                    setTimeout(function () {
-                        mdc.ripple.MDCRipple.attachTo(document.querySelector('#dialog-with-list-activation'));
-                    }, 200);
-                })();
-                //document.getElementById("dialog-with-list-activation").disabled = true;
+                var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
+                dialogScrollable.show();
+
             }
         },
         items: {
             'row_above': {
-                name: "Insertar fila encima"
-            }, 'row_below': { name: "Insertar debajo" }, 'remove_row': { name: "Eliminar fila" },
+                name: function () {
+                    return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">keyboard_arrow_up</i> Insertar fila encima";
+                }
+            }, 'row_below': {
+                name: function () {
+                    return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">keyboard_arrow_down</i> Insertar fila debajo";
+                }
+            }, 'remove_row': {
+                name: function () {
+                    return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">delete</i> Eliminar fila";
+                }
+            },
+            "hsep1": "---------",
             "edit": {
-                name: 'Habilitar edición',
+                name: function () {
+                    return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">photo_library</i> Editar foto";
+                },
                 //isHtmlName: true,
                 disabled: function () {
                     // if first row, disable this option
-                    return !(hot.getSelected()[0, 2, 0, 3] === 0)
+                    return !(hot.getSelected()[3] === 0)
                 }
             }
         }
@@ -166,11 +167,11 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     //text = document.createTextNode("Color")
     p.style.backgroundColor = value
     //p.setAttribute('style', 'color: \''+value+'\'')
-    
+
     Handsontable.dom.addEvent(p, 'mousedown', function (e) {
         e.preventDefault(); // prevent selection quirk
     });
-    
+
     Handsontable.dom.empty(td);
     td.appendChild(p);
     return td;

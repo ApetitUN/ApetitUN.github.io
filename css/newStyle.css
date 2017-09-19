@@ -12,6 +12,9 @@
     
     font-family: 'Roboto', 'Helvetica', monospace;
 }
+.htMenu .htContextMenu .handsontable{
+    color: #1874CF;
+}
 .my-modified-toolbar-section {
     position: absolute;
     right: 0;
@@ -31,10 +34,21 @@
 .mdc-toolbar__section--align-start {
     background-color: #1a75cf;
 }
+.htContextMenu table tbody tr td {
+    text-align: left;
+    /* font-size: 12px; */
+    padding: 6px 6px 6px 6px;
+}
+.htContextMenu table tbody tr td.current,
+.htContextMenu table tbody tr td.zeroclipboard-is-hover {
+  background: #1a75cf;
+  color: #ffffff;
+}
 .ht_master tr td {
     color: #646464;
     text-align: center;
 }
+
 .ht_master tr > td.current {
     background-color: #f5f5f5;
 }
