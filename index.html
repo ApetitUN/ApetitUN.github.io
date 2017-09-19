@@ -1,7 +1,6 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--
-  Material Design Lite
-  Copyright 2015 Google Inc. All rights reserved.
+  Copyright 2017 Google Inc. All rights reserved.
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -15,15 +14,13 @@
   See the License for the specific language governing permissions and
   limitations under the License
 -->
-<html lang="en">
+<html>
 
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <title>Handsontable</title>
-
+  <title>Ostrich Head in Sand</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
 
   <!--
     Loading Handsontable (full distribution that includes all dependencies apart from jQuery)
@@ -31,230 +28,145 @@
 
   <script data-jsfiddle="common" src="dist/handsontable.full.js"></script>
   <link data-jsfiddle="common" rel="stylesheet" media="screen" href="dist/handsontable.full.css">
-
-  <!-- Add to homescreen for Chrome on Android -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" sizes="192x192" href="images/android-desktop.png">
-
-  <!-- Add to homescreen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="Material Design Lite">
-  <link rel="apple-touch-icon-precomposed" href="images/ios-desktop.png">
-
-  <!-- Tile icon for Win8 (144x144 + tile color) -->
-  <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
-  <meta name="msapplication-TileColor" content="#3372DF">
-
-  <link rel="shortcut icon" href="images/favicon.png">
-
-  <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-  <!--
-    <link rel="canonical" href="http://www.example.com/">
-    -->
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="css/vendor/demo-styles.css.js"></script>
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
 
-  <link rel="stylesheet" href="css/mystyle.css">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Jcrop is not required by JavaScript Load Image, but included for the demo -->
-  <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
+  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-  <style>
-    #view-source {
-      position: fixed;
-      display: block;
-      right: 0;
-      bottom: 0;
-      margin-right: 40px;
-      margin-bottom: 40px;
-      z-index: 700;
-    }
-  </style>
+
+
+  <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
+  <link rel="stylesheet" href="css/newStyle.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 </head>
 
-<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
-  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+<body class="class=" mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base "">
+  <header class="mdc-toolbar mdc-toolbar--fixed">
+    <div class="mdc-toolbar__row">
+      <div class="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit mdc-toolbar__section--align-start">
+        <span class="catalog-back">
+                  <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
+                </span>
+        <span class="mdc-toolbar__title catalog-title">
+                <a href="./">Ostrich Head in Sand</a></span>
       </div>
-      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        <span class="docs-layout-title mdl-layout-title">
-         <img src="images/sheet.png">
-         <a href="./">Ostrich Head in Sand</a>
-       </span>
-      </div>
-      <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-      </div>
-      <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
-        <a href="#overview" class="mdl-layout__tab is-active">Cargar imagen</a>
-        <a href="#features" class="mdl-layout__tab">Generar tabla</a>
-        <button onclick="location.href='test.html';"  class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent"
-          id="add">
-            <i class="material-icons" role="presentation">photo_library</i>
-            <span class="visuallyhidden">Go to face detect</span>
-          </button>
-      </div>
-    </header>
-    
-    <main class="mdl-layout__content">
-      <div class="mdl-layout__tab-panel is-active" id="overview">
-        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-          <div class="mdl-card mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__supporting-text">
-              <h4>Carga una imagen</h4>
-              <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                <input class="mdl-textfield__input" type="text" pattern="[1-9][0-9]*|0" id="sample3">
-                <label class="mdl-textfield__label" for="sample3">Ingrese la celda a editar</label>
-                <span class="mdl-textfield__error">¡La entrada no es una celda válida!</span>
+      <!-- <div class="mdc-toolbar__section mdc-toolbar__section--align-end">
+            <div class="mdc-toolbar__section--table-style-wrapper">
+              <nav class="mdc-tab-bar mdc-tab-bar--indicator-accent">
+                <a class="mdc-tab mdc-tab--active" href="#one">Nodos</a>
+                <a class="mdc-tab" href="#two">Enlaces</a>
+                <span class="mdc-tab-bar__indicator"></span>
+              </nav>
+            </div>
+          </div> -->
+  </header>
+
+  <main id="mdl-layout__content">
+    <div class="mdc-toolbar-fixed-adjust"></div>
+
+
+
+    <section>
+      <div class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+        <div class="mdl-card mdl-cell mdl-cell--12-col">
+          <div class="mdl-card__supporting-text">
+
+            <p>Cargue un archivo .json desde el Explorador de archivos.</p>
+
+            <input type="file" id="fileinput" value="Import" />
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load"><i class="mdl-color-text--white material-icons" role="presentation">update</i>  Cargar datos en tabla</button>
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>  Guardar en JSON</button>
+            <br><br>
+            <div class="mdl-layout__content">
+              <div class="mdl-tabs mdl-js-tabs">
+                <div class="mdl-tabs__tab-bar">
+                  <a href="#nodes-panel" class="mdl-tabs__tab is-active" style="color:#1a75cf">Nodos</a>
+                  <a href="#links-panel" class="mdl-tabs__tab" style="color:#1a75cf">Enlaces</a>
+
+                </div>
+                <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
+                <pre id="example1console" class="console">Click "Load" to load data from server</pre>
+                <div class="mdl-tabs__panel is-active" id="nodes-panel">
+                  <div class="spreadsheet" id="example1"></div>
+                  <script type="text/javascript" src="js/nodesManager.js"></script>
+                </div>
+
+                <div class="mdl-tabs__panel" id="links-panel">
+
+                  <div class="spreadsheet" id="example2"></div>
+                  <script type="text/javascript" src="js/linksManager.js"></script>
+                </div>
 
               </div>
-              <p><i>Est enim iudices haec non scripta sed nata lex quam non didicimus accepimus legimus uerum ex natura ipsa arripuimus hausimus expressimus ad quam non docti sed facti non instituti sed imbuti sumus
-              </i></p>
-
-              <input id="file-input" class="none" type="file">
-
-              <br><br>
-              <h4>Resultado</h4>
-              <p id="actions" style="display:none;">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
-                    Editar
-                  </button>
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="crop">
-                    Recortar y cargar
-                  </button>
-                <!-- <button type="button" id="edit">Edit</button>
-                	<button type="button" id="crop">Crop</button> -->
-              </p>
-              <div id="result" class="result">
-                <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                  or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
-              </div>
             </div>
-            <div class="mdl-card__actions">
-              <a href="#features" class="mdl-button">Ir a generar tabla</a>
+            <div class="demo-body">
+
+              <aside id="mdc-dialog-with-list" class="mdc-dialog" role="alertdialog" aria-hidden="true" aria-labelledby="mdc-dialog-with-list-label"
+                aria-describedby="mdc-dialog-with-list-description">
+                <div class="mdc-dialog__surface">
+                  <header class="mdc-dialog__header">
+                    <h2 id="mdc-dialog-with-list-label" class="mdc-dialog__header__title">
+                      Editar foto
+                    </h2>
+                  </header>
+                  <section id="mdc-dialog-with-list-description" class="mdc-dialog__body mdc-dialog__body--scrollable">
+                    <h5>Carga una imagen</h5>
+                    <input id="input" class="none" type="file">
+                    <h5>Aquí se muestra el resultado</h5>
+                    <p id="actions" style="display:none;">
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="edit">
+                          Editar
+                        </button>
+                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="crop">
+                          Recortar y cargar
+                        </button>
+                    </p>
+                    <a id="downloadLnk" download="YourFileName.jpg">Download processed images</a>
+                    <div id="result" class="result">
+                      <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                        or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
+                    </div>
+
+
+                    <div id="showcase">
+                      <div>
+                        <canvas id="canvas1"></canvas>
+                      </div>
+                    </div>
+
+                    <script async src="js/cv/cv.js"></script>
+                    <script src='js/cv/dat.gui.js'></script>
+                    <script src='js/imageCV.js'></script>
+                    <script type='text/javascript'>
+                      var Module = {};
+                    </script>
+                  </section>
+                  <footer class="mdc-dialog__footer">
+                    <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancelar</button>
+                    <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept" id="accept">Aceptar</button>
+                  </footer>
+                </div>
+                <div class="mdc-dialog__backdrop"></div>
+              </aside>
             </div>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-              <i class="material-icons">more_vert</i>
-            </button>
-          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-            <li class="mdl-menu__item">Lorem</li>
-            <li class="mdl-menu__item" disabled>Ipsum</li>
-            <li class="mdl-menu__item">Dolor</li>
-          </ul>
-        </section>
-      </div>
-      <div class="mdl-layout__tab-panel" id="features">
-
-        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
-          <div class="mdl-card mdl-cell mdl-cell--12-col">
-            <div class="mdl-card__supporting-text">
-              <h4>Handsontable template</h4>
 
 
-              <p>Cargue un archivo .json desde Explorador de archivos</p>
-
-              <!-- </button> -->
-              <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" id="reload">
-                Recargar
-                      </button> -->
-              <input type="file" id="fileinput" value="Import" />
-              <br><br>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load">
-                Cargar tabla
-                      </button>
-              <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save">
-                Guardar en JSON
-                      </button>
-              <label><input type="checkbox" name="autosave" id="autosave" checked="checked" autocomplete="off"> Autosave</label>
-              <pre id="example1console" class="console">Click "Load" to load data from server</pre>
-              <div class="spreadsheet" id="example1"></div>
-              <script type="text/javascript" src="js/example.js"></script>
-            </div>
-            <div class="mdl-card__actions">
-              <a href="#" class="mdl-button">OK</a>
-            </div>
-          </div>
-          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn3">
-                  <i class="material-icons">more_vert</i>
-                </button>
-          <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn3">
-            <li class="mdl-menu__item">Lorem</li>
-            <li class="mdl-menu__item" disabled>Ipsum</li>
-            <li class="mdl-menu__item">Dolor</li>
-          </ul>
-        </section>
-      </div>
-      <footer class="mdl-mega-footer">
-        <div class="mdl-mega-footer--middle-section">
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">Features</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li><a href="#">About</a></li>
-              <li><a href="#">Terms</a></li>
-              <li><a href="#">Partners</a></li>
-              <li><a href="#">Updates</a></li>
-            </ul>
-          </div>
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">Details</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li><a href="#">Spec</a></li>
-              <li><a href="#">Tools</a></li>
-              <li><a href="#">Resources</a></li>
-            </ul>
-          </div>
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">Technology</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li><a href="#">How it works</a></li>
-              <li><a href="#">Patterns</a></li>
-              <li><a href="#">Usage</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Contracts</a></li>
-            </ul>
-          </div>
-          <div class="mdl-mega-footer--drop-down-section">
-            <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>
-            <h1 class="mdl-mega-footer--heading">FAQ</h1>
-            <ul class="mdl-mega-footer--link-list">
-              <li><a href="#">Questions</a></li>
-              <li><a href="#">Answers</a></li>
-              <li><a href="#">Contact us</a></li>
-            </ul>
           </div>
         </div>
-        <div class="mdl-mega-footer--bottom-section">
-          <div class="mdl-logo">
-            More Information
-          </div>
-          <ul class="mdl-mega-footer--link-list">
-            <li><a href="https://developers.google.com/web/starter-kit/">Web Starter Kit</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Privacy and Terms</a></li>
-          </ul>
-        </div>
-      </footer>
-    </main>
-  </div>
-  <a href="face_detect.html" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">Con detección</a>
-  <script src="js/vendor/material-components-web.js"></script>
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-  <script src="js/load-image.all.min.js"></script>
-  <!-- jQuery and Jcrop are not required by JavaScript Load Image, but included for the demo -->
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="js/vendor/jquery.Jcrop.js"></script>
-  <script src="js/vendor/material-components-web.js"></script>
-  <script src="js/myLoad.js"></script>
+      </div>
+    </section>
+  </main>
+
 
 </body>
+<script src="js/vendor/material-components-web.js"></script>
+<script src="js/load-image.all.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/vendor/jquery.Jcrop.js"></script>
+<script src="js/cv/myLoad.js"></script>
 
 </html>
