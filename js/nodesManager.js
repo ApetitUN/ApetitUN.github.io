@@ -43,13 +43,30 @@ var
     reload = $('reload'),
     autosaveNotification,
     hot,
-    number;
+    number,
+    selectedColumn;
 
 
 
 hot = new Handsontable(container, {
     startRows: 8,
     startCols: 6,
+    dataSchema:
+    {
+        id: null,
+        name: null,
+        className: null,
+        shape: null,
+        text: null,
+        image: null,
+        image2: null,
+        loaded: null,
+        style: {
+            lineWidth: null,
+            radius: null,
+            lineColor: null
+        }
+    },
     columns: [
         { data: "id" },
         { data: "name" },
@@ -128,7 +145,7 @@ hot.updateSettings({
                 number = (hot.getSelected()[0]);
                 var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
                 dialogScrollable.show();
-
+                selectedColumn = (hot.getSelected()[1]);
             }
         },
         items: {
@@ -153,7 +170,7 @@ hot.updateSettings({
                 //isHtmlName: true,
                 disabled: function () {
                     // if first row, disable this option
-                    return !(hot.getSelected()[3] === 0)
+                    return ((hot.getSelected()[1] === 5) && (hot.getSelected()[1] === 6))
                 }
             }
         }
@@ -164,9 +181,7 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     var colorize = Handsontable.helper.stringify(value), p, text;
 
     p = document.createElement("LI")
-    //text = document.createTextNode("Color")
     p.style.backgroundColor = value
-    //p.setAttribute('style', 'color: \''+value+'\'')
 
     Handsontable.dom.addEvent(p, 'mousedown', function (e) {
         e.preventDefault(); // prevent selection quirk

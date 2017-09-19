@@ -50,6 +50,17 @@ var
 hot2 = new Handsontable(container, {
     startRows: 8,
     startCols: 6,
+    dataSchema: {
+        id: null,
+        from: null,
+        to: null,
+        value: null,
+        type: null,
+        style: {
+            fillColor: null,
+            radius: null
+        }
+    },
     columns: [
         { data: "id" },
         {
@@ -107,14 +118,12 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     var colorize = Handsontable.helper.stringify(value), p, text;
 
     p = document.createElement("LI")
-    //text = document.createTextNode("Color")
     p.style.backgroundColor = value
-    //p.setAttribute('style', 'color: \''+value+'\'')
-    
+
     Handsontable.dom.addEvent(p, 'mousedown', function (e) {
         e.preventDefault(); // prevent selection quirk
     });
-    
+
     Handsontable.dom.empty(td);
     td.appendChild(p);
     return td;
@@ -156,7 +165,10 @@ Handsontable.dom.addEvent(load, 'click', function () {
                 document.getElementById("crop").src = currentImage
                 list_images[number] = currentImage
                 for (var n in list_images) {
-                    data.nodes[n].image = list_images[n]
+                    if (selectedColumn == 5)
+                        data.nodes[n].image = list_images[n]
+                    else if (selectedColumn == 6)
+                        data.nodes[n].image2 = list_images[n]
                 }
             }
             hot.loadData(data.nodes)
