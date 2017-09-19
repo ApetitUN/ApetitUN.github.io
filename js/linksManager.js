@@ -28,9 +28,6 @@ function ajax(url, method, params, callback) {
     return obj;
 }
 
-
-
-
 var
     $ = function (id) {
         return document.getElementById(id);
@@ -40,7 +37,7 @@ var
     autosave = $('autosave'),
     load = $('load'),
     save = $('save'),
-    reload = $('reload'),
+    reload = $('accept'),
     autosaveNotification,
     hot2,
     number;
@@ -90,13 +87,13 @@ hot2 = new Handsontable(container, {
     rowHeaders: true,
     rowHeights: 60,
     colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Radio"],
-    colWidths: [70, 100, 100, 100, 100, 100, 100],
+    //colWidths: [70, 100, 100, 100, 100, 100, 100],
     minSpareRows: 1,
     // width: 600,
     // height: 400,
     stretchH: 'all',
     persistentState: true,
-    //contextMenu: true,
+    contextMenu: true,
     afterChange: function (change, source) {
         if (source === 'loadData') {
             return; //don't save this change
@@ -104,6 +101,7 @@ hot2 = new Handsontable(container, {
         if (!autosave.checked) {
             return;
         }
+    
         clearTimeout(autosaveNotification);
         ajax('json/save.json', 'GET', JSON.stringify({ data: change }), function (data) {
             exampleConsole.innerText = 'Autosaved (' + change.length + ' ' + 'cell' + (change.length > 1 ? 's' : '') + ')';
@@ -131,7 +129,7 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
 
 
 Handsontable.dom.addEvent(load, 'click', function () {
-    var input, file, fr, list_images = {}, dataTotal, data;
+    var input, file, fr, dataTotal, data;
 
     if (typeof window.FileReader !== 'function') {
         alert("The file API isn't supported on this browser yet.");
@@ -157,22 +155,9 @@ Handsontable.dom.addEvent(load, 'click', function () {
 
     function receivedText(e) {
         lines = e.target.result;
+        list_images = {}
         dataTotal = JSON.parse("{ \"data\":" + lines + "}");
         data = dataTotal.data;
-
-        $('#accept').on('click', function () {
-            if (currentImage != undefined) {
-                document.getElementById("crop").src = currentImage
-                list_images[number] = currentImage
-                for (var n in list_images) {
-                    if (selectedColumn == 5)
-                        data.nodes[n].image = list_images[n]
-                    else if (selectedColumn == 6)
-                        data.nodes[n].image2 = list_images[n]
-                }
-            }
-            hot.loadData(data.nodes)
-        })
 
         hot.loadData(data.nodes);
         hot2.loadData(data.links);
@@ -180,8 +165,6 @@ Handsontable.dom.addEvent(load, 'click', function () {
 
     }
 });
-
-
 
 Handsontable.dom.addEvent(save, 'click', function () {
     var csvContent = "data:text/csv;charset=utf-8,";

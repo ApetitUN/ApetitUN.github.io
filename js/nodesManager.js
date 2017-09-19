@@ -28,7 +28,7 @@ function ajax(url, method, params, callback) {
     return obj;
 }
 
-
+var list_images = {}
 
 
 var
@@ -60,7 +60,7 @@ hot = new Handsontable(container, {
         text: null,
         image: null,
         image2: null,
-        loaded: null,
+        loaded: "true",
         style: {
             lineWidth: null,
             radius: null,
@@ -114,10 +114,8 @@ hot = new Handsontable(container, {
     rowHeaders: true,
     rowHeights: 60,
     colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud linea", "Radio", "Color de línea"],
-    colWidths: [70, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+    //colWidths: [70, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
     minSpareRows: 1,
-    // width: 1300,
-    // height: 400,
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,
@@ -146,6 +144,20 @@ hot.updateSettings({
                 var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
                 dialogScrollable.show();
                 selectedColumn = (hot.getSelected()[1]);
+                list_images = {}
+                $('#accept').on('click', function () {
+                    if (currentImage != undefined) {
+                        document.getElementById("crop").src = currentImage
+                        list_images[number] = currentImage
+                        for (var n in list_images) {
+                            if (selectedColumn == 5) {
+                                hot.getSourceData()[n].image = list_images[n];
+                            } else if (selectedColumn == 6)
+                                hot.getSourceData()[n].image2 = list_images[n];
+                        }
+                    }
+                    hot.loadData(hot.getSourceData())
+                })
             }
         },
         items: {
@@ -170,7 +182,7 @@ hot.updateSettings({
                 //isHtmlName: true,
                 disabled: function () {
                     // if first row, disable this option
-                    return ((hot.getSelected()[1] === 5) && (hot.getSelected()[1] === 6))
+                    return !(((hot.getSelected()[1] === 5) || (hot.getSelected()[1] === 6)))
                 }
             }
         }
@@ -199,7 +211,6 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
         img = document.createElement('IMG');
         img.src = value;
-        //Gconsole.log(img.src)
         img.setAttribute('style', 'border-radius: 50%')
         img.setAttribute('width', '50px')
         img.setAttribute('heigth', '50px')

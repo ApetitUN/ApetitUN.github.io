@@ -75,12 +75,19 @@
         <div class="mdl-card mdl-cell mdl-cell--12-col">
           <div class="mdl-card__supporting-text">
 
-            <p>Cargue un archivo .json desde el Explorador de archivos.</p>
+            <div class="mdl-grid">
+              <div class="mdl-cell mdl-cell--6-col">
+                <p>Cargue un archivo .json desde el Explorador de archivos.</p>
+                <input type="file" id="fileinput" value="Import" />
+              </div>
+              <div class="mdl-cell mdl-cell--2-col">
+              </div>
+              <div class="mdl-cell mdl-cell--4-col">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load"><i class="mdl-color-text--white material-icons" role="presentation">update</i>  Cargar datos</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>  Guardar en JSON</button>
+              </div>
+            </div>
 
-            <input type="file" id="fileinput" value="Import" />
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load"><i class="mdl-color-text--white material-icons" role="presentation">update</i>  Cargar datos en tabla</button>
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>  Guardar en JSON</button>
-            <br><br>
             <div class="mdl-layout__content">
               <div class="mdl-tabs mdl-js-tabs">
                 <div class="mdl-tabs__tab-bar">

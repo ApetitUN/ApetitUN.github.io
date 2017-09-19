@@ -66,7 +66,7 @@ var upPoint = {}, downPoint = {};
 function detectFace() {
 
   if (face_cascade == undefined) {
-    console.log("Creating the Face cascade classifier");
+    //console.log("Creating the Face cascade classifier");
     face_cascade = new cv.CascadeClassifier();
     face_cascade.load('../../test/data/haarcascade_frontalface_default.xml');
   }
@@ -98,7 +98,7 @@ function detectFace() {
     downPoint[i] = p2
     var color = new cv.Scalar(26,117,207);
     cv.rectangle(img_color, p1, p2, color, 2, 8, 0);
-    console.log("POINT1: " + p1 + "\nPOINT2: " + p2)
+    //console.log("POINT1: " + p1 + "\nPOINT2: " + p2)
     faceRect.delete();
     color.delete();
 
