@@ -61,9 +61,7 @@ hot2 = new Handsontable(container, {
     columns: [
         { data: "id" },
         {
-            data: "from",
-            type: 'dropdown',
-            source: hot.getSourceDataAtCol(1)
+            data: "from"
         },
         {
             data: "to",
@@ -71,9 +69,10 @@ hot2 = new Handsontable(container, {
             source: ['a', 'b', 'c', 'd']
         },
         { data: "value" },
-        { data: "type",type: 'dropdown',
-        source: ['indirect', 'direct']
-     },
+        {
+            data: "type", type: 'dropdown',
+            source: ['indirect', 'direct']
+        },
         {
             data: "style.fillColor", type: 'dropdown',
             renderer: colorRenderer,
@@ -91,8 +90,6 @@ hot2 = new Handsontable(container, {
     colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Longitud de línea"],
     colWidths: [1, 100, 100, 1, 100, 100, 100],
     minSpareRows: 1,
-    // width: 600,
-    // height: 400,
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,
@@ -103,7 +100,7 @@ hot2 = new Handsontable(container, {
         if (!autosave.checked) {
             return;
         }
-    
+
         clearTimeout(autosaveNotification);
         ajax('json/save.json', 'GET', JSON.stringify({ data: change }), function (data) {
             exampleConsole.innerText = 'Autosaved (' + change.length + ' ' + 'cell' + (change.length > 1 ? 's' : '') + ')';
@@ -112,6 +109,45 @@ hot2 = new Handsontable(container, {
             }, 1000);
         });
     }
+});
+
+hot2.addHook('afterChange', function () {
+    hot2.updateSettings({
+        columns: [
+            {
+                data: "id"
+            }, {
+                data: "from",
+                type: 'dropdown',
+                source: (hot.getRowHeader().map(function (e, i) {
+                    return e+" : "+hot.getSourceDataAtCol(1)[i];
+                }))
+            },
+            {
+                data: "to",
+                type: 'dropdown',
+                source: (hot.getRowHeader().map(function (e, i) {
+                    return e+" : "+hot.getSourceDataAtCol(1)[i];
+                }))
+            },
+            { data: "value" },
+            {
+                data: "type", type: 'dropdown',
+                source: ['indirect', 'direct']
+            },
+            {
+                data: "style.fillColor", type: 'dropdown',
+                renderer: colorRenderer,
+                allowInvalid: false,
+                source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
+            },
+            {
+                data: "style.radius", type: 'dropdown',
+                source: ['5', '10', '15']
+            }
+        ]
+    })
+    //hot2.render
 });
 
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
@@ -164,15 +200,15 @@ Handsontable.dom.addEvent(load, 'click', function () {
         hot.loadData(data.nodes);
         hot2.loadData(data.links);
         exampleConsole.innerText = 'Data loaded';
-        console.log(hot.getSourceDataAtCol(1))
+        //console.log(hot.getSourceDataAtCol(1))
     }
 });
-
-var JSONtext = "{ \"nodes\":" + JSON.stringify(hot.getSourceData()) + ", \"links\":" + JSON.stringify(hot2.getSourceData()) + "}";
 
 Handsontable.dom.addEvent(save, 'click', function () {
     var nodeToSave = hot.getSourceData()
     var dataToSave = hot2.getSourceData()
+    node2 = hot.getSourceData()
+    link2 = hot2.getSourceData()
     var encodedUri = encodeURIComponent("{ \"nodes\":" + JSON.stringify(nodeToSave) + ", \"links\":" + JSON.stringify(dataToSave) + "}")
     var link = document.createElement("a");
     link.setAttribute("href", 'data:text/plain;charset=utf-u,' + encodedUri);

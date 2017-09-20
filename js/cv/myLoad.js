@@ -11,7 +11,7 @@
 
 /* global loadImage, HTMLCanvasElement, $ */
 
-var currentImage
+var currentImage, node2, link2
 
 $(function () {
   'use strict'
