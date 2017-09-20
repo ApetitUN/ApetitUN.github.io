@@ -164,7 +164,7 @@ $(function () {
           minWidth: 500,
           maxWidth: 500,
           pixelRatio: pixelRatio,
-          downsamplingRatio: 0.5,
+          downsamplingRatio: 500/coordinates.w,
         }))
         //console.log(coordinates.x + " "  + coordinates.y + " " + coordinates.w + " "  + coordinates.h)
         coordinates = null

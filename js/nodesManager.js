@@ -51,6 +51,10 @@ var
 hot = new Handsontable(container, {
     startRows: 8,
     startCols: 6,
+    hiddenColumns: {
+        columns: [3, 5, 9],
+        indicators: true
+      },
     dataSchema:
     {
         id: null,
@@ -73,35 +77,35 @@ hot = new Handsontable(container, {
         {
             data: "className",
             type: 'dropdown',
-            source: ['a', 'b', 'c', 'd']
+            source: ['personas', 'bienes', 'empresas', 'vehiculos', 'conectores', 'cuentasbancarias']
         },
         {
             data: "shape",
             type: 'dropdown',
-            source: ['a', 'b', 'c', 'd']
+            source: ['circle', 'square', 'triangle']
         },
         { data: "text" },
         {
             data: "image",
             renderer: coverRenderer,
-            type: 'dropdown',
-            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+            // type: 'dropdown',
+            // source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
         {
             data: "image2",
             renderer: coverRenderer,
-            type: 'dropdown',
-            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+            // type: 'dropdown',
+            // source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
         { data: "loaded" },
         {
             data: "style.lineWidth",
             type: 'dropdown',
-            source: ['10px', '20px', '30px']
+            source: ['5', '10', '15']
         }, {
             data: "style.radius",
             type: 'dropdown',
-            source: ['1px', '2px', '3px']
+            source: ['60', '100', '150']
         }, {
             data: "style.lineColor",
             type: 'dropdown',
@@ -113,8 +117,8 @@ hot = new Handsontable(container, {
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 60,
-    colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud linea", "Radio", "Color de línea"],
-    //colWidths: [70, 100, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+    colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud de línea", "Radio", "Color de línea"],
+    colWidths: [1, 100, 100, 100, 300, 100, 100, 1, 100, 100, 100],
     minSpareRows: 1,
     stretchH: 'all',
     persistentState: true,

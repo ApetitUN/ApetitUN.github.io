@@ -29,9 +29,9 @@
   <script data-jsfiddle="common" src="dist/handsontable.full.js"></script>
   <link data-jsfiddle="common" rel="stylesheet" media="screen" href="dist/handsontable.full.css">
   <script src="css/vendor/demo-styles.css.js"></script>
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-pink.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.amber-deep_purple.min.css">
 
-  <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
 
 
 
@@ -93,10 +93,11 @@
                 <div class="mdl-tabs__tab-bar">
                   <a href="#nodes-panel" class="mdl-tabs__tab is-active" style="color:#1a75cf">Nodos</a>
                   <a href="#links-panel" class="mdl-tabs__tab" style="color:#1a75cf">Enlaces</a>
-
+                  <a href="#graph-panel" class="mdl-tabs__tab" style="color:#1a75cf">JSON</a>
                 </div>
-                <label><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
-                <pre id="example1console" class="console">Click "Load" to load data from server</pre>
+                <br><br>
+                <label style="display:none"><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
+                <pre style="display:none" id="example1console" class="console">Click "Load" to load data from server</pre>
                 <div class="mdl-tabs__panel is-active" id="nodes-panel">
                   <div class="spreadsheet" id="example1"></div>
                   <script type="text/javascript" src="js/nodesManager.js"></script>
@@ -106,6 +107,11 @@
 
                   <div class="spreadsheet" id="example2"></div>
                   <script type="text/javascript" src="js/linksManager.js"></script>
+                </div>
+
+                <div class="graph-panel" id="links-panel">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="myFunction()">Click me</button>
+                  <script type="text/javascript" src="js/jsontext.js"></script>
                 </div>
 
               </div>
