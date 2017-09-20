@@ -49,12 +49,6 @@ var
 
 
 hot = new Handsontable(container, {
-    startRows: 8,
-    startCols: 6,
-    hiddenColumns: {
-        columns: [3, 5, 9],
-        indicators: true
-      },
     dataSchema:
     {
         id: null,

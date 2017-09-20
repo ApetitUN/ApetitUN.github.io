@@ -45,8 +45,8 @@ var
 
 
 hot2 = new Handsontable(container, {
-    startRows: 8,
-    startCols: 6,
+    // startRows: 8,
+    // startCols: 6,
     dataSchema: {
         id: null,
         from: null,
@@ -111,6 +111,8 @@ hot2 = new Handsontable(container, {
     }
 });
 
+manufacturerData =  hot.getRowHeader()
+
 hot2.addHook('afterChange', function () {
     hot2.updateSettings({
         columns: [
@@ -118,17 +120,18 @@ hot2.addHook('afterChange', function () {
                 data: "id"
             }, {
                 data: "from",
-                type: 'dropdown',
-                source: (hot.getRowHeader().map(function (e, i) {
-                    return e+" : "+hot.getSourceDataAtCol(1)[i];
-                }))
+                renderer: updateGraphCell,
+                type: 'handsontable',
+                handsontable: {
+                    colHeaders: ['ID', 'Nombre'],
+                    data: manufacturerData
+                  }
             },
             {
                 data: "to",
+                renderer: updateGraphCell,
                 type: 'dropdown',
-                source: (hot.getRowHeader().map(function (e, i) {
-                    return e+" : "+hot.getSourceDataAtCol(1)[i];
-                }))
+                source: hot.getRowHeader()
             },
             { data: "value" },
             {
@@ -150,8 +153,20 @@ hot2.addHook('afterChange', function () {
     //hot2.render
 });
 
+function updateGraphCell(instance, td, row, col, prop, value, cellProperties){
+    var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;
+
+    textOnCell = document.createElement("P")
+    internText = document.createTextNode(value + " : " + hot.getSourceDataAtCol(1)[value-1])
+
+    textOnCell.appendChild(internText)
+    Handsontable.dom.empty(td)
+    td.appendChild(textOnCell)
+    return td;
+}
+
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p, text;
+    var colorize = Handsontable.helper.stringify(value), p;
 
     p = document.createElement("LI")
     p.style.backgroundColor = value
@@ -207,8 +222,6 @@ Handsontable.dom.addEvent(load, 'click', function () {
 Handsontable.dom.addEvent(save, 'click', function () {
     var nodeToSave = hot.getSourceData()
     var dataToSave = hot2.getSourceData()
-    node2 = hot.getSourceData()
-    link2 = hot2.getSourceData()
     var encodedUri = encodeURIComponent("{ \"nodes\":" + JSON.stringify(nodeToSave) + ", \"links\":" + JSON.stringify(dataToSave) + "}")
     var link = document.createElement("a");
     link.setAttribute("href", 'data:text/plain;charset=utf-u,' + encodedUri);
