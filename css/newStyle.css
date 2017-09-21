@@ -121,6 +121,20 @@ body .handsontable .currentRow {
     height: 500px;
     overflow: hidden;
 }
+.spreadsheet2 {
+    
+    
+    height: 500px;
+    
+}
+.handsontable .htAutocompleteArrow {
+    float: right;
+    font-size: 20px;
+    color: #1975cf
+}
+.handsontable td .htAutocompleteArrow:hover {
+    color: #19cf74;
+}
 .mdl-layout__content {
     display: block;
     width: 100%;

@@ -45,7 +45,7 @@ var
 
 
 hot2 = new Handsontable(container, {
-    // startRows: 8,
+    startRows: 1,
     // startCols: 6,
     dataSchema: {
         id: null,
@@ -86,8 +86,8 @@ hot2 = new Handsontable(container, {
     rowHeaders: true,
     rowHeights: 60,
     colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Longitud de línea"],
-    colWidths: [1, 100, 100, 1, 100, 100, 100],
-    minSpareRows: 1,
+    colWidths: [50, 100, 100, 1, 100, 100, 100],
+    //minSpareRows: 1,
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,
@@ -113,7 +113,8 @@ hot2.addHook('afterChange', function () {
     hot2.updateSettings({
         columns: [
             {
-                data: "id"
+                data: "id",
+                
             }, {
                 data: "from",
                 type: 'handsontable',
@@ -122,12 +123,12 @@ hot2.addHook('afterChange', function () {
                     autoColumnSize: true,
                     data: hot.getRowHeader().map(function (e) {
                         return [e];
-                    }),columns: [
-                        {renderer: updateGraphCell, type: 'numeric'}
+                    }), columns: [
+                        { renderer: updateGraphCell, type: 'numeric' }
                     ]
                 },
                 renderer: updateGraphCell
-                  
+
             },
             {
                 data: "to",
@@ -137,8 +138,8 @@ hot2.addHook('afterChange', function () {
                     autoColumnSize: true,
                     data: hot.getRowHeader().map(function (e) {
                         return [e];
-                    }),columns: [
-                        {renderer: updateGraphCell, type: 'numeric'}
+                    }), columns: [
+                        { renderer: updateGraphCell, type: 'numeric' }
                     ]
                 },
                 renderer: updateGraphCell
@@ -149,10 +150,15 @@ hot2.addHook('afterChange', function () {
                 source: ['indirect', 'direct']
             },
             {
-                data: "style.fillColor", type: 'dropdown',
+                data: "style.fillColor", 
+                type: 'handsontable',
                 renderer: colorRenderer,
                 allowInvalid: false,
-                source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
+                handsontable: {
+                    data:  colorData,
+                    columns: [{renderer:colorDropdownRenderer}]
+                
+                }
             },
             {
                 data: "style.radius", type: 'dropdown',
@@ -163,11 +169,11 @@ hot2.addHook('afterChange', function () {
     //hot2.render
 });
 
-function updateGraphCell(instance, td, row, col, prop, value, cellProperties){
+function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
     var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;
 
     textOnCell = document.createElement("P")
-    internText = document.createTextNode(value + " : " + hot.getSourceDataAtCol(1)[value-1])
+    internText = document.createTextNode(value + " : " + hot.getSourceDataAtCol(1)[value - 1])
 
     textOnCell.appendChild(internText)
     Handsontable.dom.empty(td)
@@ -176,8 +182,27 @@ function updateGraphCell(instance, td, row, col, prop, value, cellProperties){
 }
 
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p;
+    var colorize = Handsontable.helper.stringify(value), p, div, divText;
+    div = document.createElement("DIV")
+    div.className = "htAutocompleteArrow"
+    divText = document.createTextNode("▼")
+    div.appendChild(divText)
+    p = document.createElement("LI")
+    //p.style.listStyleType = "none"
+    p.style.backgroundColor = value
 
+    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
+        e.preventDefault(); // prevent selection quirk
+    });
+
+    Handsontable.dom.empty(td);
+    td.appendChild(p);
+    td.appendChild(div)
+    return td;
+}
+
+function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperties) {
+    var colorize = Handsontable.helper.stringify(value), p;
     p = document.createElement("LI")
     p.style.backgroundColor = value
 

@@ -44,11 +44,18 @@ var
     autosaveNotification,
     hot,
     number,
-    selectedColumn;
+    selectedColumn,
+    colorData = [],
+    colors = ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d'];
 
-
+    while (color = colors.shift()) {
+        colorData.push([
+          [color]
+        ]);
+      }
 
 hot = new Handsontable(container, {
+    startRows: 1,
     dataSchema:
     {
         id: null,
@@ -82,14 +89,14 @@ hot = new Handsontable(container, {
         {
             data: "image",
             renderer: coverRenderer,
-            // type: 'dropdown',
-            // source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+            type: 'dropdown',
+            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
         {
             data: "image2",
             renderer: coverRenderer,
-            // type: 'dropdown',
-            // source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+            type: 'dropdown',
+            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
         { data: "loaded" },
         {
@@ -102,18 +109,21 @@ hot = new Handsontable(container, {
             source: ['60', '100', '150']
         }, {
             data: "style.lineColor",
-            type: 'dropdown',
+            type: 'handsontable',
             renderer: colorRenderer,
             allowInvalid: false,
-            source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
+            handsontable: {
+                data:  colorData,
+                columns: [{renderer:colorDropdownRenderer}]
+            
+            }
         }
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 60,
     colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud de línea", "Radio", "Color de línea"],
-    colWidths: [1, 100, 100, 100, 300, 100, 100, 1, 100, 100, 100],
-    minSpareRows: 1,
+    colWidths: [50, 100, 100, 100, 300, 100, 100, 1, 100, 100, 100],
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,
@@ -177,30 +187,13 @@ hot.updateSettings({
                 name: function () {
                     return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">photo_library</i> Editar foto";
                 },
-                //isHtmlName: true,
                 disabled: function () {
-                    // if first row, disable this option
                     return !(((hot.getSelected()[1] === 5) || (hot.getSelected()[1] === 6)))
                 }
             }
         }
     }
 })
-
-function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p, text;
-
-    p = document.createElement("LI")
-    p.style.backgroundColor = value
-
-    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
-        e.preventDefault(); // prevent selection quirk
-    });
-
-    Handsontable.dom.empty(td);
-    td.appendChild(p);
-    return td;
-}
 
 function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     var escaped = Handsontable.helper.stringify(value),
