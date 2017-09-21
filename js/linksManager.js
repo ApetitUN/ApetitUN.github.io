@@ -64,9 +64,7 @@ hot2 = new Handsontable(container, {
             data: "from"
         },
         {
-            data: "to",
-            type: 'dropdown',
-            source: ['a', 'b', 'c', 'd']
+            data: "to"
         },
         { data: "value" },
         {
@@ -111,8 +109,6 @@ hot2 = new Handsontable(container, {
     }
 });
 
-manufacturerData =  hot.getRowHeader()
-
 hot2.addHook('afterChange', function () {
     hot2.updateSettings({
         columns: [
@@ -120,18 +116,32 @@ hot2.addHook('afterChange', function () {
                 data: "id"
             }, {
                 data: "from",
-                renderer: updateGraphCell,
                 type: 'handsontable',
                 handsontable: {
-                    colHeaders: ['ID', 'Nombre'],
-                    data: manufacturerData
-                  }
+                    //colHeaders: ['ID'],
+                    autoColumnSize: true,
+                    data: hot.getRowHeader().map(function (e) {
+                        return [e];
+                    }),columns: [
+                        {renderer: updateGraphCell, type: 'numeric'}
+                    ]
+                },
+                renderer: updateGraphCell
+                  
             },
             {
                 data: "to",
-                renderer: updateGraphCell,
-                type: 'dropdown',
-                source: hot.getRowHeader()
+                type: 'handsontable',
+                handsontable: {
+                    //colHeaders: ['ID'],
+                    autoColumnSize: true,
+                    data: hot.getRowHeader().map(function (e) {
+                        return [e];
+                    }),columns: [
+                        {renderer: updateGraphCell, type: 'numeric'}
+                    ]
+                },
+                renderer: updateGraphCell
             },
             { data: "value" },
             {
