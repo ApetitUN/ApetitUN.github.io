@@ -114,6 +114,7 @@ hot2.addHook('afterChange', function () {
         columns: [
             {
                 data: "id",
+                renderer: copyOfIDRenderer
                 
             }, {
                 data: "from",
@@ -166,8 +167,18 @@ hot2.addHook('afterChange', function () {
             }
         ]
     })
-    //hot2.render
 });
+
+function copyOfIDRenderer(instance, td, row, col, prop, value, cellProperties) {
+    var idNode = Handsontable.helper.stringify(value), idText, textOnText
+    idText = document.createElement("P");
+    textOnText = document.createTextNode(row+1)
+    idText.appendChild(textOnText)
+    value = idText.childNodes[0].textContent 
+    Handsontable.dom.empty(td);
+    td.appendChild(idText)
+    return td
+}
 
 function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
     var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;

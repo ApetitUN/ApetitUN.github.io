@@ -122,6 +122,8 @@ $(function () {
   $('#input')
     .on('change', dropChangeHandler)
 
+  console.log("test"+upPoint)
+
   $('#edit')
     .on('click', function (event) {
       event.preventDefault()
