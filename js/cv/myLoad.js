@@ -122,7 +122,7 @@ $(function () {
   $('#input')
     .on('change', dropChangeHandler)
 
-  console.log("test"+upPoint)
+  
 
   $('#edit')
     .on('click', function (event) {
@@ -133,6 +133,10 @@ $(function () {
       // console.log("This is the down point:" + downPoint[0])
       var img = imgNode[0]
       var pixelRatio = window.devicePixelRatio || 1
+      if(upPoint[0] == undefined && downPoint[0] == undefined){
+        upPoint[0] = [40, 40]
+        downPoint[0] = [(img.width / pixelRatio) - 40, (img.height / pixelRatio) - 40]
+      }
       imgNode.Jcrop({
         aspectRatio: 1,
         setSelect: [
