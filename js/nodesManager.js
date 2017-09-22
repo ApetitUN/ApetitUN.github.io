@@ -58,7 +58,7 @@ hot = new Handsontable(container, {
     startRows: 1,
     dataSchema:
     {
-        id: 0,
+        id: null,
         name: null,
         className: null,
         shape: null,
@@ -90,13 +90,13 @@ hot = new Handsontable(container, {
             data: "image",
             renderer: coverRenderer,
             type: 'dropdown',
-            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+            source: ['http://s.hswstatic.com/gif/buying-house1.jpg', 'https://d2x3bkdslnxkuj.cloudfront.net/1028152_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
         {
             data: "image2",
             renderer: coverRenderer,
             type: 'dropdown',
-            source: ['http://d279m997dpfwgl.cloudfront.net/wp/2013/03/Asma-Khalid_300.jpg', 'http://img2.zergnet.com/2031933_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
+            source: ['http://s.hswstatic.com/gif/buying-house1.jpg', 'https://d2x3bkdslnxkuj.cloudfront.net/1028152_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
         { data: "loaded" },
         {
@@ -109,14 +109,10 @@ hot = new Handsontable(container, {
             source: ['60', '100', '150']
         }, {
             data: "style.lineColor",
-            type: 'handsontable',
+            type: 'dropdown',
             renderer: colorRenderer,
             allowInvalid: false,
-            handsontable: {
-                data:  colorData,
-                columns: [{renderer:colorDropdownRenderer}]
-            
-            }
+            source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
         }
     ],
     currentRowClassName: 'currentRow',
@@ -128,9 +124,12 @@ hot = new Handsontable(container, {
     persistentState: true,
     contextMenu: true,
     afterChange: function (change, source) {
+        // var selectedRow
         if (source === 'loadData') {
             return; //don't save this change
         }
+                
+        // console.log(selectedRow)
         if (!autosave.checked) {
             return;
         }
@@ -143,6 +142,12 @@ hot = new Handsontable(container, {
         });
     }
 });
+
+
+// var rows = hot.countRows();  
+// for(var i = 0; i < rows; i++){
+//     hot.setDataAtCell(i, 0, i + 1)
+// }
 
 hot.updateSettings({
     contextMenu: {
@@ -197,21 +202,14 @@ hot.updateSettings({
 
 
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p, div, divText;
+    var colorize = Handsontable.helper.stringify(value), div, divText;
     div = document.createElement("DIV")
     div.className = "htAutocompleteArrow"
     divText = document.createTextNode("▼")
     div.appendChild(divText)
-    p = document.createElement("LI")
-    //p.style.listStyleType = "none"
-    p.style.backgroundColor = value
-
-    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
-        e.preventDefault(); // prevent selection quirk
-    });
+    td.style.backgroundColor = value
 
     Handsontable.dom.empty(td);
-    td.appendChild(p);
     td.appendChild(div)
     return td;
 }
@@ -233,7 +231,11 @@ function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperti
 
 function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     var escaped = Handsontable.helper.stringify(value),
-        img;
+        img, div, divText;
+        div = document.createElement("DIV")
+        div.className = "htAutocompleteArrow"
+        divText = document.createTextNode("▼")
+        div.appendChild(divText)
 
     if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
         img = document.createElement('IMG');
@@ -254,7 +256,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
         // render as text
         Handsontable.renderers.TextRenderer.apply(this, arguments);
     }
-
+    td.appendChild(div)
     return td;
 }
 

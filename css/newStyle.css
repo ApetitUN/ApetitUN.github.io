@@ -130,7 +130,7 @@ body .handsontable .currentRow {
 .handsontable .htAutocompleteArrow {
     float: right;
     font-size: 20px;
-    color: #1975cf
+    color: #c8c8c8
 }
 .handsontable td .htAutocompleteArrow:hover {
     color: #19cf74;

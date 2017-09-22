@@ -72,10 +72,15 @@ hot2 = new Handsontable(container, {
             source: ['indirect', 'direct']
         },
         {
-            data: "style.fillColor", type: 'dropdown',
+            data: "style.fillColor",
+            type: 'handsontable',
             renderer: colorRenderer,
             allowInvalid: false,
-            source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
+            handsontable: {
+                data:  colorData,
+                columns: [{renderer:colorDropdownRenderer}]
+            
+            }
         },
         {
             data: "style.radius", type: 'dropdown',
@@ -125,7 +130,7 @@ hot2.addHook('afterChange', function () {
                     data: hot.getRowHeader().map(function (e) {
                         return [e];
                     }), columns: [
-                        { renderer: updateGraphCell, type: 'numeric' }
+                        { renderer: updateDropdownGraphCell, type: 'numeric' }
                     ]
                 },
                 renderer: updateGraphCell
@@ -140,7 +145,7 @@ hot2.addHook('afterChange', function () {
                     data: hot.getRowHeader().map(function (e) {
                         return [e];
                     }), columns: [
-                        { renderer: updateGraphCell, type: 'numeric' }
+                        { renderer: updateDropdownGraphCell, type: 'numeric' }
                     ]
                 },
                 renderer: updateGraphCell
@@ -152,14 +157,10 @@ hot2.addHook('afterChange', function () {
             },
             {
                 data: "style.fillColor", 
-                type: 'handsontable',
+                type: 'dropdown',
                 renderer: colorRenderer,
                 allowInvalid: false,
-                handsontable: {
-                    data:  colorData,
-                    columns: [{renderer:colorDropdownRenderer}]
-                
-                }
+                source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
             },
             {
                 data: "style.radius", type: 'dropdown',
@@ -180,35 +181,52 @@ function copyOfIDRenderer(instance, td, row, col, prop, value, cellProperties) {
     return td
 }
 
-function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
-    var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;
+// var rows = hot.countRows();  
+// for(var i = 0; i < rows; i++){
+//     hot2.setDataAtCell(i, 0, i + 1)
+// }
 
+function updateDropdownGraphCell(instance, td, row, col, prop, value, cellProperties) {
+    var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;
     textOnCell = document.createElement("P")
     internText = document.createTextNode(value + " : " + hot.getSourceDataAtCol(1)[value - 1])
 
     textOnCell.appendChild(internText)
     Handsontable.dom.empty(td)
     td.appendChild(textOnCell)
+    
     return td;
 }
 
-function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p, div, divText;
+function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
+    var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText, div, divText;
     div = document.createElement("DIV")
     div.className = "htAutocompleteArrow"
     divText = document.createTextNode("▼")
     div.appendChild(divText)
-    p = document.createElement("LI")
-    //p.style.listStyleType = "none"
-    p.style.backgroundColor = value
+    textOnCell = document.createElement("P")
+    internText = document.createTextNode(value + " : " + hot.getSourceDataAtCol(1)[value - 1])
 
-    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
-        e.preventDefault(); // prevent selection quirk
-    });
+    textOnCell.appendChild(internText)
+    Handsontable.dom.empty(td)
+    td.appendChild(textOnCell)
+    td.appendChild(div)
+    return td;
+}
+
+function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
+    var colorize = Handsontable.helper.stringify(value), div, divText;
+    div = document.createElement("DIV")
+    div.className = "htAutocompleteArrow"
+    divText = document.createTextNode("▼")
+    div.appendChild(divText)
+    //p = document.createElement("LI")
+    //p.style.listStyleType = "none"
+    td.style.backgroundColor = value
 
     Handsontable.dom.empty(td);
-    td.appendChild(p);
     td.appendChild(div)
+    //td.appendChild(p);
     return td;
 }
 
