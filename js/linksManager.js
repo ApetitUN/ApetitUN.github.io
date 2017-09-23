@@ -48,7 +48,7 @@ hot2 = new Handsontable(container, {
     startRows: 1,
     // startCols: 6,
     dataSchema: {
-        id: null,
+        id: 1,
         from: null,
         to: null,
         value: null,
@@ -111,7 +111,12 @@ hot2 = new Handsontable(container, {
                 exampleConsole.innerText = 'Changes will be autosaved';
             }, 1000);
         });
-    }
+    },
+    afterCreateRow: function(index){
+        for(var i = 0; i < hot2.getRowHeader().length; i++){
+            hot2.setDataAtCell(i, 0, i+1)
+        }
+    } 
 });
 
 hot2.addHook('afterChange', function () {

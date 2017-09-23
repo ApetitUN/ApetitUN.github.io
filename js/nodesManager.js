@@ -58,7 +58,7 @@ hot = new Handsontable(container, {
     startRows: 1,
     dataSchema:
     {
-        id: null,
+        id: 1,
         name: null,
         className: null,
         shape: null,
@@ -128,7 +128,11 @@ hot = new Handsontable(container, {
         if (source === 'loadData') {
             return; //don't save this change
         }
-                
+        // if(source === "edit"){
+        //     var number = parseInt(change[0])
+        //     hot.setDataAtCell(number, 0, number+1)
+        //     return;
+        // }
         // console.log(selectedRow)
         if (!autosave.checked) {
             return;
@@ -140,7 +144,12 @@ hot = new Handsontable(container, {
                 exampleConsole.innerText = 'Changes will be autosaved';
             }, 1000);
         });
-    }
+    },
+    afterCreateRow: function(index){
+        for(var i = 0; i < hot.getRowHeader().length; i++){
+            hot.setDataAtCell(i, 0, i+1)
+        }
+    } 
 });
 
 
