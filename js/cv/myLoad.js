@@ -160,6 +160,8 @@ $(function () {
     .on('click', function (event) {
       event.preventDefault()
       var img = result.find('img, canvas')[0]
+      //img.setAttribute('style', 'border-radius: 50%')
+      
       var pixelRatio = window.devicePixelRatio || 1
       if (img && coordinates) {
         updateResults(loadImage.scale(img, {
@@ -170,7 +172,7 @@ $(function () {
           minWidth: 500,
           maxWidth: 500,
           pixelRatio: pixelRatio,
-          downsamplingRatio: 500/coordinates.w,
+          downsamplingRatio: 500/coordinates.w
         }))
         //console.log(coordinates.x + " "  + coordinates.y + " " + coordinates.w + " "  + coordinates.h)
         coordinates = null

@@ -68,7 +68,7 @@
     font-family: 'Roboto', 'Helvetica', monospace;
 }
 .mdc-dialog__body--scrollable {
-    max-height: 500px;
+    max-height: 400px;
 }
 .mdc-dialog__surface {
     /* height: calc(100% - 30px); */

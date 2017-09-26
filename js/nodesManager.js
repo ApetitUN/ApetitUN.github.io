@@ -48,11 +48,11 @@ var
     colorData = [],
     colors = ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d'];
 
-    while (color = colors.shift()) {
-        colorData.push([
-          [color]
-        ]);
-      }
+while (color = colors.shift()) {
+    colorData.push([
+        [color]
+    ]);
+}
 
 hot = new Handsontable(container, {
     startRows: 1,
@@ -145,18 +145,14 @@ hot = new Handsontable(container, {
             }, 1000);
         });
     },
-    afterCreateRow: function(index){
-        for(var i = 0; i < hot.getRowHeader().length; i++){
-            hot.setDataAtCell(i, 0, i+1)
+    afterCreateRow: function (index) {
+        for (var i = 0; i < hot.getRowHeader().length; i++) {
+            //hot.setDataAtCell(i, 0, i+1)
+            hot.getSourceData()[i].id = i + 1
+            // hot.getSourceData()
         }
-    } 
+    }
 });
-
-
-// var rows = hot.countRows();  
-// for(var i = 0; i < rows; i++){
-//     hot.setDataAtCell(i, 0, i + 1)
-// }
 
 hot.updateSettings({
     contextMenu: {
@@ -208,66 +204,6 @@ hot.updateSettings({
         }
     }
 })
-
-
-function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), div, divText;
-    div = document.createElement("DIV")
-    div.className = "htAutocompleteArrow"
-    divText = document.createTextNode("▼")
-    div.appendChild(divText)
-    td.style.backgroundColor = value
-
-    Handsontable.dom.empty(td);
-    td.appendChild(div)
-    return td;
-}
-
-function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p;
-    p = document.createElement("LI")
-    p.style.backgroundColor = value
-
-    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
-        e.preventDefault(); // prevent selection quirk
-    });
-
-    Handsontable.dom.empty(td);
-    td.appendChild(p);
-    return td;
-}
-
-
-function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var escaped = Handsontable.helper.stringify(value),
-        img, div, divText;
-        div = document.createElement("DIV")
-        div.className = "htAutocompleteArrow"
-        divText = document.createTextNode("▼")
-        div.appendChild(divText)
-
-    if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
-        img = document.createElement('IMG');
-        img.src = value;
-        img.setAttribute('style', 'border-radius: 50%')
-        img.setAttribute('width', '50px')
-        img.setAttribute('heigth', '50px')
-
-
-        Handsontable.dom.addEvent(img, 'mousedown', function (e) {
-            e.preventDefault(); // prevent selection quirk
-        });
-
-        Handsontable.dom.empty(td);
-        td.appendChild(img);
-    }
-    else {
-        // render as text
-        Handsontable.renderers.TextRenderer.apply(this, arguments);
-    }
-    td.appendChild(div)
-    return td;
-}
 
 
 Handsontable.dom.addEvent(autosave, 'click', function () {

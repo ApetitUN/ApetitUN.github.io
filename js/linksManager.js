@@ -77,9 +77,9 @@ hot2 = new Handsontable(container, {
             renderer: colorRenderer,
             allowInvalid: false,
             handsontable: {
-                data:  colorData,
-                columns: [{renderer:colorDropdownRenderer}]
-            
+                data: colorData,
+                columns: [{ renderer: colorDropdownRenderer }]
+
             }
         },
         {
@@ -112,11 +112,11 @@ hot2 = new Handsontable(container, {
             }, 1000);
         });
     },
-    afterCreateRow: function(index){
-        for(var i = 0; i < hot2.getRowHeader().length; i++){
-            hot2.setDataAtCell(i, 0, i+1)
+    afterCreateRow: function (index) {
+        for (var i = 0; i < hot2.getRowHeader().length; i++) {
+            hot2.getSourceData()[i].id = i + 1
         }
-    } 
+    }
 });
 
 hot2.addHook('afterChange', function () {
@@ -125,7 +125,7 @@ hot2.addHook('afterChange', function () {
             {
                 data: "id",
                 renderer: copyOfIDRenderer
-                
+
             }, {
                 data: "from",
                 type: 'handsontable',
@@ -161,7 +161,7 @@ hot2.addHook('afterChange', function () {
                 source: ['indirect', 'direct']
             },
             {
-                data: "style.fillColor", 
+                data: "style.fillColor",
                 type: 'dropdown',
                 renderer: colorRenderer,
                 allowInvalid: false,
@@ -174,80 +174,6 @@ hot2.addHook('afterChange', function () {
         ]
     })
 });
-
-function copyOfIDRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var idNode = Handsontable.helper.stringify(value), idText, textOnText
-    idText = document.createElement("P");
-    textOnText = document.createTextNode(row+1)
-    idText.appendChild(textOnText)
-    value = idText.childNodes[0].textContent 
-    Handsontable.dom.empty(td);
-    td.appendChild(idText)
-    return td
-}
-
-// var rows = hot.countRows();  
-// for(var i = 0; i < rows; i++){
-//     hot2.setDataAtCell(i, 0, i + 1)
-// }
-
-function updateDropdownGraphCell(instance, td, row, col, prop, value, cellProperties) {
-    var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;
-    textOnCell = document.createElement("P")
-    internText = document.createTextNode(value + " : " + hot.getSourceDataAtCol(1)[value - 1])
-
-    textOnCell.appendChild(internText)
-    Handsontable.dom.empty(td)
-    td.appendChild(textOnCell)
-    
-    return td;
-}
-
-function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
-    var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText, div, divText;
-    div = document.createElement("DIV")
-    div.className = "htAutocompleteArrow"
-    divText = document.createTextNode("▼")
-    div.appendChild(divText)
-    textOnCell = document.createElement("P")
-    internText = document.createTextNode(value + " : " + hot.getSourceDataAtCol(1)[value - 1])
-
-    textOnCell.appendChild(internText)
-    Handsontable.dom.empty(td)
-    td.appendChild(textOnCell)
-    td.appendChild(div)
-    return td;
-}
-
-function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), div, divText;
-    div = document.createElement("DIV")
-    div.className = "htAutocompleteArrow"
-    divText = document.createTextNode("▼")
-    div.appendChild(divText)
-    //p = document.createElement("LI")
-    //p.style.listStyleType = "none"
-    td.style.backgroundColor = value
-
-    Handsontable.dom.empty(td);
-    td.appendChild(div)
-    //td.appendChild(p);
-    return td;
-}
-
-function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p;
-    p = document.createElement("LI")
-    p.style.backgroundColor = value
-
-    Handsontable.dom.addEvent(p, 'mousedown', function (e) {
-        e.preventDefault(); // prevent selection quirk
-    });
-
-    Handsontable.dom.empty(td);
-    td.appendChild(p);
-    return td;
-}
 
 
 Handsontable.dom.addEvent(load, 'click', function () {
