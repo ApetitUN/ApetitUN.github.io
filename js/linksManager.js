@@ -52,7 +52,7 @@ hot2 = new Handsontable(container, {
         from: null,
         to: null,
         value: null,
-        type: null,
+        type: "direct",
         style: {
             fillColor: null,
             radius: null
@@ -89,9 +89,9 @@ hot2 = new Handsontable(container, {
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
-    rowHeights: 60,
-    colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Longitud de línea"],
-    colWidths: [50, 100, 100, 1, 100, 100, 100],
+    rowHeights: 20,
+    colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Grosor de línea"],
+    colWidths: [1, 100, 100, 1, 1, 100, 100],
     //minSpareRows: 1,
     stretchH: 'all',
     persistentState: true,
@@ -113,9 +113,10 @@ hot2 = new Handsontable(container, {
         });
     },
     afterCreateRow: function (index) {
-        for (var i = 0; i < hot2.getRowHeader().length; i++) {
-            hot2.getSourceData()[i].id = i + 1
-        }
+        updateIDs(hot2)
+    },
+    afterRemoveRow: function (index) {
+        updateIDs(hot2)
     }
 });
 
@@ -174,6 +175,26 @@ hot2.addHook('afterChange', function () {
         ]
     })
 });
+
+hot2.updateSettings({
+    contextMenu: {
+        items: {
+            'row_above': {
+                name: function () {
+                    return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">keyboard_arrow_up</i> Insertar fila encima";
+                }
+            }, 'row_below': {
+                name: function () {
+                    return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">keyboard_arrow_down</i> Insertar fila debajo";
+                }
+            }, 'remove_row': {
+                name: function () {
+                    return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">delete</i> Eliminar fila";
+                }
+            }
+        }
+    }
+})
 
 
 Handsontable.dom.addEvent(load, 'click', function () {

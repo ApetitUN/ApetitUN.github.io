@@ -1,4 +1,10 @@
-function addAutocompleteArrow(){
+function updateIDs(hs){
+    for (var i = 0; i < hs.getRowHeader().length; i++) {
+        hs.getSourceData()[i].id = i + 1
+    }
+}
+
+function addAutocompleteArrow() {
     var div, divText
     div = document.createElement("DIV")
     div.className = "htAutocompleteArrow"
@@ -7,13 +13,16 @@ function addAutocompleteArrow(){
     return div;
 }
 
+// Functions renderer
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value);
-    
-    td.style.backgroundColor = value
+    var colorize = Handsontable.helper.stringify(value), div2;
+    div2 = document.createElement("DIV")
+    div2.className = "circleColor"
+    div2.style.backgroundColor = value
 
     Handsontable.dom.empty(td);
     td.appendChild(addAutocompleteArrow())
+    td.appendChild(div2)
     return td;
 }
 
@@ -36,14 +45,15 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     var escaped = Handsontable.helper.stringify(value),
         img;
 
-    
+        td.appendChild(addAutocompleteArrow())
+
     if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
         img = document.createElement('IMG');
-        // img.setAttribute('style', 'border-radius: 50%')
+        img.setAttribute('style', 'border-radius: 50%')
         img.setAttribute('width', '50px')
         img.setAttribute('heigth', '50px')
         img.src = value;
-        
+
         Handsontable.dom.addEvent(img, 'mousedown', function (e) {
             e.preventDefault(); // prevent selection quirk
         });
@@ -56,7 +66,6 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
         // render as text
         Handsontable.renderers.TextRenderer.apply(this, arguments);
     }
-    td.appendChild(addAutocompleteArrow())
     return td;
 }
 
@@ -90,7 +99,7 @@ function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
 
     textOnCell.appendChild(internText)
     Handsontable.dom.empty(td)
-    td.appendChild(textOnCell)
     td.appendChild(addAutocompleteArrow())
+    td.appendChild(textOnCell)
     return td;
 }

@@ -82,8 +82,8 @@ hot = new Handsontable(container, {
         },
         {
             data: "shape",
-            type: 'dropdown',
-            source: ['circle', 'square', 'triangle']
+            // type: 'dropdown',
+            // source: ['circle', 'square', 'triangle']
         },
         { data: "text" },
         {
@@ -119,21 +119,14 @@ hot = new Handsontable(container, {
     rowHeaders: true,
     rowHeights: 60,
     colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud de línea", "Radio", "Color de línea"],
-    colWidths: [50, 100, 100, 100, 300, 100, 100, 1, 100, 100, 100],
+    colWidths: [1, 100, 100, 1, 300, 100, 100, 1, 100, 100, 100],
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,
     afterChange: function (change, source) {
-        // var selectedRow
         if (source === 'loadData') {
             return; //don't save this change
         }
-        // if(source === "edit"){
-        //     var number = parseInt(change[0])
-        //     hot.setDataAtCell(number, 0, number+1)
-        //     return;
-        // }
-        // console.log(selectedRow)
         if (!autosave.checked) {
             return;
         }
@@ -146,13 +139,29 @@ hot = new Handsontable(container, {
         });
     },
     afterCreateRow: function (index) {
-        for (var i = 0; i < hot.getRowHeader().length; i++) {
-            //hot.setDataAtCell(i, 0, i+1)
-            hot.getSourceData()[i].id = i + 1
-            // hot.getSourceData()
+        updateIDs(hot)
+    },
+    afterRemoveRow: function (index) {
+        updateIDs(hot)
+    },
+});
+
+hot.addHook('afterChange', function () {
+    if(hot.getSelected() != undefined) {
+        var row = hot.getSelected()[0]
+        var column = hot.getSelected()[1]
+        var classNameValue = hot.getDataAtCell(row, column)
+        if (classNameValue === "empresas" || classNameValue === "bienes" || classNameValue === "cuentasbancarias") {
+            hot.getSourceData()[row].shape = "square"
+        } else if (classNameValue === "conectores" || classNameValue === "personas") {
+            hot.getSourceData()[row].shape = "circle"
+        } else if (classNameValue === "vehiculos") {
+            hot.getSourceData()[row].shape = "triangule"
         }
     }
-});
+    
+}
+)
 
 hot.updateSettings({
     contextMenu: {

@@ -2,6 +2,11 @@
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
     background-color: #1a75cf;
 }
+.circleColor{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
 .wtBorder {
     background-color: #1a75cf!important;
 }
