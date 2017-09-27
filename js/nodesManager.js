@@ -37,7 +37,7 @@ hot = new Handsontable(container, {
         image2: null,
         loaded: "true",
         style: {
-            lineWidth: null,
+            lineWidth: "10",
             radius: null,
             lineColor: null
         }
@@ -51,13 +51,6 @@ hot = new Handsontable(container, {
             source: ['personas', 'bienes', 'empresas', 'vehiculos', 'conectores', 'cuentasbancarias']
         },
         {
-            data: "shape",
-            renderer: hiddenText
-            // type: 'dropdown',
-            // source: ['circle', 'square', 'triangle']
-        },
-        { data: "text" },
-        {
             data: "image",
             renderer: coverRenderer,
             type: 'dropdown',
@@ -69,31 +62,43 @@ hot = new Handsontable(container, {
             type: 'dropdown',
             source: ['http://s.hswstatic.com/gif/buying-house1.jpg', 'https://d2x3bkdslnxkuj.cloudfront.net/1028152_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
+        { data: "text" }, {
+            data: "style.radius",
+            type: 'dropdown',
+            source: ['60', '100', '150']
+        }, {
+            data: "style.lineColor",
+            type: 'handsontable',
+            renderer: colorRenderer,
+            allowInvalid: false,
+            handsontable: {
+                data: colorData,
+                autoColumnSize: true,
+                columns: [{ renderer: colorDropdownRenderer }]
+
+            }
+        },
+        {
+            data: "shape",
+            renderer: hiddenText
+            // type: 'dropdown',
+            // source: ['circle', 'square', 'triangle']
+        },
         {
             data: "loaded",
             renderer: hiddenText
         },
         {
             data: "style.lineWidth",
-            type: 'dropdown',
-            source: ['5', '10', '15']
-        }, {
-            data: "style.radius",
-            type: 'dropdown',
-            source: ['60', '100', '150']
-        }, {
-            data: "style.lineColor",
-            type: 'dropdown',
-            renderer: colorRenderer,
-            allowInvalid: false,
-            source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
+            // type: 'dropdown',
+            // source: ['5', '10', '15']
         }
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 55,
-    colHeaders: ["ID", "Nombre", "Tipo de elemento", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud de línea", "Radio", "Color de línea"],
-    colWidths: [1, 100, 100, 1, 300, 100, 100, 1, 100, 100, 100],
+    colHeaders: ["ID", "Nombre", "Tipo de elemento", "Icono", "Foto", "Descripción", "Radio", "Color de línea", "Figura", "Cargado", "Longitud de línea"],
+    colWidths: [1, 100, 100, 100, 100, 300, 100, 100, 1, 1, 1],
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,

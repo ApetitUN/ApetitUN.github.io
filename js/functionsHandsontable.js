@@ -61,16 +61,26 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
 }
 
 function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperties) {
-    var colorize = Handsontable.helper.stringify(value), p;
-    p = document.createElement("LI")
+    var colorize = Handsontable.helper.stringify(value), p, a, b;
+    p = document.createElement("DIV")
+    p.className = "circleColor2"
     p.style.backgroundColor = value
-
+    if(value == "#d53e4f"){
+        b = " rojo"
+    } else if(value == "#3288bd"){
+        b = " azul"
+    } else if(value == "#66c265"){
+        b = " verde"
+    } else if(value == "#4d4d4d"){
+        b = " gris"
+    }
+    a = document.createTextNode(b)
     Handsontable.dom.addEvent(p, 'mousedown', function (e) {
         e.preventDefault(); // prevent selection quirk
     });
-
     Handsontable.dom.empty(td);
-    td.appendChild(p);
+    td.appendChild(p)
+    td.appendChild(a)
     return td;
 }
 

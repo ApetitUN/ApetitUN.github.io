@@ -36,10 +36,6 @@ hot2 = new Handsontable(container, {
         {
             data: "to"
         },
-        { data: "value" },
-        {
-            data: "type", renderer: hiddenText
-        },
         {
             data: "style.fillColor",
             type: 'handsontable',
@@ -54,13 +50,17 @@ hot2 = new Handsontable(container, {
         {
             data: "style.radius", type: 'dropdown',
             source: ['5', '10', '15']
+        },
+        { data: "value" },
+        {
+            data: "type", renderer: hiddenText
         }
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 25,
-    colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Grosor de línea"],
-    colWidths: [1, 100, 100, 1, 1, 100, 100],
+    colHeaders: ["ID", "Inicio", "Fin", "Color de relleno", "Grosor de línea", "Valor", "Tipo"],
+    colWidths: [1, 100, 100, 100, 100, 1, 1],
     //minSpareRows: 1,
     stretchH: 'all',
     persistentState: true,
@@ -88,12 +88,6 @@ hot2 = new Handsontable(container, {
         updateIDs(hot2)
     }
 });
-
-// var come = hot.getRowHeader().map(function (e) {
-//     return [e];
-// })
-
-// console.log(come)
 
 hot2.addHook('afterChange', function () {
     hot2.updateSettings({
@@ -138,22 +132,27 @@ hot2.addHook('afterChange', function () {
                 },
                 renderer: updateGraphCell,
                 persistentState: true
-                
-            },
-            { data: "value" },
-            {
-                data: "type", renderer: hiddenText
+
             },
             {
                 data: "style.fillColor",
-                type: 'dropdown',
+                type: 'handsontable',
                 renderer: colorRenderer,
                 allowInvalid: false,
-                source: ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d']
+                handsontable: {
+                    autoColumnSize: true,
+                    data: colorData,
+                    columns: [{ renderer: colorDropdownRenderer }]
+
+                }
             },
             {
                 data: "style.radius", type: 'dropdown',
                 source: ['5', '10', '15']
+            },
+            { data: "value" },
+            {
+                data: "type", renderer: hiddenText
             }
         ]
     })
