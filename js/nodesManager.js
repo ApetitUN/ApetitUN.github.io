@@ -1,33 +1,3 @@
-function ajax(url, method, params, callback) {
-    var obj;
-
-    try {
-        obj = new XMLHttpRequest();
-    } catch (e) {
-        try {
-            obj = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (e) {
-            try {
-                obj = new ActiveXObject("Microsoft.XMLHTTP");
-            } catch (e) {
-                alert("Your browser does not support Ajax.");
-                return false;
-            }
-        }
-    }
-    obj.onreadystatechange = function () {
-        if (obj.readyState == 4) {
-            callback(obj);
-        }
-    };
-    obj.open(method, url, true);
-    obj.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    obj.send(params);
-
-    return obj;
-}
-
 var list_images = {}
 
 
@@ -82,6 +52,7 @@ hot = new Handsontable(container, {
         },
         {
             data: "shape",
+            renderer: hiddenText
             // type: 'dropdown',
             // source: ['circle', 'square', 'triangle']
         },
@@ -98,7 +69,10 @@ hot = new Handsontable(container, {
             type: 'dropdown',
             source: ['http://s.hswstatic.com/gif/buying-house1.jpg', 'https://d2x3bkdslnxkuj.cloudfront.net/1028152_300.jpg', 'https://i.cbc.ca/1.2115364.1382070777!/httpImage/image.jpg_gen/derivatives/original_300/morton.jpg', 'http://img1.zergnet.com/1391764_300.jpg']
         },
-        { data: "loaded" },
+        {
+            data: "loaded",
+            renderer: hiddenText
+        },
         {
             data: "style.lineWidth",
             type: 'dropdown',
@@ -117,8 +91,8 @@ hot = new Handsontable(container, {
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
-    rowHeights: 60,
-    colHeaders: ["ID", "Nombre", "ClassName", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud de línea", "Radio", "Color de línea"],
+    rowHeights: 55,
+    colHeaders: ["ID", "Nombre", "Tipo de elemento", "Figura", "Descripción", "Imagen", "Imagen2", "Cargado", "Longitud de línea", "Radio", "Color de línea"],
     colWidths: [1, 100, 100, 1, 300, 100, 100, 1, 100, 100, 100],
     stretchH: 'all',
     persistentState: true,
@@ -147,19 +121,21 @@ hot = new Handsontable(container, {
 });
 
 hot.addHook('afterChange', function () {
-    if(hot.getSelected() != undefined) {
+    if (hot.getSelected() != undefined) {
         var row = hot.getSelected()[0]
         var column = hot.getSelected()[1]
-        var classNameValue = hot.getDataAtCell(row, column)
-        if (classNameValue === "empresas" || classNameValue === "bienes" || classNameValue === "cuentasbancarias") {
-            hot.getSourceData()[row].shape = "square"
-        } else if (classNameValue === "conectores" || classNameValue === "personas") {
-            hot.getSourceData()[row].shape = "circle"
-        } else if (classNameValue === "vehiculos") {
-            hot.getSourceData()[row].shape = "triangule"
+        if (hot.getColHeader(column) === "Tipo de elemento") {
+            var classNameValue = hot.getDataAtCell(row, column)
+            if (classNameValue === "empresas" || classNameValue === "bienes" || classNameValue === "cuentasbancarias") {
+                hot.getSourceData()[row].shape = "square"
+            } else if (classNameValue === "conectores" || classNameValue === "personas") {
+                hot.getSourceData()[row].shape = "circle"
+            } else if (classNameValue === "vehiculos") {
+                hot.getSourceData()[row].shape = "triangle"
+            }
         }
     }
-    
+
 }
 )
 

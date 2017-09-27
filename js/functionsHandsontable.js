@@ -1,4 +1,38 @@
-function updateIDs(hs){
+function ajax(url, method, params, callback) {
+    var obj;
+
+    try {
+        obj = new XMLHttpRequest();
+    } catch (e) {
+        try {
+            obj = new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                obj = new ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                alert("Your browser does not support Ajax.");
+                return false;
+            }
+        }
+    }
+    obj.onreadystatechange = function () {
+        if (obj.readyState == 4) {
+            callback(obj);
+        }
+    };
+    obj.open(method, url, true);
+    obj.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+    obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    obj.send(params);
+
+    return obj;
+}
+
+
+//  Update IDs of rows
+
+
+function updateIDs(hs) {
     for (var i = 0; i < hs.getRowHeader().length; i++) {
         hs.getSourceData()[i].id = i + 1
     }
@@ -45,7 +79,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     var escaped = Handsontable.helper.stringify(value),
         img;
 
-        td.appendChild(addAutocompleteArrow())
+    td.appendChild(addAutocompleteArrow())
 
     if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
         img = document.createElement('IMG');
@@ -57,9 +91,9 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
         Handsontable.dom.addEvent(img, 'mousedown', function (e) {
             e.preventDefault(); // prevent selection quirk
         });
-        
+
         Handsontable.dom.empty(td);
-        
+
         td.appendChild(img);
     }
     else {
@@ -103,3 +137,22 @@ function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
     td.appendChild(textOnCell)
     return td;
 }
+
+function hiddenText(instance, td, row, col, prop, value, cellProperties) {
+    var hide = Handsontable.helper.stringify(value), doc
+    doc = document.createElement("A")
+    doc.style.fontSize = 1;
+    Handsontable.dom.empty(td)
+    td.appendChild(doc)
+    return td;
+}
+
+// Render for dropdown
+
+function colorHighlighter(item) {
+    var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
+    var label = item.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
+      return '<strong>' + match + '</strong>';
+    });
+    return '<span style="margin-right: 30px; background-color: ' + item + '">&nbsp;&nbsp;&nbsp;</span>' + label;
+  }

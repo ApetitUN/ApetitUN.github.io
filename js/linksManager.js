@@ -1,33 +1,3 @@
-function ajax(url, method, params, callback) {
-    var obj;
-
-    try {
-        obj = new XMLHttpRequest();
-    } catch (e) {
-        try {
-            obj = new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (e) {
-            try {
-                obj = new ActiveXObject("Microsoft.XMLHTTP");
-            } catch (e) {
-                alert("Your browser does not support Ajax.");
-                return false;
-            }
-        }
-    }
-    obj.onreadystatechange = function () {
-        if (obj.readyState == 4) {
-            callback(obj);
-        }
-    };
-    obj.open(method, url, true);
-    obj.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-    obj.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    obj.send(params);
-
-    return obj;
-}
-
 var
     $ = function (id) {
         return document.getElementById(id);
@@ -68,8 +38,7 @@ hot2 = new Handsontable(container, {
         },
         { data: "value" },
         {
-            data: "type", type: 'dropdown',
-            source: ['indirect', 'direct']
+            data: "type", renderer: hiddenText
         },
         {
             data: "style.fillColor",
@@ -89,7 +58,7 @@ hot2 = new Handsontable(container, {
     ],
     currentRowClassName: 'currentRow',
     rowHeaders: true,
-    rowHeights: 20,
+    rowHeights: 25,
     colHeaders: ["ID", "Inicio", "Fin", "Valor", "Tipo", "Color de relleno", "Grosor de línea"],
     colWidths: [1, 100, 100, 1, 1, 100, 100],
     //minSpareRows: 1,
@@ -120,6 +89,12 @@ hot2 = new Handsontable(container, {
     }
 });
 
+// var come = hot.getRowHeader().map(function (e) {
+//     return [e];
+// })
+
+// console.log(come)
+
 hot2.addHook('afterChange', function () {
     hot2.updateSettings({
         columns: [
@@ -129,6 +104,12 @@ hot2.addHook('afterChange', function () {
 
             }, {
                 data: "from",
+                // type: "autocomplete",
+                // source: hot.getSourceDataAtCol(1),
+                // renderer: updateGraphCell,
+                // highlighter: colorHighlighter,
+                // //persistentState: true,
+                // strict: true
                 type: 'handsontable',
                 handsontable: {
                     //colHeaders: ['ID'],
@@ -139,7 +120,8 @@ hot2.addHook('afterChange', function () {
                         { renderer: updateDropdownGraphCell, type: 'numeric' }
                     ]
                 },
-                renderer: updateGraphCell
+                renderer: updateGraphCell,
+                //persistentState: true
 
             },
             {
@@ -154,12 +136,13 @@ hot2.addHook('afterChange', function () {
                         { renderer: updateDropdownGraphCell, type: 'numeric' }
                     ]
                 },
-                renderer: updateGraphCell
+                renderer: updateGraphCell,
+                persistentState: true
+                
             },
             { data: "value" },
             {
-                data: "type", type: 'dropdown',
-                source: ['indirect', 'direct']
+                data: "type", renderer: hiddenText
             },
             {
                 data: "style.fillColor",
