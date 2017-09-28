@@ -129,7 +129,7 @@ body .handsontable .currentRow {
 .spreadsheet {
     /* width: calc(100% - 100px); */
     
-    height: 500px;
+    height: 100%;
     /* overflow: hidden; */
 }
 .spreadsheet2 {
