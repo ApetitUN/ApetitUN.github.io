@@ -91,7 +91,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
 
     td.appendChild(addAutocompleteArrow())
 
-    if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0) {
+    if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0 || escaped.indexOf('/images/') === 0) {
         img = document.createElement('IMG');
         img.setAttribute('style', 'border-radius: 50%')
         img.setAttribute('width', '50px')

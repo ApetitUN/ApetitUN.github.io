@@ -1,13 +1,44 @@
+/* Styles graph */
+
+.images_tooltip {
+    width: 95%;
+    margin: 15px;
+    margin-top: 20px;
+    align: left;
+}
+.text_tooltip {
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    padding: 5px;
+    text-align: justify;
+}
+.div_text_tooltip {
+    float: left;
+    width: 40%;
+    padding: 2%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.div_image_tooltip {
+    float: left;
+    width: 45%;
+    margin-right: 3%;
+    height: 100%;
+}
 .mdl-demo .mdl-layout__header-row,
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
     background-color: #1a75cf;
 }
-.circleColor{
+.circleColor {
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
-.circleColor2{
+.circleColor2 {
     border-radius: 50%;
     height: 20px;
     width: 20px;
@@ -23,7 +54,7 @@
     
     font-family: 'Roboto', 'Helvetica', monospace;
 }
-.htMenu .htContextMenu .handsontable{
+.htMenu .htContextMenu .handsontable {
     color: #1874CF;
 }
 .my-modified-toolbar-section {
@@ -48,18 +79,18 @@
 .htContextMenu table tbody tr td {
     text-align: left;
     /* font-size: 12px; */
+    
     padding: 6px 6px 6px 6px;
 }
 .htContextMenu table tbody tr td.current,
 .htContextMenu table tbody tr td.zeroclipboard-is-hover {
-  background: #1a75cf;
-  color: #ffffff;
+    background: #1a75cf;
+    color: #ffffff;
 }
 .ht_master tr td {
     color: #646464;
     text-align: center;
 }
-
 .ht_master tr > td.current {
     background-color: #f5f5f5;
 }
@@ -133,10 +164,7 @@ body .handsontable .currentRow {
     /* overflow: hidden; */
 }
 .spreadsheet2 {
-    
-    
     height: 500px;
-    
 }
 .handsontable .htAutocompleteArrow {
     float: right;

@@ -59,7 +59,7 @@ hot2 = new Handsontable(container, {
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 25,
-    colHeaders: ["ID", "Inicio", "Fin", "Color de relleno", "Grosor de línea", "Valor", "Tipo"],
+    colHeaders: ["ID", "Inicio", "Fin", "Color de la línea", "Grosor de línea", "Valor", "Tipo"],
     colWidths: [1, 100, 100, 100, 100, 1, 1],
     //minSpareRows: 1,
     stretchH: 'all',

@@ -97,7 +97,7 @@ hot = new Handsontable(container, {
     currentRowClassName: 'currentRow',
     rowHeaders: true,
     rowHeights: 55,
-    colHeaders: ["ID", "Nombre", "Tipo de elemento", "Icono", "Foto", "Descripción", "Radio", "Color de línea", "Figura", "Cargado", "Longitud de línea"],
+    colHeaders: ["ID", "Nombre", "Tipo de nodo", "Icono", "Foto", "Descripción", "Tamaño", "Color del borde", "Figura", "Cargado", "Longitud de línea"],
     colWidths: [1, 100, 100, 100, 100, 300, 100, 100, 1, 1, 1],
     stretchH: 'all',
     persistentState: true,
@@ -129,9 +129,10 @@ hot.addHook('afterChange', function () {
     if (hot.getSelected() != undefined) {
         var row = hot.getSelected()[0]
         var column = hot.getSelected()[1]
-        if (hot.getColHeader(column) === "Tipo de elemento") {
+        if (column == 2) {
             var classNameValue = hot.getDataAtCell(row, column)
             if (classNameValue === "empresas" || classNameValue === "bienes" || classNameValue === "cuentasbancarias") {
+                //hot.getSourceData()[row].image = "/images/android-desktop.png"
                 hot.getSourceData()[row].shape = "square"
             } else if (classNameValue === "conectores" || classNameValue === "personas") {
                 hot.getSourceData()[row].shape = "circle"
@@ -158,9 +159,9 @@ hot.updateSettings({
                         document.getElementById("crop").src = currentImage
                         list_images[number] = currentImage
                         for (var n in list_images) {
-                            if (selectedColumn == 5) {
+                            if (selectedColumn == 3) {
                                 hot.getSourceData()[n].image = list_images[n];
-                            } else if (selectedColumn == 6)
+                            } else if (selectedColumn == 4)
                                 hot.getSourceData()[n].image2 = list_images[n];
                         }
                     }
@@ -188,7 +189,7 @@ hot.updateSettings({
                     return "<i class=\"mdl-color-text--grey material-icons\" role=\"presentation\" style=\"font-size: 14px;\">photo_library</i> Editar foto";
                 },
                 disabled: function () {
-                    return !(((hot.getSelected()[1] === 5) || (hot.getSelected()[1] === 6)))
+                    return !(((hot.getSelected()[1] === 3) || (hot.getSelected()[1] === 4)))
                 }
             }
         }
