@@ -167,7 +167,13 @@ hot.updateSettings({
                         }
                     }
                     hot.loadData(hot.getSourceData())
+                    $('#mdc-dialog-with-list').trigger("reset")
                 })
+                $('#cancel').on('click', function(){
+                    dialogScrollable.close()
+                    
+                })
+                
             }
         },
         items: {
