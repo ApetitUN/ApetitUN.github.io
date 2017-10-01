@@ -169,16 +169,42 @@ hot.updateSettings({
                         var y = 0;
                         var imgWidth = 100;
                         var imgHeight = 100;
-
+                        var auxiliarImage
                         var ctx = canvas.getContext("2d");
                         testImage.onload = function () {
+                            //ctx.save();
+                            ctx.beginPath();
+                            ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI*2, true);   
+                            ctx.closePath();
+                            ctx.clip();
+                            
                             ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
+                            
+                            ctx.beginPath();
+                            ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI*2, true);
+                            ctx.clip();
+                            ctx.closePath();
+                            //ctx.save()
+                            //auxiliarImage = canvas.toDataURL()
+                            list_images[number] = canvas.toDataURL()
+                            //console.log("Imagen" + list_images[number])
+                            for (var n in list_images) {
+                            if (selectedColumn == 3) {
+                                hot.getSourceData()[n].image = list_images[n];
+                            } else if (selectedColumn == 4)
+                                hot.getSourceData()[n].image2 = list_images[n];
                         }
+                            //ctx.restore();
+                            // ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
+                        }
+                        //ctx.fill()
                         testImage.src = currentImage
-                        testImage.style.display = 'none';
+                         hot.loadData(hot.getSourceData())
+                        
+                        // testImage.style.display = 'none';
                         // ctx.fillStyle = "red";
                         // ctx.fillRect(x, y, imgWidth, imgHeight);
-                        
+                        /*
                         var imageX = ctx.getImageData(x, y, imgWidth, imgHeight);
                         console.log(imageX)
                         var data = imageX.data,
@@ -192,16 +218,11 @@ hot.updateSettings({
                         ctx.putImageData(imageX, 0, 0);
                         testImage.src = canvas.toDataURL();
                         console.log(testImage.src)
-
-                        list_images[number] = currentImage
-                        for (var n in list_images) {
-                            if (selectedColumn == 3) {
-                                hot.getSourceData()[n].image = list_images[n];
-                            } else if (selectedColumn == 4)
-                                hot.getSourceData()[n].image2 = list_images[n];
-                        }
+                        */
+                        
+                        
                     }
-                    hot.loadData(hot.getSourceData())
+                   
                     //$('#mdc-dialog-with-list').trigger("reset")
                 })
                 // $('#cancel').on('click', function(){
