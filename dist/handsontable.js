@@ -28812,7 +28812,7 @@ var DateEditor = function (_TextEditor) {
     // TODO: Move this option to general settings
     var _this = _possibleConstructorReturn(this, (DateEditor.__proto__ || Object.getPrototypeOf(DateEditor)).call(this, hotInstance));
 
-    _this.defaultDateFormat = 'DD/MM/YYYY';
+    _this.defaultDateFormat = 'YYYY/MM/DD hh:mm';
     _this.isCellEdited = false;
     _this.parentDestroyed = false;
     return _this;

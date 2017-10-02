@@ -132,7 +132,7 @@ hot.addHook('afterChange', function () {
         if (column == 2) {
             var classNameValue = hot.getDataAtCell(row, column)
             if (classNameValue === "empresas" || classNameValue === "bienes" || classNameValue === "cuentasbancarias") {
-                //hot.getSourceData()[row].image = "/images/android-desktop.png"
+                hot.getSourceData()[row].image = "/images/android-desktop.png"
                 hot.getSourceData()[row].shape = "square"
             } else if (classNameValue === "conectores" || classNameValue === "personas") {
                 hot.getSourceData()[row].shape = "circle"
@@ -154,81 +154,46 @@ hot.updateSettings({
                 dialogScrollable.show();
                 selectedColumn = (hot.getSelected()[1]);
                 list_images = {}
-                //var image = new Image()
+                var testImage = new Image()
+                var canvas = document.getElementById("canvas2");
+                canvas.width = 100;
+                canvas.height = 100;
+                canvas.style.display = "none";
+                var x = 0;
+                var y = 0;
+                var imgWidth = 100;
+                var imgHeight = 100;
+                var auxiliarImage
+                var ctx = canvas.getContext("2d");
+
 
                 $('#accept').on('click', function () {
                     if (currentImage != undefined) {
 
                         document.getElementById("crop").src = currentImage
-                        var testImage = new Image()
-                        var canvas = document.getElementById("canvas2");
-                        //console.log(testImage.src)
-                        canvas.width = 100;
-                        canvas.height = 100;
-                        var x = 0;
-                        var y = 0;
-                        var imgWidth = 100;
-                        var imgHeight = 100;
-                        var auxiliarImage
-                        var ctx = canvas.getContext("2d");
-                        testImage.onload = function () {
-                            //ctx.save();
-                            ctx.beginPath();
-                            ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI*2, true);   
-                            ctx.closePath();
-                            ctx.clip();
-                            
-                            ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
-                            
-                            ctx.beginPath();
-                            ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI*2, true);
-                            ctx.clip();
-                            ctx.closePath();
-                            //ctx.save()
-                            //auxiliarImage = canvas.toDataURL()
-                            list_images[number] = canvas.toDataURL()
-                            //console.log("Imagen" + list_images[number])
-                            for (var n in list_images) {
-                            if (selectedColumn == 3) {
-                                hot.getSourceData()[n].image = list_images[n];
-                            } else if (selectedColumn == 4)
-                                hot.getSourceData()[n].image2 = list_images[n];
-                        }
-                            //ctx.restore();
-                            // ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
-                        }
-                        //ctx.fill()
-                        testImage.src = currentImage
-                         hot.loadData(hot.getSourceData())
-                        
-                        // testImage.style.display = 'none';
-                        // ctx.fillStyle = "red";
-                        // ctx.fillRect(x, y, imgWidth, imgHeight);
-                        /*
-                        var imageX = ctx.getImageData(x, y, imgWidth, imgHeight);
-                        console.log(imageX)
-                        var data = imageX.data,
-                            length = data.length;
-                        for (var i = 0; i < length; i += 4) {
-                            imageX.data[i+1] = 255 - imageX.data[i];     // red
-                            //imageX.data[i + 1] = 255 - imageX.data[i + 1]; // green
-                            //imageX.data[i + 2] = 255 - imageX.data[i + 2]; // blue
-                        }
-                        imageX.data = data;
-                        ctx.putImageData(imageX, 0, 0);
-                        testImage.src = canvas.toDataURL();
-                        console.log(testImage.src)
-                        */
-                        
-                        
-                    }
-                   
-                    //$('#mdc-dialog-with-list').trigger("reset")
-                })
-                // $('#cancel').on('click', function(){
-                //     dialogScrollable.close()
 
-                // })
+                        testImage.src = currentImage
+                        testImage.onload = function () {
+                            ctx.beginPath();
+                            ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI * 2, true);
+                            ctx.closePath();
+                            ctx.clip();
+
+                            ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
+
+                            auxiliarImage = canvas.toDataURL()
+                            list_images[number] = canvas.toDataURL()
+                            for (var n in list_images) {
+                                if (selectedColumn == 3) {
+                                    hot.getSourceData()[n].image = list_images[n];
+                                } else if (selectedColumn == 4)
+                                    hot.getSourceData()[n].image2 = list_images[n];
+                            }
+                            hot.loadData(hot.getSourceData())
+                        }
+                        // console.log(auxiliarImage)
+                    }
+                })
 
             }
         },

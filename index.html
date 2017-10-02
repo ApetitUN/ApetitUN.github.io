@@ -44,34 +44,8 @@
 
 </head>
 
-<body class="class=" mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base "">
-  <header class="mdc-toolbar mdc-toolbar--fixed">
-    <div class="mdc-toolbar__row">
-      <div class="mdc-toolbar__section mdc-toolbar__section--shrink-to-fit mdc-toolbar__section--align-start">
-        <span class="catalog-back">
-                  <a href="index.html" class="mdc-toolbar__icon--menu"><img src="images/sheet24.png"></a>
-                </span>
-        <span class="mdc-toolbar__title catalog-title">
-                <a href="./">Entropía</a></span>
-      </div>
-      <!-- <div class="mdc-toolbar__section mdc-toolbar__section--align-end">
-            <div class="mdc-toolbar__section--table-style-wrapper">
-              <nav class="mdc-tab-bar mdc-tab-bar--indicator-accent">
-                <a class="mdc-tab mdc-tab--active" href="#one">Nodos</a>
-                <a class="mdc-tab" href="#two">Enlaces</a>
-                <span class="mdc-tab-bar__indicator"></span>
-              </nav>
-            </div>
-          </div> -->
-  </header>
+<body >
 
-  <main id="mdl-layout__content">
-    <div class="mdc-toolbar-fixed-adjust"></div>
-
-
-
-    <section>
-      <div class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
         <div class="mdl-card mdl-cell mdl-cell--12-col">
           <div class="mdl-card__supporting-text">
 
@@ -86,7 +60,6 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Cargar" id="load"><i class="mdl-color-text--white material-icons" role="presentation">update</i>  Cargar datos</button>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" name="Guardar" id="save"><i class="mdl-color-text--white material-icons" role="presentation">save</i>  Guardar</button>
               </div>
-              <canvas id="canvas2"></canvas>
             </div>
 
             <div class="mdl-layout__content">
@@ -95,6 +68,7 @@
                   <a href="#nodes-panel" class="mdl-tabs__tab is-active" style="color:#1a75cf">Nodos</a>
                   <a href="#links-panel" class="mdl-tabs__tab" style="color:#1a75cf">Enlaces</a>
                   <a href="#graph-panel" class="mdl-tabs__tab" style="color:#1a75cf">JSON</a>
+                  <!-- <a href="#graph-panel" class="mdl-tabs__tab" style="color:#1a75cf">Línea de tiempo</a> -->
                   <script src="js/functionsHandsontable.js"></script>
 
                 </div>
@@ -119,6 +93,12 @@
                   <script type="text/javascript" src="js/jsontext.js"></script>
 
                 </div>
+<!-- 
+                <div class="mdl-tabs__panel" id="graph-panel" onclick="myFunction()">
+                  <div class="spreadsheet" id="example3"></div>
+                  <script type="text/javascript" src="js/timelineManager.js"></script>
+
+                </div> -->
 
               </div>
             </div>
@@ -145,6 +125,8 @@
                         </button>
                     </p>
                     <a id="downloadLnk" download="YourFileName.jpg">Download processed images</a>
+                    <canvas id="canvas2"></canvas>
+
                     <div id="result" class="result">
                       <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                        or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
                     </div>
@@ -152,7 +134,7 @@
 
                     <div id="showcase">
                       <div>
-                         
+
                         <canvas id="canvas1"></canvas>
                       </div>
                     </div>
@@ -177,7 +159,7 @@
           </div>
         </div>
       </div>
-    </section>
+
   </main>
 
 

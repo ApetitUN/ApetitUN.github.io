@@ -60,18 +60,19 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     return td;
 }
 
+
 function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperties) {
     var colorize = Handsontable.helper.stringify(value), p, a, b;
     p = document.createElement("DIV")
     p.className = "circleColor2"
     p.style.backgroundColor = value
-    if(value == "#d53e4f"){
+    if (value == "#d53e4f") {
         b = " rojo"
-    } else if(value == "#3288bd"){
+    } else if (value == "#3288bd") {
         b = " azul"
-    } else if(value == "#66c265"){
+    } else if (value == "#66c265") {
         b = " verde"
-    } else if(value == "#4d4d4d"){
+    } else if (value == "#4d4d4d") {
         b = " gris"
     }
     a = document.createTextNode(b)
@@ -162,7 +163,7 @@ function hiddenText(instance, td, row, col, prop, value, cellProperties) {
 function colorHighlighter(item) {
     var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
     var label = item.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
-      return '<strong>' + match + '</strong>';
+        return '<strong>' + match + '</strong>';
     });
     return '<span style="margin-right: 30px; background-color: ' + item + '">&nbsp;&nbsp;&nbsp;</span>' + label;
-  }
+}
