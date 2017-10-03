@@ -20,36 +20,25 @@
   <meta charset="utf-8">
   <title>Linea de tiempo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="/images/logo_components_color_2x_web_48dp.png">
 
+  <link data-jsfiddle="common" rel="stylesheet" media="screen" href="css/vendor/pikaday/pikaday.css">
 
-
+  <script src="js/vendor/mdl/material.min.js"></script>
+  <link rel="stylesheet" href="css/vendor/mdl/material.amber-deep_purple.min.css">
+  <script src="js/vendor/mdc-web/demo-styles.css.js"></script>
   <!--
       Loading Handsontable (full distribution that includes all dependencies apart from jQuery)
     -->
+  <script data-jsfiddle="common" src="js/vendor/handsontable/handsontable.full.js"></script>
+  <link data-jsfiddle="common" rel="stylesheet" media="screen" href="css/vendor/handsontable/handsontable.full.css">
 
-  <link data-jsfiddle="common" rel="stylesheet" media="screen" href="dist/pikaday/pikaday.css">
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-lite/1.3.0/material.amber-deep_purple.min.css">
-  <script src="css/vendor/demo-styles.css.js"></script>
-
-  <!-- <script data-jsfiddle="common" src="dist/moment/moment.js"></script> -->
-  <!-- <script data-jsfiddle="common" src="dist/pikaday/pikaday.js"></script> -->
-  <!-- <script data-jsfiddle="common" src="dist/pikaday/plugins/pikaday.jquery.js"></script> -->
-
-  <script data-jsfiddle="common" src="dist/handsontable.full.js"></script>
-  <link data-jsfiddle="common" rel="stylesheet" media="screen" href="dist/handsontable.full.css">
-
-  <link rel="stylesheet" href="css/vendor/jquery.Jcrop.css">
+  <link rel="stylesheet" href="css/vendor/jquery/jquery.Jcrop.css">
   <link rel="stylesheet" href="css/newStyle.css">
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <script src="js/vendor/material-components-web.js"></script>
-  <script async src="js/cv/cv.js"></script>
-  <script src='js/cv/dat.gui.js'></script>
+  <link rel="stylesheet" href="css/vendor/mdl/materialIcons.css">
+  <script src="js/vendor/mdl/material-components-web.js"></script>
+  <script async src="js/vendor/opencv/cv.js"></script>
+  <script src='js/vendor/opencv/dat.gui.js'></script>
 
 </head>
 
@@ -77,19 +66,19 @@
           <div class="mdl-tabs__tab-bar">
             <a href="#data-panel" class="mdl-tabs__tab is-active" style="color:#1a75cf">Datos</a>
             <a href="#tl-panel" class="mdl-tabs__tab" style="color:#1a75cf">Gráfica</a>
-            <script src="js/functionsHandsontable.js"></script>
-
+            <script src="js/commonHandsontable/functionsHandsontable.js"></script>
           </div>
+          <br><br>
           <label style="display:none"><input type="checkbox" name="autosave" id="autosave" checked="unchecked" autocomplete="off" disabled> Autosave</label>
           <pre style="display:none" id="example1console" class="console">Click "Load" to load data from server</pre>
           <div class="mdl-tabs__panel is-active" id="data-panel">
             <div class="spreadsheet2" id="example3"></div>
-            <script type="text/javascript" src="js/timelineManager.js"></script>
+            <script type="text/javascript" src="js/timeline/timelineManager.js"></script>
           </div>
 
           <div class="mdl-tabs__panel" id="tl-panel" onclick="timeline()">
             <p class="spreadsheet2" style="font-size:10px" id="p1">Aquí aparecerá el grafo</p>
-            <script type="text/javascript" src="js/timeline.js"></script>
+            <script type="text/javascript" src="js/timeline/timeline.js"></script>
           </div>
         </div>
       </div>
@@ -120,7 +109,7 @@
               <canvas id="canvas2"></canvas>
 
               <div id="result" class="result">
-                <p>This demo works only in browsers with support for the <a href="https://developer.mozilla.org/en/DOM/window.URL">URL</a>                  or <a href="https://developer.mozilla.org/en/DOM/FileReader">FileReader</a> API.</p>
+                <p>No soporta la API. Contacte al administrador.</p>
               </div>
 
 
@@ -146,18 +135,18 @@
   </div>
 
 </body>
-<script src='js/imageCV.js'></script>
+<script src='js/netChart/imageCV.js'></script>
 <script type='text/javascript'>
   var Module = {};
 
 </script>
 
-<script src="js/load-image.all.min.js"></script>
+<script src="js/vendor/jquery/load-image.all.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="js/vendor/jquery/jquery-1.12.4.js"></script>
+<script src="js/vendor/jquery/jquery-ui.js"></script>
 
-<script src="js/vendor/jquery.Jcrop.js"></script>
-<script src="js/cv/myLoad.js"></script>
+<script src="js/vendor/jquery/jquery.Jcrop.js"></script>
+<script src="js/vendor/opencv/myLoad.js"></script>
 
 </html>
