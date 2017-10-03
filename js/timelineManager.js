@@ -37,17 +37,13 @@ hot3 = new Handsontable(container, {
         {
             data: "start",
             type: 'date',
-            dateFormat: 'YYYY/MM/DD',
+            
+            //dateFormat: 'YYYY/MM/DD hh:mm',
             datePickerConfig: {
-                field: document.getElementsByClassName("pika-single")[0],
-                firstDay: 1,
-                minDate: new Date(2000, 0, 1),
-                maxDate: new Date(2020, 12, 31),
-                yearRange: [2000, 2020],
-                bound: true,
-                onSelect : function(){
-                    console.log(document.getElementsByClassName("pika-single")[0])
-                }
+                defaultDate: '1995-05-01T01:05',
+                allowEmpty: false,
+                showWeekNumber: true,
+                yearRange: ['1900','2030'],
             }
         }
     ],
