@@ -161,6 +161,7 @@ hot.updateSettings({
                 var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
                 dialogScrollable.show();
                 selectedColumn = (hot.getSelected()[1]);
+                var elementType = hot.getSourceData()[number].className 
                 list_images = {}
                 var testImage = new Image()
                 var canvas = document.getElementById("canvas2");
@@ -183,7 +184,8 @@ hot.updateSettings({
                         testImage.src = currentImage
                         testImage.onload = function () {
                             ctx.beginPath();
-                            ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI * 2, true);
+                            if(elementType == "persona" || elementType == undefined)
+                                ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI * 2, true);
                             ctx.closePath();
                             ctx.clip();
 
