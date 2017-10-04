@@ -3,12 +3,9 @@ var
         return document.getElementById(id);
     },
     container = $('example3'),
-    exampleConsole = $('example1console'),
-    autosave = $('autosave'),
     load2 = $('load2'),
     save2 = $('save2'),
     reload = $('accept'),
-    autosaveNotification,
     hot3,
     number;
 
@@ -56,23 +53,6 @@ hot3 = new Handsontable(container, {
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,
-    afterChange: function (change, source) {
-        if (source === 'loadData') {
-            return; //don't save this change
-        }
-        if (!autosave.checked) {
-            return;
-        }
-
-        clearTimeout(autosaveNotification);
-        ajax('json/save.json', 'GET', JSON.stringify({ data: change }), function (data) {
-            exampleConsole.innerText = 'Autosaved (' + change.length + ' ' + 'cell' + (change.length > 1 ? 's' : '') + ')';
-            autosaveNotification = setTimeout(function () {
-                exampleConsole.innerText = 'Changes will be autosaved';
-            }, 1000);
-        });
-    },
-
 });
 
 hot3.updateSettings({
@@ -183,7 +163,6 @@ Handsontable.dom.addEvent(load2, 'click', function () {
         list_images = {}
         dataTotal = JSON.parse("{ \"data\":" + lines + "}");
         hot3.loadData(dataTotal.data)
-        exampleConsole.innerText = 'Data loaded';
         //console.log(hot3.getSourceDataAtCol(1))
     }
 });
@@ -195,5 +174,5 @@ Handsontable.dom.addEvent(save2, 'click', function () {
     link.setAttribute("download", "data.json");
     document.body.appendChild(link);
     link.click();
-    window.open(encodedUri)
+    //window.open(encodedUri)
 });

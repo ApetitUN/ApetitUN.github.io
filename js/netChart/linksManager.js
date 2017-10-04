@@ -60,7 +60,7 @@ hot2 = new Handsontable(container, {
     rowHeaders: true,
     rowHeights: 25,
     colHeaders: ["ID", "Inicio", "Fin", "Color de la línea", "Grosor de línea", "Valor", "Tipo"],
-    colWidths: [1, 100, 100, 100, 100, 1, 1],
+    colWidths: [1, 300, 300, 200, 200, 1, 1],
     //minSpareRows: 1,
     stretchH: 'all',
     persistentState: true,
@@ -226,7 +226,7 @@ Handsontable.dom.addEvent(save, 'click', function () {
     link.setAttribute("download", "data.json");
     document.body.appendChild(link);
     link.click();
-    window.open(encodedUri)
+    //window.open(encodedUri)
 });
 
 Handsontable.dom.addEvent(autosave, 'click', function () {
