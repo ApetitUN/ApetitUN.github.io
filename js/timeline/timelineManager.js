@@ -84,10 +84,10 @@ hot3.updateSettings({
 
                         testImage.src = currentImage
                         testImage.onload = function () {
-                            ctx.beginPath();
-                            ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI * 2, true);
-                            ctx.closePath();
-                            ctx.clip();
+                            // ctx.beginPath();
+                            // ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI * 2, true);
+                            // ctx.closePath();
+                            // ctx.clip();
 
                             ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
 

@@ -29,6 +29,10 @@
     margin-right: 3%;
     height: 100%;
 }
+.mdl-tabs{
+    overflow: hidden;    
+    height: 600px;
+}
 .mdl-demo .mdl-layout__header-row,
 .mdl-tabs.is-upgraded .mdl-tabs__tab.is-active::after {
     background-color: #1a75cf;
@@ -158,14 +162,14 @@ body .handsontable .currentRow {
     color: rgb(255, 255, 255);
 }
 .spreadsheet {
-    /* width: calc(100% - 100px); */
-    
-    height: 100%;
-    /* overflow: hidden; */
+    height: 500px;
+    overflow: scroll; 
 }
 .spreadsheet2 {
     height: 500px;
+    overflow: scroll; 
 }
+
 .handsontable .htAutocompleteArrow {
     float: right;
     font-size: 20px;

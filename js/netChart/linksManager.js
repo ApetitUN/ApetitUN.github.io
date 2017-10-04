@@ -3,12 +3,9 @@ var
         return document.getElementById(id);
     },
     container = $('example2'),
-    exampleConsole = $('example1console'),
-    autosave = $('autosave'),
     load = $('load'),
     save = $('save'),
     reload = $('accept'),
-    autosaveNotification,
     hot2,
     number;
 
@@ -63,24 +60,9 @@ hot2 = new Handsontable(container, {
     colWidths: [1, 300, 300, 200, 200, 1, 1],
     //minSpareRows: 1,
     stretchH: 'all',
+    // height: 500,
     persistentState: true,
     contextMenu: true,
-    afterChange: function (change, source) {
-        if (source === 'loadData') {
-            return; //don't save this change
-        }
-        if (!autosave.checked) {
-            return;
-        }
-
-        clearTimeout(autosaveNotification);
-        ajax('json/save.json', 'GET', JSON.stringify({ data: change }), function (data) {
-            exampleConsole.innerText = 'Autosaved (' + change.length + ' ' + 'cell' + (change.length > 1 ? 's' : '') + ')';
-            autosaveNotification = setTimeout(function () {
-                exampleConsole.innerText = 'Changes will be autosaved';
-            }, 1000);
-        });
-    },
     afterCreateRow: function (index) {
         updateIDs(hot2)
     },
@@ -98,16 +80,12 @@ hot2.addHook('afterChange', function () {
 
             }, {
                 data: "from",
-                // type: "autocomplete",
-                // source: hot.getSourceDataAtCol(1),
-                // renderer: updateGraphCell,
-                // highlighter: colorHighlighter,
-                // //persistentState: true,
-                // strict: true
                 type: 'handsontable',
                 handsontable: {
                     //colHeaders: ['ID'],
                     autoColumnSize: true,
+                    //width: 500,
+                    height: 120,
                     data: hot.getRowHeader().map(function (e) {
                         return [e];
                     }), columns: [
@@ -124,6 +102,8 @@ hot2.addHook('afterChange', function () {
                 handsontable: {
                     //colHeaders: ['ID'],
                     autoColumnSize: true,
+                    //width: 500,
+                    height: 120,
                     data: hot.getRowHeader().map(function (e) {
                         return [e];
                     }), columns: [
@@ -212,7 +192,6 @@ Handsontable.dom.addEvent(load, 'click', function () {
 
         hot.loadData(data.nodes);
         hot2.loadData(data.links);
-        exampleConsole.innerText = 'Data loaded';
         //console.log(hot.getSourceDataAtCol(1))
     }
 });
@@ -229,14 +208,7 @@ Handsontable.dom.addEvent(save, 'click', function () {
     //window.open(encodedUri)
 });
 
-Handsontable.dom.addEvent(autosave, 'click', function () {
-    if (autosave.checked) {
-        exampleConsole.innerText = 'Changes will be autosaved';
-    }
-    else {
-        exampleConsole.innerText = 'Changes will not be autosaved';
-    }
-});
+
 
 
 

@@ -6,12 +6,9 @@ var
         return document.getElementById(id);
     },
     container = $('example1'),
-    exampleConsole = $('example1console'),
-    autosave = $('autosave'),
     load = $('load'),
     save = $('save'),
     reload = $('reload'),
-    autosaveNotification,
     hot,
     number,
     selectedColumn,
@@ -54,13 +51,20 @@ hot = new Handsontable(container, {
             data: "image",
             renderer: coverRenderer,
             type: 'dropdown',
-            source: ['/images/bienes.png', '/images/dinero.png', '/images/empresas.png', '/images/enemigo.png', '/images/familia.png', '/images/movilidad.png']
+            source: ['/img/conector/bienes.png', '/img/conector/dinero.png', '/img/conector/empresas.png',
+             '/img/conector/enemigo.png', '/img/conector/familia.png', '/img/conector/movilidad.png',
+             '/img/icono/bienes.png','/img/icono/empresa.png','/img/icono/persona.png',
+             '/img/icono/reporte.png','/img/icono/cuentas.png','/img/icono/local.png','/img/icono/vehiculo.png'
+            ]
         },
         {
             data: "image2",
             renderer: coverRenderer,
             type: 'dropdown',
-            source: ['/images/bienes.png', '/images/dinero.png', '/images/empresas.png', '/images/enemigo.png', '/images/familia.png', '/images/movilidad.png']
+            source: ['/img/conector/bienes.png', '/img/conector/dinero.png', '/img/conector/empresas.png',
+             '/img/conector/enemigo.png', '/img/conector/familia.png', '/img/conector/movilidad.png',
+             '/img/icono/bienes.png','/img/icono/empresa.png','/img/icono/persona.png',
+             '/img/icono/reporte.png','/img/icono/cuentas.png','/img/icono/local.png','/img/icono/vehiculo.png']
         },
         { data: "text" }, {
             data: "style.radius",
@@ -102,21 +106,6 @@ hot = new Handsontable(container, {
     stretchH: 'all',
     persistentState: true,
     contextMenu: true,
-    afterChange: function (change, source) {
-        if (source === 'loadData') {
-            return; //don't save this change
-        }
-        if (!autosave.checked) {
-            return;
-        }
-        clearTimeout(autosaveNotification);
-        ajax('json/save.json', 'GET', JSON.stringify({ data: change }), function (data) {
-            exampleConsole.innerText = 'Autosaved (' + change.length + ' ' + 'cell' + (change.length > 1 ? 's' : '') + ')';
-            autosaveNotification = setTimeout(function () {
-                exampleConsole.innerText = 'Changes will be autosaved';
-            }, 1000);
-        });
-    },
     afterCreateRow: function (index) {
         updateIDs(hot)
     },
@@ -130,16 +119,22 @@ hot.addHook('afterChange', function () {
         var row = hot.getSelected()[0]
         var column = hot.getSelected()[1]
         var imageXtype = {
-            "personas": "persona.png", "bienes": "bienes.png", "empresas": "local.png",
+            "personas": "persona.png", "bienes": "bienes.png", "empresas": "empresa.png",
             "vehiculos": "vehiculo.png", "conectores": "reporte.png", "cuentasbancarias": "cuentas.png"
         }
 
         var classNameValue = hot.getDataAtCell(row, column)
         if (column == 2) {
-            if (imageXtype[classNameValue] == undefined)
-                hot.getSourceData()[row].image = "/images/logo/preloader.gif"
-            else
-                hot.getSourceData()[row].image = "/images/logo/" + imageXtype[classNameValue]
+            if (imageXtype[classNameValue] == undefined) {
+
+                hot.getSourceData()[row].image = "/img/icono/preloader.gif"
+                hot.getSourceData()[row].image2 = "/img/icono/preloader.gif"
+            }
+            else {
+                hot.getSourceData()[row].image = "/img/icono/" + imageXtype[classNameValue]
+                hot.getSourceData()[row].image2 = "/img/icono/" + imageXtype[classNameValue]
+                hot.render()
+            }
             if (classNameValue === "empresas" || classNameValue === "bienes" || classNameValue === "cuentasbancarias") {
                 hot.getSourceData()[row].shape = "square"
             } else if (classNameValue === "conectores" || classNameValue === "personas") {
@@ -161,7 +156,6 @@ hot.updateSettings({
                 var dialogScrollable = new mdc.dialog.MDCDialog(document.querySelector('#mdc-dialog-with-list'));
                 dialogScrollable.show();
                 selectedColumn = (hot.getSelected()[1]);
-                var elementType = hot.getSourceData()[number].className 
                 list_images = {}
                 var testImage = new Image()
                 var canvas = document.getElementById("canvas2");
@@ -183,26 +177,49 @@ hot.updateSettings({
 
                         testImage.src = currentImage
                         testImage.onload = function () {
-                            ctx.beginPath();
-                            if(elementType == "persona" || elementType == undefined)
+                            //console.log("El elemento seleccionado es " + hot.getSourceData()[number].className)
+                            if (hot.getSourceData()[number].className == "personas" || hot.getSourceData()[number].className == "conectores") {
+                                ctx.beginPath();
                                 ctx.arc(50, 50, imgHeight * 0.5, 0, Math.PI * 2, true);
-                            ctx.closePath();
-                            ctx.clip();
+                                ctx.closePath();
+                                ctx.clip();
+                                ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
 
-                            ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
+                            } else if (hot.getSourceData()[number].className == "vehiculos") {
+                                ctx.beginPath();
+                                ctx.moveTo(50, 0);
+                                ctx.lineTo(0, imgHeight);
+                                ctx.lineTo(imgHeight, imgHeight);
+                                ctx.closePath();
+                                ctx.clip();
+                                ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
 
+                            } else {
+                                ctx.drawImage(testImage, x, y, imgWidth, imgHeight);
+
+                            }
                             auxiliarImage = canvas.toDataURL()
                             list_images[number] = canvas.toDataURL()
                             for (var n in list_images) {
                                 if (selectedColumn == 3) {
                                     hot.getSourceData()[n].image = list_images[n];
-                                } else if (selectedColumn == 4)
-                                    hot.getSourceData()[n].image2 = list_images[n];
+                                }
+                                //  else if (selectedColumn == 4)
+                                //     hot.getSourceData()[n].image2 = list_images[n];
                             }
                             hot.loadData(hot.getSourceData())
                         }
+                        list_images[number] = currentImage
+                        for (var n in list_images) {
+                            if (selectedColumn == 4) {
+                                hot.getSourceData()[n].image2 = list_images[n];
+                            }
+                        }
+                        hot.loadData(hot.getSourceData())
+
                         // console.log(auxiliarImage)
                     }
+                    
                 })
 
             }
@@ -233,16 +250,6 @@ hot.updateSettings({
         }
     }
 })
-
-
-Handsontable.dom.addEvent(autosave, 'click', function () {
-    if (autosave.checked) {
-        exampleConsole.innerText = 'Changes will be autosaved';
-    }
-    else {
-        exampleConsole.innerText = 'Changes will not be autosaved';
-    }
-});
 
 
 

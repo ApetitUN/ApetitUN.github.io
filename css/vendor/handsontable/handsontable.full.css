@@ -565,6 +565,7 @@ CheckboxRenderer
 
 .handsontable.listbox {
   margin: 0;
+  /* z-index: 9999; */
 }
 
 .handsontable.listbox .ht_master table {
@@ -595,6 +596,7 @@ CheckboxRenderer
 
 .handsontable.listbox .wtBorder {
   visibility: hidden;
+  /* z-index: 9999; */
 }
 
 .handsontable.listbox tr td.current,
