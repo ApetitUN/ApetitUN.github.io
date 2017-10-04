@@ -1,29 +1,32 @@
+// List of images to use in an instance in handsontable 
 var list_images = {}
 
-
+// Variable declarations
 var
     $ = function (id) {
         return document.getElementById(id);
     },
-    container = $('example1'),
-    load = $('load'),
+    container = $('example1'), // name of container div in HTML
+    load = $('load'), 
     save = $('save'),
     reload = $('reload'),
-    hot,
-    number,
-    selectedColumn,
+    hot, // name of handsontable instance
+    number, // number of row selected (used by load image function)
+    selectedColumn, // selected row (used by load image function)
     colorData = [],
     colors = ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d'];
 
+// Change of arroy to Object 
 while (color = colors.shift()) {
     colorData.push([
         [color]
     ]);
 }
 
+//  Initialization of handsontable
 hot = new Handsontable(container, {
-    startRows: 1,
-    dataSchema:
+    startRows: 1, // Number of initial rows
+    dataSchema: // Default squema used by handsontable to create data with null or default values 
     {
         id: 1,
         name: null,
@@ -39,7 +42,7 @@ hot = new Handsontable(container, {
             lineColor: null
         }
     },
-    columns: [
+    columns: [ // Defines order of data load or squema. 
         { data: "id" },
         { data: "name" },
         {
@@ -49,7 +52,7 @@ hot = new Handsontable(container, {
         },
         {
             data: "image",
-            renderer: coverRenderer,
+            renderer: coverRenderer, // Each column in handsontable can call an function, this is placed in /commonHandsontable/functionsHandsontable.js 
             type: 'dropdown',
             source: ['/img/conector/bienes.png', '/img/conector/dinero.png', '/img/conector/empresas.png',
              '/img/conector/enemigo.png', '/img/conector/familia.png', '/img/conector/movilidad.png',
@@ -74,7 +77,7 @@ hot = new Handsontable(container, {
             data: "style.lineColor",
             type: 'handsontable',
             renderer: colorRenderer,
-            allowInvalid: false,
+            allowInvalid: false, 
             handsontable: {
                 data: colorData,
                 autoColumnSize: true,
@@ -99,44 +102,44 @@ hot = new Handsontable(container, {
         }
     ],
     currentRowClassName: 'currentRow',
-    rowHeaders: true,
-    rowHeights: 55,
+    rowHeaders: true, // Allows show number of rows
+    rowHeights: 55, 
     colHeaders: ["ID", "Nombre", "Tipo de nodo", "Icono", "Foto", "Descripción", "Tamaño", "Color del borde", "Figura", "Cargado", "Longitud de línea"],
     colWidths: [1, 100, 100, 100, 100, 300, 100, 100, 1, 1, 1],
-    stretchH: 'all',
+    stretchH: 'all', // Allows width: 100%
     persistentState: true,
-    contextMenu: true,
+    contextMenu: true, // Context Menu is enabled
     afterCreateRow: function (index) {
-        updateIDs(hot)
+        updateIDs(hot) // Recalcule ID's after create new row
     },
     afterRemoveRow: function (index) {
-        updateIDs(hot)
+        updateIDs(hot) // Recalcule ID's after remove new row
     },
 });
 
+// after change allows edit values of other cells 
 hot.addHook('afterChange', function () {
     if (hot.getSelected() != undefined) {
-        var row = hot.getSelected()[0]
+        var row = hot.getSelected()[0] 
         var column = hot.getSelected()[1]
         var imageXtype = {
-            "personas": "persona.png", "bienes": "bienes.png", "empresas": "empresa.png",
-            "vehiculos": "vehiculo.png", "conectores": "reporte.png", "cuentasbancarias": "cuentas.png"
+            "personas": "icono/persona.png", "bienes": "icono/bienes.png", "empresas": "icono/empresa.png",
+            "vehiculos": "icono/vehiculo.png", "conectores": "conector/enemigo.png", "cuentasbancarias": "icono/cuentas.png"
         }
 
-        var classNameValue = hot.getDataAtCell(row, column)
-        if (column == 2) {
+        var classNameValue = hot.getDataAtCell(row, column) // Recover data at cell
+        if (column == 2) { // If the column is equal to "className" -> "Tipo de nodo"
             if (imageXtype[classNameValue] == undefined) {
-
                 hot.getSourceData()[row].image = "/img/icono/preloader.gif"
                 hot.getSourceData()[row].image2 = "/img/icono/preloader.gif"
             }
             else {
-                hot.getSourceData()[row].image = "/img/icono/" + imageXtype[classNameValue]
-                hot.getSourceData()[row].image2 = "/img/icono/" + imageXtype[classNameValue]
+                hot.getSourceData()[row].image = "/img/" + imageXtype[classNameValue] // Match with image 
+                hot.getSourceData()[row].image2 = "/img/" + imageXtype[classNameValue]
                 hot.render()
             }
             if (classNameValue === "empresas" || classNameValue === "bienes" || classNameValue === "cuentasbancarias") {
-                hot.getSourceData()[row].shape = "square"
+                hot.getSourceData()[row].shape = "square" // replace in cell [row, shape]
             } else if (classNameValue === "conectores" || classNameValue === "personas") {
                 hot.getSourceData()[row].shape = "circle"
             } else if (classNameValue === "vehiculos") {
@@ -148,6 +151,7 @@ hot.addHook('afterChange', function () {
 }
 )
 
+// We can modify the 
 hot.updateSettings({
     contextMenu: {
         callback: function (key, options) {
