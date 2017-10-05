@@ -1,3 +1,4 @@
+// Please read comments in js/netChart/nodesManager.js and js/netChart/linksManager.js
 var
     $ = function (id) {
         return document.getElementById(id);
@@ -34,8 +35,7 @@ hot3 = new Handsontable(container, {
         {
             data: "start",
             type: 'date',
-            
-            //dateFormat: 'YYYY/MM/DD hh:mm',
+            // Date picker (pikadate)
             datePickerConfig: {
                 defaultDate: '1995-05-01T01:05',
                 allowEmpty: false,

@@ -94,9 +94,9 @@ function detectFace() {
     var prt = 0.3;
     var p1 = [x - w * prt / 2, y - h * prt / 2];
     var p2 = [x + w + w * prt / 2, y + h + h * prt / 2];
-    upPoint[i] = p1
+    upPoint[i] = p1 // define the selected points
     downPoint[i] = p2
-    var color = new cv.Scalar(26,117,207);
+    var color = new cv.Scalar(26, 117, 207);
     cv.rectangle(img_color, p1, p2, color, 2, 8, 0);
     //console.log("POINT1: " + p1 + "\nPOINT2: " + p2)
     faceRect.delete();

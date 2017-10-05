@@ -1,3 +1,5 @@
+// Please, read comments in "/js/netChart/nodesManager.js"
+// Declare variables
 var
     $ = function (id) {
         return document.getElementById(id);
@@ -6,14 +8,11 @@ var
     load = $('load'),
     save = $('save'),
     reload = $('accept'),
-    hot2,
-    number;
-
-
+    hot2;
 
 hot2 = new Handsontable(container, {
     startRows: 1,
-    // startCols: 6,
+    // default schema to allow handsontable define an estructure 
     dataSchema: {
         id: 1,
         from: 1,
@@ -39,6 +38,7 @@ hot2 = new Handsontable(container, {
             renderer: colorRenderer,
             allowInvalid: false,
             handsontable: {
+                autoColumnSize: true,
                 data: colorData,
                 columns: [{ renderer: colorDropdownRenderer }]
 
@@ -58,19 +58,18 @@ hot2 = new Handsontable(container, {
     rowHeights: 25,
     colHeaders: ["ID", "Inicio", "Fin", "Color de la línea", "Grosor de línea", "Valor", "Tipo"],
     colWidths: [1, 300, 300, 200, 200, 1, 1],
-    //minSpareRows: 1,
     stretchH: 'all',
-    // height: 500,
     persistentState: true,
     contextMenu: true,
     afterCreateRow: function (index) {
         updateIDs(hot2)
     },
     afterRemoveRow: function (index) {
-        updateIDs(hot2)
+        updateIDs(hot2) // Recalcule ID's after create new row
     }
 });
 
+//  Update the columns after settings, because we need data of nodes
 hot2.addHook('afterChange', function () {
     hot2.updateSettings({
         columns: [
@@ -138,6 +137,7 @@ hot2.addHook('afterChange', function () {
     })
 });
 
+// Edit the context menu
 hot2.updateSettings({
     contextMenu: {
         items: {
@@ -158,7 +158,7 @@ hot2.updateSettings({
     }
 })
 
-
+// Load JSON to handsontable
 Handsontable.dom.addEvent(load, 'click', function () {
     var input, file, fr, dataTotal, data;
 
@@ -186,17 +186,18 @@ Handsontable.dom.addEvent(load, 'click', function () {
 
     function receivedText(e) {
         lines = e.target.result;
-        list_images = {}
-        dataTotal = JSON.parse("{ \"data\":" + lines + "}");
+        list_images = {} // reset list of images
+        dataTotal = JSON.parse("{ \"data\":" + lines + "}"); // concat the string due to handsontable purpose
         data = dataTotal.data;
 
-        hot.loadData(data.nodes);
-        hot2.loadData(data.links);
-        //console.log(hot.getSourceDataAtCol(1))
+        hot.loadData(data.nodes); // load data in nodes
+        hot2.loadData(data.links); // load data in links
     }
 });
 
+// Save handsontable to JSON
 Handsontable.dom.addEvent(save, 'click', function () {
+    // save JSON with defined structure
     var nodeToSave = hot.getSourceData()
     var dataToSave = hot2.getSourceData()
     var encodedUri = encodeURIComponent("{ \"nodes\":" + JSON.stringify(nodeToSave) + ", \"links\":" + JSON.stringify(dataToSave) + "}")
@@ -205,7 +206,6 @@ Handsontable.dom.addEvent(save, 'click', function () {
     link.setAttribute("download", "data.json");
     document.body.appendChild(link);
     link.click();
-    //window.open(encodedUri)
 });
 
 

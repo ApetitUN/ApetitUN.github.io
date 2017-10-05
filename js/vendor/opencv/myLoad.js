@@ -144,7 +144,7 @@ $(function () {
           upPoint[0][1],
           downPoint[0][0],
           downPoint[0][1]
-        ],
+        ], // Initial select
         onSelect: function (coords) {
           coordinates = coords
         },

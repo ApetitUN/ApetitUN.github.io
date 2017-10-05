@@ -30,14 +30,13 @@ function ajax(url, method, params, callback) {
 
 
 //  Update IDs of rows
-
-
 function updateIDs(hs) {
     for (var i = 0; i < hs.getRowHeader().length; i++) {
         hs.getSourceData()[i].id = i + 1
     }
 }
 
+// add element arrow in handsontable
 function addAutocompleteArrow() {
     var div, divText
     div = document.createElement("DIV")
@@ -47,7 +46,7 @@ function addAutocompleteArrow() {
     return div;
 }
 
-// Functions renderer
+// Color renderer to create circle in cell
 function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     var colorize = Handsontable.helper.stringify(value), div2;
     div2 = document.createElement("DIV")
@@ -60,7 +59,7 @@ function colorRenderer(instance, td, row, col, prop, value, cellProperties) {
     return td;
 }
 
-
+// Create dropdown with color and text
 function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperties) {
     var colorize = Handsontable.helper.stringify(value), p, a, b;
     p = document.createElement("DIV")
@@ -85,7 +84,7 @@ function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperti
     return td;
 }
 
-
+// Create renderer to allow upload local image
 function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     var escaped = Handsontable.helper.stringify(value),
         img;
@@ -114,6 +113,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
     return td;
 }
 
+// shows IDs in handsontable (actually hidden)
 function copyOfIDRenderer(instance, td, row, col, prop, value, cellProperties) {
     var idNode = Handsontable.helper.stringify(value), idText, textOnText
     idText = document.createElement("P");
@@ -125,6 +125,7 @@ function copyOfIDRenderer(instance, td, row, col, prop, value, cellProperties) {
     return td
 }
 
+// shows number ID and data at cell in dropdown
 function updateDropdownGraphCell(instance, td, row, col, prop, value, cellProperties) {
     var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;
     textOnCell = document.createElement("P")
@@ -137,6 +138,7 @@ function updateDropdownGraphCell(instance, td, row, col, prop, value, cellProper
     return td;
 }
 
+// shows number ID and data at cell in cell
 function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
     var updateCellWithName = Handsontable.helper.stringify(value), textOnCell, internText;
     textOnCell = document.createElement("P")
@@ -149,6 +151,7 @@ function updateGraphCell(instance, td, row, col, prop, value, cellProperties) {
     return td;
 }
 
+// sets font 1px to "hidden" cell
 function hiddenText(instance, td, row, col, prop, value, cellProperties) {
     var hide = Handsontable.helper.stringify(value), doc
     doc = document.createElement("A")
@@ -156,14 +159,4 @@ function hiddenText(instance, td, row, col, prop, value, cellProperties) {
     Handsontable.dom.empty(td)
     td.appendChild(doc)
     return td;
-}
-
-// Render for dropdown
-
-function colorHighlighter(item) {
-    var query = this.query.replace(/[\-\[\]{}()*+?.,\\\^$|#\s]/g, '\\$&');
-    var label = item.replace(new RegExp('(' + query + ')', 'ig'), function ($1, match) {
-        return '<strong>' + match + '</strong>';
-    });
-    return '<span style="margin-right: 30px; background-color: ' + item + '">&nbsp;&nbsp;&nbsp;</span>' + label;
 }
