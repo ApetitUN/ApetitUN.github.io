@@ -770,7 +770,7 @@ thead .htCollapseButton:after {
 }
 
 .ht_master .wtHolder {
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 .ht_clone_left .wtHolder {

@@ -51,6 +51,9 @@
 .wtBorder {
     background-color: #1a75cf!important;
 }
+/* .handsontableEditor.handsontable.listbox {
+    border-style: solid;
+} */
 .handsontable th {
     color: #1974CF;
     /* color: #ffffff; */

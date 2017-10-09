@@ -28,6 +28,16 @@ function ajax(url, method, params, callback) {
     return obj;
 }
 
+var colorData = [],
+    colors = ['#d53e4f', '#3288bd', '#66c265', '#4d4d4d', '#ff7f2a', '#ffcc00'];
+
+// Change of arroy to Object
+while (color = colors.shift()) {
+    colorData.push([
+        [color]
+    ]);
+}
+
 
 //  Update IDs of rows
 function updateIDs(hs) {
@@ -73,6 +83,10 @@ function colorDropdownRenderer(instance, td, row, col, prop, value, cellProperti
         b = " verde"
     } else if (value == "#4d4d4d") {
         b = " gris"
+    } else if (value == '#ffcc00') {
+        b = " amarillo"
+    } else if (value == '#ff7f2a') {
+        b = " naranja"
     }
     a = document.createTextNode(b)
     Handsontable.dom.addEvent(p, 'mousedown', function (e) {
@@ -91,7 +105,7 @@ function coverRenderer(instance, td, row, col, prop, value, cellProperties) {
 
     td.appendChild(addAutocompleteArrow())
 
-    if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0 || escaped.indexOf('/img/') === 0) {
+    if (escaped.indexOf('http') === 0 || escaped.indexOf('data:image') === 0 || escaped.indexOf('img/') === 0) {
         img = document.createElement('IMG');
         //img.setAttribute('style', 'border-radius: 50%')
         img.setAttribute('width', '50px')
@@ -158,5 +172,6 @@ function hiddenText(instance, td, row, col, prop, value, cellProperties) {
     doc.style.fontSize = 1;
     Handsontable.dom.empty(td)
     td.appendChild(doc)
+    td.style.display = "none";
     return td;
 }
