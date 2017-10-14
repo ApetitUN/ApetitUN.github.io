@@ -67,28 +67,29 @@
                   <a href="#graph-panel" class="mdl-tabs__tab" style="color:#1a75cf">JSON</a>
                   <!-- <a href="#graph-panel" class="mdl-tabs__tab" style="color:#1a75cf">Línea de tiempo</a> -->
                   <script src="js/commonHandsontable/functionsHandsontable.js"></script>
-
+                  
                 </div>
                 <br><br>
                 <div class="mdl-tabs__panel is-active" id="nodes-panel">
                   <div class="spreadsheet" id="example1"></div>
                   <script type="text/javascript" src="js/netChart/nodesManager.js"></script>
                 </div>
-
+                
                 <div class="mdl-tabs__panel" id="links-panel">
-
+                  
                   <div class="spreadsheet" id="example2"></div>
                   <script type="text/javascript" src="js//netChart/linksManager.js"></script>
                 </div>
-
+                
                 <div class="mdl-tabs__panel" id="graph-panel" onclick="myFunction()">
-
+                  
                   <!-- <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="myFunction()">Click me</button> -->
                   <p class="spreadsheet2" style="font-size:10px" id="p1">Aquí aparecerá el grafo</p>
                   <script type="text/javascript" src="js/netChart/jsontext.js"></script>
-
+                  
                 </div>
-
+                
+                <script src="js/commonHandsontable/changeUI.js"></script>
               </div>
             </div>
             <div class="demo-body">
@@ -149,6 +150,7 @@
       </div>
 
 </body>
+
 <script src="js/vendor/jquery/load-image.all.min.js"></script>
 
 <script src="js/vendor/jquery/jquery.js"></script>
