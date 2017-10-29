@@ -1,0 +1,5983 @@
+{
+    "nodes": [
+        {
+            "id": 1,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Fuentes",
+            "className": "NOUN",
+            "text": "Number\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 2,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 3,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "la",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 4,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Policía",
+            "className": "PROPN",
+            "text": "fPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 5,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Nacional",
+            "className": "PROPN",
+            "text": "fPOS\u003dADJ++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 6,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "le",
+            "className": "PRON",
+            "text": "Case\u003dDat\nNumber\u003dSing\nPerson\u003d3\nPronType\u003dPrs\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 7,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "confirmaron",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dPlur\nPerson\u003d3\nTense\u003dPast\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 8,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "a",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 9,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "EL",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 10,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "TIEMPO",
+            "className": "NOUN",
+            "text": "fPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 11,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "que",
+            "className": "SCONJ",
+            "text": "fPOS\u003dSCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/SCONJ.png",
+            "image2": "img/iconos/SCONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 12,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "efectivos",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 13,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 14,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "la",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 15,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Dijín",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 16,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "ya",
+            "className": "ADV",
+            "text": "fPOS\u003dADV++",
+            "loaded": "true",
+            "image": "img/iconos/ADV.png",
+            "image2": "img/iconos/ADV.png",
+            "shape": "circle"
+        },
+        {
+            "id": 17,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "le",
+            "className": "PRON",
+            "text": "Case\u003dDat\nNumber\u003dSing\nPerson\u003d3\nPronType\u003dPrs\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 18,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "notificaron",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dPlur\nPerson\u003d3\nTense\u003dPast\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 19,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "a",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 20,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "los",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dPlur\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 21,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "esmeralderos",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 22,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Pedro",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 23,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Nel",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 24,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Rincón",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 25,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Castillo",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 26,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 27,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "\u0027Pedro",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 28,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Orejas",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 29,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "\u0027",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 30,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 31,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "y",
+            "className": "CONJ",
+            "text": "fPOS\u003dCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/CONJ.png",
+            "image2": "img/iconos/CONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 32,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Horacio",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 33,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Triana",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 34,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 35,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "y",
+            "className": "CONJ",
+            "text": "fPOS\u003dCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/CONJ.png",
+            "image2": "img/iconos/CONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 36,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "al",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 37,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "exalcalde",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 38,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 39,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Coper",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 40,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "(",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 41,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Boyacá",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 42,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ")",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 43,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 44,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "José",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 45,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Rogelio",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 46,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Triana",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 47,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 48,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "que",
+            "className": "SCONJ",
+            "text": "fPOS\u003dSCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/SCONJ.png",
+            "image2": "img/iconos/SCONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 49,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "están",
+            "className": "AUX",
+            "text": "Mood\u003dInd\nNumber\u003dPlur\nPerson\u003d3\nTense\u003dPres\nVerbForm\u003dFin\nfPOS\u003dAUX++",
+            "loaded": "true",
+            "image": "img/iconos/AUX.png",
+            "image2": "img/iconos/AUX.png",
+            "shape": "circle"
+        },
+        {
+            "id": 50,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "solicitados",
+            "className": "VERB",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 51,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "en",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 52,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "extradición",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 53,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "por",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 54,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "autoridades",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 55,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 56,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Estados",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 57,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Unidos",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 58,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 59,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "que",
+            "className": "SCONJ",
+            "text": "fPOS\u003dSCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/SCONJ.png",
+            "image2": "img/iconos/SCONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 60,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "los",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dPlur\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 61,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "acusa",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 62,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 63,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "narcotráfico",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 64,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ".",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 65,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Con",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 66,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "este",
+            "className": "DET",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nPronType\u003dDem\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 67,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "formalismo",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 68,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "se",
+            "className": "PRON",
+            "text": "Case\u003dAcc,Dat\nPerson\u003d3\nPrepCase\u003dNpr\nPronType\u003dPrs\nReflex\u003dYes\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 69,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "da",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPres\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 70,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "inicio",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 71,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 72,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "manera",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 73,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "formal",
+            "className": "ADJ",
+            "text": "Number\u003dSing\nfPOS\u003dADJ++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 74,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "al",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 75,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "trámite",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 76,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "legal",
+            "className": "ADJ",
+            "text": "Number\u003dSing\nfPOS\u003dADJ++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 77,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 78,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "extradición",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 79,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 80,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "los",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dPlur\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 81,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "tres",
+            "className": "NUM",
+            "text": "Number\u003dPlur\nNumType\u003dCard\nfPOS\u003dNUM++",
+            "loaded": "true",
+            "image": "img/iconos/NUM.png",
+            "image2": "img/iconos/NUM.png",
+            "shape": "circle"
+        },
+        {
+            "id": 82,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "hombres",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 83,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "recluidos",
+            "className": "VERB",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 84,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "en",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 85,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "centros",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 86,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "carcelarios",
+            "className": "ADJ",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dADJ++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 87,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "del",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 88,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "país",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 89,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ".",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 90,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "El",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 91,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "viernes",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 92,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "pasado",
+            "className": "ADJ",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 93,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "fue",
+            "className": "AUX",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPast\nVerbForm\u003dFin\nfPOS\u003dAUX++",
+            "loaded": "true",
+            "image": "img/iconos/AUX.png",
+            "image2": "img/iconos/AUX.png",
+            "shape": "circle"
+        },
+        {
+            "id": 94,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "capturado",
+            "className": "VERB",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nTense\u003dPast\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 95,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "con",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 96,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "fines",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 97,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 98,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "extradición",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 99,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "en",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 100,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "una",
+            "className": "DET",
+            "text": "Definite\u003dInd\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 101,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "gallera",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 102,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 103,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "ubicada",
+            "className": "VERB",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 104,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "al",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 105,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "sur",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 106,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 107,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Bogotá",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 108,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 109,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "el",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 110,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "exalcalde",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 111,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 112,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Coper",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 113,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 114,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "quien",
+            "className": "PRON",
+            "text": "Number\u003dSing\nPronType\u003dInt,Rel\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 115,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "es",
+            "className": "AUX",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPres\nVerbForm\u003dFin\nfPOS\u003dAUX++",
+            "loaded": "true",
+            "image": "img/iconos/AUX.png",
+            "image2": "img/iconos/AUX.png",
+            "shape": "circle"
+        },
+        {
+            "id": 116,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "acusado",
+            "className": "VERB",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nTense\u003dPast\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 117,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 118,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "integrar",
+            "className": "VERB",
+            "text": "VerbForm\u003dInf\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 119,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "una",
+            "className": "DET",
+            "text": "Definite\u003dInd\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 120,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "red",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 121,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "dedicada",
+            "className": "VERB",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 122,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "al",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 123,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "narcotráfico",
+            "className": "ADJ",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 124,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "por",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 125,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "las",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dFem\nNumber\u003dPlur\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 126,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "autoridades",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 127,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "norteamericanas",
+            "className": "ADJ",
+            "text": "Gender\u003dFem\nNumber\u003dPlur\nfPOS\u003dADJ++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 128,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ".",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 129,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "\u0027Pedro",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 130,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Orejas",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 131,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "\u0027",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 132,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 133,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "recluido",
+            "className": "VERB",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 134,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "en",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 135,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "la",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 136,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "cárcel",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 137,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Picaleña",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 138,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 139,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Ibagué",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 140,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "donde",
+            "className": "ADV",
+            "text": "fPOS\u003dADV++",
+            "loaded": "true",
+            "image": "img/iconos/ADV.png",
+            "image2": "img/iconos/ADV.png",
+            "shape": "circle"
+        },
+        {
+            "id": 141,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "paga",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPres\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 142,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "una",
+            "className": "DET",
+            "text": "Definite\u003dInd\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 143,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "condena",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 144,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 145,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "20",
+            "className": "NUM",
+            "text": "NumType\u003dCard\nfPOS\u003dNUM++",
+            "loaded": "true",
+            "image": "img/iconos/NUM.png",
+            "image2": "img/iconos/NUM.png",
+            "shape": "circle"
+        },
+        {
+            "id": 146,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "años",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 147,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "por",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 148,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "el",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 149,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "homicidio",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 150,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 151,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "otro",
+            "className": "DET",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nPronType\u003dInd\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 152,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "esmeraldero",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 153,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 154,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "hace",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPres\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 155,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "un",
+            "className": "DET",
+            "text": "Definite\u003dInd\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 156,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "mes",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 157,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 158,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "a",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 159,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "través",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 160,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 161,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "su",
+            "className": "DET",
+            "text": "Number\u003dSing\nPerson\u003d3\nPoss\u003dYes\nPronType\u003dPrs\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 162,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "abogada",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 163,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 164,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "había",
+            "className": "AUX",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dImp\nVerbForm\u003dFin\nfPOS\u003dAUX++",
+            "loaded": "true",
+            "image": "img/iconos/AUX.png",
+            "image2": "img/iconos/AUX.png",
+            "shape": "circle"
+        },
+        {
+            "id": 165,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "señalado",
+            "className": "VERB",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nTense\u003dPast\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 166,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "que",
+            "className": "SCONJ",
+            "text": "fPOS\u003dSCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/SCONJ.png",
+            "image2": "img/iconos/SCONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 167,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "le",
+            "className": "PRON",
+            "text": "Case\u003dDat\nNumber\u003dSing\nPerson\u003d3\nPronType\u003dPrs\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 168,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "pediría",
+            "className": "VERB",
+            "text": "Mood\u003dCnd\nNumber\u003dSing\nPerson\u003d3\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 169,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "a",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 170,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "la",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 171,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "DEA",
+            "className": "NOUN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 172,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "que",
+            "className": "SCONJ",
+            "text": "fPOS\u003dSCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/SCONJ.png",
+            "image2": "img/iconos/SCONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 173,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "viajará",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dFut\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 174,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "y",
+            "className": "CONJ",
+            "text": "fPOS\u003dCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/CONJ.png",
+            "image2": "img/iconos/CONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 175,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "le",
+            "className": "PRON",
+            "text": "Case\u003dDat\nNumber\u003dSing\nPerson\u003d3\nPronType\u003dPrs\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 176,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "tomara",
+            "className": "VERB",
+            "text": "Mood\u003dSub\nNumber\u003dSing\nPerson\u003d3\nTense\u003dImp\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 177,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "declaración",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 178,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "sobre",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 179,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "la",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 180,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "posible",
+            "className": "ADJ",
+            "text": "Number\u003dSing\nfPOS\u003dADJ++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 181,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "investigación",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 182,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "que",
+            "className": "SCONJ",
+            "text": "fPOS\u003dSCONJ++",
+            "loaded": "true",
+            "image": "img/iconos/SCONJ.png",
+            "image2": "img/iconos/SCONJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 183,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "llevaban",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dPlur\nPerson\u003d3\nTense\u003dImp\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 184,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "en",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 185,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "su",
+            "className": "DET",
+            "text": "Number\u003dSing\nPerson\u003d3\nPoss\u003dYes\nPronType\u003dPrs\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 186,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "contra",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 187,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ".",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 188,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "El",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 189,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "esmeraldero",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 190,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Horacio",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 191,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Triana",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 192,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 193,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "quien",
+            "className": "PRON",
+            "text": "Number\u003dSing\nPronType\u003dInt,Rel\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 194,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "está",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPres\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 195,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "preso",
+            "className": "ADJ",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dADJ++",
+            "loaded": "true",
+            "image": "img/iconos/ADJ.png",
+            "image2": "img/iconos/ADJ.png",
+            "shape": "circle"
+        },
+        {
+            "id": 196,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "por",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 197,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "el",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 198,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "atentado",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 199,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "contra",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 200,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "el",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 201,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "comerciante",
+            "className": "NOUN",
+            "text": "Number\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 202,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 203,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "gemas",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 204,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Hernando",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 205,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Sánchez",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 206,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 207,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "uno",
+            "className": "PRON",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nPronType\u003dInd\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 208,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 209,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "los",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dPlur\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 210,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "‘herederos",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 211,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "’",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 212,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "del",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 213,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "negocio",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 214,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 215,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Víctor",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 216,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Carranza",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 217,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Niño",
+            "className": "PROPN",
+            "text": "fPOS\u003dPROPN++",
+            "loaded": "true",
+            "image": "img/iconos/PROPN.png",
+            "image2": "img/iconos/PROPN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 218,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ",",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        },
+        {
+            "id": 219,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "es",
+            "className": "VERB",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPres\nVerbForm\u003dFin\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 220,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "otro",
+            "className": "PRON",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nPronType\u003dInd\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 221,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "de",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 222,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "los",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dMasc\nNumber\u003dPlur\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 223,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "solicitados",
+            "className": "NOUN",
+            "text": "Gender\u003dMasc\nNumber\u003dPlur\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 224,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "en",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 225,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "extradición",
+            "className": "NOUN",
+            "text": "Gender\u003dFem\nNumber\u003dSing\nfPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 226,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "que",
+            "className": "PRON",
+            "text": "PronType\u003dInt,Rel\nfPOS\u003dPRON++",
+            "loaded": "true",
+            "image": "img/iconos/PRON.png",
+            "image2": "img/iconos/PRON.png",
+            "shape": "circle"
+        },
+        {
+            "id": 227,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "fue",
+            "className": "AUX",
+            "text": "Mood\u003dInd\nNumber\u003dSing\nPerson\u003d3\nTense\u003dPast\nVerbForm\u003dFin\nfPOS\u003dAUX++",
+            "loaded": "true",
+            "image": "img/iconos/AUX.png",
+            "image2": "img/iconos/AUX.png",
+            "shape": "circle"
+        },
+        {
+            "id": 228,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "notificado",
+            "className": "VERB",
+            "text": "Gender\u003dMasc\nNumber\u003dSing\nTense\u003dPast\nVerbForm\u003dPart\nfPOS\u003dVERB++",
+            "loaded": "true",
+            "image": "img/iconos/VERB.png",
+            "image2": "img/iconos/VERB.png",
+            "shape": "circle"
+        },
+        {
+            "id": 229,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "por",
+            "className": "ADP",
+            "text": "fPOS\u003dADP++",
+            "loaded": "true",
+            "image": "img/iconos/ADP.png",
+            "image2": "img/iconos/ADP.png",
+            "shape": "circle"
+        },
+        {
+            "id": 230,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "la",
+            "className": "DET",
+            "text": "Definite\u003dDef\nGender\u003dFem\nNumber\u003dSing\nPronType\u003dArt\nfPOS\u003dDET++",
+            "loaded": "true",
+            "image": "img/iconos/DET.png",
+            "image2": "img/iconos/DET.png",
+            "shape": "circle"
+        },
+        {
+            "id": 231,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": "Policía",
+            "className": "NOUN",
+            "text": "fPOS\u003dNOUN++",
+            "loaded": "true",
+            "image": "img/iconos/NOUN.png",
+            "image2": "img/iconos/NOUN.png",
+            "shape": "circle"
+        },
+        {
+            "id": 232,
+            "style": {
+                "lineColor": "#f2f2f2",
+                "lineWidth": 7,
+                "radius": 60
+            },
+            "name": ".",
+            "className": "PUNCT",
+            "text": "fPOS\u003dPUNCT++",
+            "loaded": "true",
+            "image": "img/iconos/PUNCT.png",
+            "image2": "img/iconos/PUNCT.png",
+            "shape": "circle"
+        }
+    ],
+    "links": [
+        {
+            "id": 1,
+            "from": 7,
+            "to": 1,
+            "type": "nsubj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 2,
+            "from": 4,
+            "to": 2,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 3,
+            "from": 4,
+            "to": 3,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 4,
+            "from": 1,
+            "to": 4,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 5,
+            "from": 4,
+            "to": 5,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 6,
+            "from": 7,
+            "to": 6,
+            "type": "iobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 7,
+            "from": 10,
+            "to": 8,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 8,
+            "from": 10,
+            "to": 9,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 9,
+            "from": 7,
+            "to": 10,
+            "type": "iobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 10,
+            "from": 18,
+            "to": 11,
+            "type": "mark",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 11,
+            "from": 18,
+            "to": 12,
+            "type": "nsubj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 12,
+            "from": 15,
+            "to": 13,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 13,
+            "from": 15,
+            "to": 14,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 14,
+            "from": 12,
+            "to": 15,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 15,
+            "from": 18,
+            "to": 16,
+            "type": "advmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 16,
+            "from": 18,
+            "to": 17,
+            "type": "iobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 17,
+            "from": 7,
+            "to": 18,
+            "type": "ccomp",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 18,
+            "from": 21,
+            "to": 19,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 19,
+            "from": 21,
+            "to": 20,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 20,
+            "from": 18,
+            "to": 21,
+            "type": "dobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 21,
+            "from": 21,
+            "to": 22,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 22,
+            "from": 22,
+            "to": 23,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 23,
+            "from": 22,
+            "to": 24,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 24,
+            "from": 22,
+            "to": 25,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 25,
+            "from": 22,
+            "to": 26,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 26,
+            "from": 22,
+            "to": 27,
+            "type": "conj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 27,
+            "from": 27,
+            "to": 28,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 28,
+            "from": 27,
+            "to": 29,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 29,
+            "from": 22,
+            "to": 30,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 30,
+            "from": 22,
+            "to": 31,
+            "type": "cc",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 31,
+            "from": 22,
+            "to": 32,
+            "type": "conj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 32,
+            "from": 32,
+            "to": 33,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 33,
+            "from": 18,
+            "to": 34,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 34,
+            "from": 18,
+            "to": 35,
+            "type": "cc",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 35,
+            "from": 37,
+            "to": 36,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 36,
+            "from": 18,
+            "to": 37,
+            "type": "conj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 37,
+            "from": 39,
+            "to": 38,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 38,
+            "from": 37,
+            "to": 39,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 39,
+            "from": 41,
+            "to": 40,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 40,
+            "from": 37,
+            "to": 41,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 41,
+            "from": 41,
+            "to": 42,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 42,
+            "from": 44,
+            "to": 43,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 43,
+            "from": 37,
+            "to": 44,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 44,
+            "from": 44,
+            "to": 45,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 45,
+            "from": 44,
+            "to": 46,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 46,
+            "from": 50,
+            "to": 47,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 47,
+            "from": 50,
+            "to": 48,
+            "type": "nsubjpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 48,
+            "from": 50,
+            "to": 49,
+            "type": "auxpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 49,
+            "from": 37,
+            "to": 50,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 50,
+            "from": 52,
+            "to": 51,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 51,
+            "from": 50,
+            "to": 52,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 52,
+            "from": 54,
+            "to": 53,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 53,
+            "from": 50,
+            "to": 54,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 54,
+            "from": 56,
+            "to": 55,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 55,
+            "from": 54,
+            "to": 56,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 56,
+            "from": 56,
+            "to": 57,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 57,
+            "from": 54,
+            "to": 58,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 58,
+            "from": 64,
+            "to": 59,
+            "type": "mark",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 59,
+            "from": 61,
+            "to": 60,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 60,
+            "from": 64,
+            "to": 61,
+            "type": "nsubj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 61,
+            "from": 63,
+            "to": 62,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 62,
+            "from": 61,
+            "to": 63,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 63,
+            "from": 54,
+            "to": 64,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 64,
+            "from": 67,
+            "to": 65,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 65,
+            "from": 67,
+            "to": 66,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 66,
+            "from": 69,
+            "to": 67,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 67,
+            "from": 69,
+            "to": 68,
+            "type": "iobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 68,
+            "from": 69,
+            "to": 70,
+            "type": "nsubj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 69,
+            "from": 72,
+            "to": 71,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 70,
+            "from": 70,
+            "to": 72,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 71,
+            "from": 72,
+            "to": 73,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 72,
+            "from": 75,
+            "to": 74,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 73,
+            "from": 72,
+            "to": 75,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 74,
+            "from": 75,
+            "to": 76,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 75,
+            "from": 78,
+            "to": 77,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 76,
+            "from": 75,
+            "to": 78,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 77,
+            "from": 82,
+            "to": 79,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 78,
+            "from": 82,
+            "to": 80,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 79,
+            "from": 82,
+            "to": 81,
+            "type": "nummod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 80,
+            "from": 78,
+            "to": 82,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 81,
+            "from": 82,
+            "to": 83,
+            "type": "acl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 82,
+            "from": 85,
+            "to": 84,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 83,
+            "from": 83,
+            "to": 85,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 84,
+            "from": 85,
+            "to": 86,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 85,
+            "from": 88,
+            "to": 87,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 86,
+            "from": 85,
+            "to": 88,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 87,
+            "from": 69,
+            "to": 89,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 88,
+            "from": 91,
+            "to": 90,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 89,
+            "from": 94,
+            "to": 91,
+            "type": "nsubjpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 90,
+            "from": 91,
+            "to": 92,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 91,
+            "from": 94,
+            "to": 93,
+            "type": "auxpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 92,
+            "from": 96,
+            "to": 95,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 93,
+            "from": 94,
+            "to": 96,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 94,
+            "from": 98,
+            "to": 97,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 95,
+            "from": 96,
+            "to": 98,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 96,
+            "from": 101,
+            "to": 99,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 97,
+            "from": 101,
+            "to": 100,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 98,
+            "from": 94,
+            "to": 101,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 99,
+            "from": 103,
+            "to": 102,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 100,
+            "from": 101,
+            "to": 103,
+            "type": "acl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 101,
+            "from": 105,
+            "to": 104,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 102,
+            "from": 103,
+            "to": 105,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 103,
+            "from": 107,
+            "to": 106,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 104,
+            "from": 105,
+            "to": 107,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 105,
+            "from": 110,
+            "to": 108,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 106,
+            "from": 110,
+            "to": 109,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 107,
+            "from": 105,
+            "to": 110,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 108,
+            "from": 112,
+            "to": 111,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 109,
+            "from": 110,
+            "to": 112,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 110,
+            "from": 116,
+            "to": 113,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 111,
+            "from": 116,
+            "to": 114,
+            "type": "nsubjpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 112,
+            "from": 116,
+            "to": 115,
+            "type": "auxpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 113,
+            "from": 112,
+            "to": 116,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 114,
+            "from": 118,
+            "to": 117,
+            "type": "mark",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 115,
+            "from": 116,
+            "to": 118,
+            "type": "acl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 116,
+            "from": 120,
+            "to": 119,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 117,
+            "from": 118,
+            "to": 120,
+            "type": "dobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 118,
+            "from": 120,
+            "to": 121,
+            "type": "acl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 119,
+            "from": 123,
+            "to": 122,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 120,
+            "from": 121,
+            "to": 123,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 121,
+            "from": 126,
+            "to": 124,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 122,
+            "from": 126,
+            "to": 125,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 123,
+            "from": 121,
+            "to": 126,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 124,
+            "from": 126,
+            "to": 127,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 125,
+            "from": 94,
+            "to": 128,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 126,
+            "from": 154,
+            "to": 129,
+            "type": "nsubj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 127,
+            "from": 129,
+            "to": 130,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 128,
+            "from": 129,
+            "to": 131,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 129,
+            "from": 133,
+            "to": 132,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 130,
+            "from": 129,
+            "to": 133,
+            "type": "acl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 131,
+            "from": 136,
+            "to": 134,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 132,
+            "from": 136,
+            "to": 135,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 133,
+            "from": 133,
+            "to": 136,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 134,
+            "from": 136,
+            "to": 137,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 135,
+            "from": 139,
+            "to": 138,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 136,
+            "from": 137,
+            "to": 139,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 137,
+            "from": 141,
+            "to": 140,
+            "type": "advmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 138,
+            "from": 136,
+            "to": 141,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 139,
+            "from": 143,
+            "to": 142,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 140,
+            "from": 141,
+            "to": 143,
+            "type": "dobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 141,
+            "from": 146,
+            "to": 144,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 142,
+            "from": 146,
+            "to": 145,
+            "type": "nummod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 143,
+            "from": 143,
+            "to": 146,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 144,
+            "from": 149,
+            "to": 147,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 145,
+            "from": 149,
+            "to": 148,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 146,
+            "from": 143,
+            "to": 149,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 147,
+            "from": 152,
+            "to": 150,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 148,
+            "from": 152,
+            "to": 151,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 149,
+            "from": 149,
+            "to": 152,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 150,
+            "from": 133,
+            "to": 153,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 151,
+            "from": 156,
+            "to": 155,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 152,
+            "from": 154,
+            "to": 156,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 153,
+            "from": 159,
+            "to": 157,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 154,
+            "from": 159,
+            "to": 158,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 155,
+            "from": 165,
+            "to": 159,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 156,
+            "from": 162,
+            "to": 160,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 157,
+            "from": 162,
+            "to": 161,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 158,
+            "from": 159,
+            "to": 162,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 159,
+            "from": 159,
+            "to": 163,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 160,
+            "from": 165,
+            "to": 164,
+            "type": "aux",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 161,
+            "from": 154,
+            "to": 165,
+            "type": "parataxis",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 162,
+            "from": 168,
+            "to": 166,
+            "type": "mark",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 163,
+            "from": 168,
+            "to": 167,
+            "type": "iobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 164,
+            "from": 165,
+            "to": 168,
+            "type": "ccomp",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 165,
+            "from": 171,
+            "to": 169,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 166,
+            "from": 171,
+            "to": 170,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 167,
+            "from": 168,
+            "to": 171,
+            "type": "iobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 168,
+            "from": 173,
+            "to": 172,
+            "type": "mark",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 169,
+            "from": 171,
+            "to": 173,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 170,
+            "from": 168,
+            "to": 174,
+            "type": "cc",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 171,
+            "from": 176,
+            "to": 175,
+            "type": "iobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 172,
+            "from": 168,
+            "to": 176,
+            "type": "conj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 173,
+            "from": 176,
+            "to": 177,
+            "type": "dobj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 174,
+            "from": 181,
+            "to": 178,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 175,
+            "from": 181,
+            "to": 179,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 176,
+            "from": 181,
+            "to": 180,
+            "type": "amod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 177,
+            "from": 177,
+            "to": 181,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 178,
+            "from": 183,
+            "to": 182,
+            "type": "mark",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 179,
+            "from": 181,
+            "to": 183,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 180,
+            "from": 186,
+            "to": 184,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 181,
+            "from": 186,
+            "to": 185,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 182,
+            "from": 183,
+            "to": 186,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 183,
+            "from": 154,
+            "to": 187,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 184,
+            "from": 189,
+            "to": 188,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 185,
+            "from": 220,
+            "to": 189,
+            "type": "nsubj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 186,
+            "from": 189,
+            "to": 190,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 187,
+            "from": 190,
+            "to": 191,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 188,
+            "from": 195,
+            "to": 192,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 189,
+            "from": 195,
+            "to": 193,
+            "type": "nsubj",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 190,
+            "from": 195,
+            "to": 194,
+            "type": "cop",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 191,
+            "from": 189,
+            "to": 195,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 192,
+            "from": 198,
+            "to": 196,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 193,
+            "from": 198,
+            "to": 197,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 194,
+            "from": 195,
+            "to": 198,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 195,
+            "from": 201,
+            "to": 199,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 196,
+            "from": 201,
+            "to": 200,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 197,
+            "from": 195,
+            "to": 201,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 198,
+            "from": 203,
+            "to": 202,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 199,
+            "from": 201,
+            "to": 203,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 200,
+            "from": 203,
+            "to": 204,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 201,
+            "from": 204,
+            "to": 205,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 202,
+            "from": 207,
+            "to": 206,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 203,
+            "from": 204,
+            "to": 207,
+            "type": "appos",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 204,
+            "from": 210,
+            "to": 208,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 205,
+            "from": 210,
+            "to": 209,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 206,
+            "from": 207,
+            "to": 210,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 207,
+            "from": 213,
+            "to": 211,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 208,
+            "from": 213,
+            "to": 212,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 209,
+            "from": 210,
+            "to": 213,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 210,
+            "from": 215,
+            "to": 214,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 211,
+            "from": 213,
+            "to": 215,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 212,
+            "from": 215,
+            "to": 216,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 213,
+            "from": 215,
+            "to": 217,
+            "type": "name",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 214,
+            "from": 207,
+            "to": 218,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 215,
+            "from": 220,
+            "to": 219,
+            "type": "cop",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 216,
+            "from": 223,
+            "to": 221,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 217,
+            "from": 223,
+            "to": 222,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 218,
+            "from": 220,
+            "to": 223,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 219,
+            "from": 225,
+            "to": 224,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 220,
+            "from": 223,
+            "to": 225,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 221,
+            "from": 228,
+            "to": 226,
+            "type": "nsubjpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 222,
+            "from": 228,
+            "to": 227,
+            "type": "auxpass",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 223,
+            "from": 223,
+            "to": 228,
+            "type": "acl:relcl",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 224,
+            "from": 231,
+            "to": 229,
+            "type": "case",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 225,
+            "from": 231,
+            "to": 230,
+            "type": "det",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 226,
+            "from": 228,
+            "to": 231,
+            "type": "nmod",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        },
+        {
+            "id": 227,
+            "from": 220,
+            "to": 232,
+            "type": "punct",
+            "value": "",
+            "style": {
+                "fillColor": "#a6a6a6",
+                "radius": 5
+            }
+        }
+    ]
+}
