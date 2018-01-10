@@ -111,6 +111,7 @@ afterRemoveRow: function (index) {
 }
 });
 
+
 //  Update the columns after settings, because we need data of nodes
 hot2.addHook('afterChange', function () {
     //window.document.documentElement.click(),    
@@ -288,7 +289,7 @@ link.click();
 
 
 
-
+hot2.render();
 
 
 

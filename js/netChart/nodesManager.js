@@ -122,6 +122,7 @@ hot = new Handsontable(container, {
     },
 });
 
+
 // Defines columns
 var classNameColumn = 2
 var imageIconColumn = 3
@@ -270,3 +271,6 @@ hot.updateSettings({
         }
     }
 })
+
+hot.render()
+

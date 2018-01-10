@@ -44,6 +44,7 @@ function updateIDs(hs) {
     for (var i = 0; i < hs.getRowHeader().length; i++) {
         hs.getSourceData()[i].id = i + 1
     }
+    //hs.render()
 }
 
 // add element arrow in handsontable
